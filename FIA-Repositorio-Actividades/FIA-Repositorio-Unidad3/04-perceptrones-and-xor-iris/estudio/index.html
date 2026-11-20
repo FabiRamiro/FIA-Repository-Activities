@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Guía práctica de perceptrones, AND, XOR, Iris y funciones de activación en redes neuronales.">
+  <title>Cuaderno de IA · Perceptrones y activaciones</title>
+  <link rel="stylesheet" href="estilo.css">
+  <script src="datos-iris.js" defer></script>
+  <script src="laboratorios.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <header class="top" id="inicio">
+    <div class="shell top-inner">
+      <a class="brand" href="#inicio"><span class="logo" aria-hidden="true">∑</span> Cuaderno de IA</a>
+      <a class="file-link" href="../Perceptrones.xlsx" download>Descargar Excel <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+  <div class="hero">
+    <div class="shell hero-grid">
+      <div>
+        <p class="kicker">FUNDAMENTOS DE INTELIGENCIA ARTIFICIAL</p>
+        <h1>Del perceptrón a las <em>redes neuronales.</em></h1>
+        <p class="intro">Estudia tu Excel paso a paso. Traza las fronteras de AND e Iris, descubre cómo se resuelve XOR y experimenta con las funciones de activación.</p>
+        <div class="actions"><a class="primary" href="#fundamentos">Empezar a estudiar <span aria-hidden="true">→</span></a><a class="secondary" href="#activaciones">Ir a activaciones</a></div>
+      </div>
+      <figure class="hero-figure">
+        <div class="figure-top"><strong>IRIS · FRONTERA DE DECISIÓN</strong><span class="formula-chip">Z = 0</span></div>
+        <canvas id="hero-plot" class="plot hero-plot" role="img" aria-label="Frontera de Iris. Los ejemplos de clase positiva quedan abajo a la izquierda y los negativos arriba a la derecha."></canvas>
+        <figcaption><span><i class="dot positive"></i> Clase +1</span><span><i class="dot negative"></i> Clase −1</span><span><i class="line-key"></i> Frontera</span></figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="shell layout">
+    <aside>
+      <nav class="course-nav" aria-label="Temario">
+        <p class="kicker">TEMARIO</p>
+        <a href="#fundamentos"><span>01</span> El perceptrón</a>
+        <a href="#and"><span>02</span> Compuerta AND</a>
+        <a href="#iris"><span>03</span> Conjunto Iris</a>
+        <a href="#xor"><span>04</span> Compuerta XOR</a>
+        <a href="#activaciones"><span>05</span> Funciones de activación</a>
+        <a href="#excel"><span>06</span> Recrear en Excel</a>
+        <a href="#practica"><span>07</span> Práctica y repaso</a>
+        <div class="progress-box"><div><label for="progress">Tu avance</label><output id="progress-text">0 de 7</output></div><progress id="progress" max="7" value="0"></progress></div>
+      </nav>
+    </aside>
+    <main id="contenido">
+      <section id="fundamentos" class="chapter">
+        <p class="kicker">01 / FUNDAMENTOS</p>
+        <h2>Cómo decide un perceptrón</h2>
+        <p class="lede">Un perceptrón convierte varias entradas en una decisión. Primero calcula un puntaje. Después convierte ese puntaje en una clase.</p>
+        <div class="flow"><div><small>Entradas</small><strong>x₁, x₂, …</strong></div><span aria-hidden="true">→</span><div><small>Suma ponderada</small><strong>Z = Σ wⱼxⱼ + b</strong></div><span aria-hidden="true">→</span><div><small>Activación</small><strong>ŷ ∈ {−1, +1}</strong></div></div>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Símbolo</th><th>Cómo leerlo en tu Excel</th></tr></thead>
+          <tbody>
+            <tr><td><code>xⱼ</code></td><td>Entrada o característica. En Iris, cada característica es una medida de la flor.</td></tr>
+            <tr><td><code>wⱼ</code></td><td>Peso. Si xⱼ aumenta una unidad y todo lo demás queda fijo, Z cambia en wⱼ.</td></tr>
+            <tr><td><code>b = w₀</code></td><td>Sesgo. Se suma siempre. La columna x₀ vale 1, por eso w₀x₀ = w₀.</td></tr>
+            <tr><td><code>Z</code></td><td>Puntaje antes de la activación. También se llama preactivación.</td></tr>
+            <tr><td><code>y, ŷ</code></td><td>Clase esperada y clase predicha. La hoja usa +1 si Z ≥ 0 y −1 si Z &lt; 0.</td></tr>
+          </tbody>
+        </table></div>
+        <h3>Cómo aprende</h3>
+        <p>Una <strong>época</strong> es una pasada por todos los ejemplos. En tu hoja, cada fila calcula Z con los pesos actuales. La fila siguiente actualiza los pesos con el error de la anterior. La tasa de aprendizaje <code>η = 0.1</code> escala el ajuste.</p>
+        <div class="equation">wⱼ nuevo = wⱼ actual + η · (y − ŷ) · xⱼ</div>
+        <details><summary>Seguir a mano la primera actualización de AND</summary><p>En la fila 4, x₁ = −1, w₁ = −3.15, y = −1 y ŷ = +1. El ajuste es 0.1 · (−1 − 1) · (−1) = +0.2. En I5, el nuevo w₁ es −2.95. Para el sesgo se usa x₀ = 1, así que el ajuste es −0.2. Si la predicción coincide con la clase, y − ŷ = 0 y los pesos quedan iguales.</p></details>
+        <details><summary>Ver el algoritmo en pseudocódigo</summary><pre><code>Inicializar los pesos y el sesgo
+Por cada época:
+    Por cada ejemplo:
+        Z ← suma de (entrada × peso) + sesgo
+        predicción ← +1 si Z ≥ 0, o −1 en otro caso
+        error ← clase esperada − predicción
+        Por cada entrada j:
+            peso[j] ← peso[j] + tasa × error × entrada[j]
+        sesgo ← sesgo + tasa × error</code></pre></details>
+        <label class="done"><input type="checkbox" data-chapter="fundamentos"> Marcar como estudiado</label>
+      </section>
+
+      <section id="and" class="chapter">
+        <p class="kicker">02 / AND</p><h2>De los pesos a una recta</h2>
+        <p class="lede">Con dos entradas, los puntos donde Z = 0 forman la frontera de decisión. Cuando cruzas la frontera, el puntaje cambia de signo.</p>
+        <p>En <strong>AND Perceptron</strong>, toma w₁, w₂ y w₀ de <code>I55:K55</code>. El modelo final tiene Z = 0.05x₁ + 1.05x₂ − 1.09. Iguala a cero, pasa los otros términos al lado derecho y divide entre el peso de x₂.</p>
+        <div class="equation">x₂ = −(w₁x₁ + w₀) / w₂ = (1.09 − 0.05x₁) / 1.05</div>
+        <p>La pendiente es −w₁/w₂ y dice cuánto cambia la altura por cada unidad horizontal. El intercepto vertical es −w₀/w₂ y dice dónde cruza el eje vertical. Si w₂ = 0 y w₁ ≠ 0, la frontera es vertical en x₁ = −w₀/w₁.</p>
+        <div class="lab">
+          <h3>Laboratorio AND</h3>
+          <p>Mueve el sesgo y busca cuándo el punto (1, 1) cambia de clase. La tabla compara el resultado con la etiqueta esperada.</p>
+          <div class="lab-grid">
+            <div><canvas id="and-plot" class="plot" role="img" aria-label="Dispersión de AND con frontera y cuatro ejemplos. La tabla adyacente muestra sus predicciones."></canvas>
+              <div class="legend"><span><i class="dot positive"></i> +1 esperado</span><span><i class="dot negative"></i> −1 esperado</span><span><i class="line-key"></i> Z = 0</span></div></div>
+            <div class="controls">
+              <label for="bias">Sesgo w₀ <output id="bias-value" for="bias">−1.09</output></label>
+              <input id="bias" type="range" min="-2" max="0" step="0.01" value="-1.09">
+              <button type="button" id="and-reset">Restaurar pesos del Excel</button>
+              <div class="stat" id="and-score" aria-live="polite"></div>
+              <div class="table-wrap"><table class="compact"><thead><tr><th>(x₁, x₂)</th><th>Z</th><th>Ŷ / y</th></tr></thead><tbody id="and-rows"></tbody></table></div>
+            </div>
+          </div>
+        </div>
+        <p>Con el sesgo original, en (1, 1) el puntaje es +0.01. La recta pasa por x₂ ≈ 0.99048 cuando x₁ = 1, así que el punto queda apenas arriba. Redondear antes de calcular puede cambiar una decisión cerca del umbral.</p>
+        <label class="done"><input type="checkbox" data-chapter="and"> Marcar como estudiado</label>
+      </section>
+
+      <section id="iris" class="chapter">
+        <p class="kicker">03 / IRIS</p><h2>Cuatro medidas, dos ejes</h2>
+        <p class="lede">El modelo usa cuatro medidas en centímetros. Para dibujar su hiperplano de decisión en una gráfica XY, hacemos un corte fijando las dos medidas del sépalo.</p>
+        <div class="table-wrap"><table><thead><tr><th>Entrada</th><th>Medida</th><th>Columna</th><th>Peso final</th></tr></thead><tbody>
+          <tr><td>x₁</td><td>Largo del sépalo</td><td>D</td><td>−1.30</td></tr>
+          <tr><td>x₂</td><td>Ancho del sépalo</td><td>E</td><td>+4.00</td></tr>
+          <tr><td>x₃</td><td>Largo del pétalo</td><td>F</td><td>−0.93</td></tr>
+          <tr><td>x₄</td><td>Ancho del pétalo</td><td>G</td><td>−2.05</td></tr>
+        </tbody></table></div>
+        <p>En <strong>IRIS Dataset</strong>, lee los pesos de <code>K203:O203</code>. El conjunto original incluye tres especies. Tu hoja contiene dos clases, con 50 flores por clase. Las filas <code>4:103</code> son la primera época. Las filas <code>104:203</code> repiten esas observaciones.</p>
+        <p>El modelo completo calcula Z = −1.30x₁ + 4x₂ − 0.93x₃ − 2.05x₄ − 0.74. Con los promedios de sépalo x₁ = 5.797 y x₂ = 3.196, la constante del corte es C = −1.30(5.797) + 4(3.196) − 0.74 = 4.5079.</p>
+        <div class="equation">Z = C − 0.93x₃ − 2.05x₄ → x₄ = (C − 0.93x₃) / 2.05</div>
+        <div class="lab">
+          <h3>Laboratorio Iris</h3>
+          <p>Cambia las medidas fijas de sépalo. Las flores se siguen dibujando con sus pétalos reales y el corte se desplaza.</p>
+          <div class="lab-grid">
+            <div><canvas id="iris-plot" class="plot" role="img" aria-label="Corte del hiperplano de Iris usando largo y ancho del pétalo."></canvas>
+              <div class="legend"><span><i class="dot positive"></i> Clase +1</span><span><i class="dot negative"></i> Clase −1</span><span><i class="line-key"></i> Corte Z = 0</span></div></div>
+            <div class="controls">
+              <label for="sepal-length">Largo del sépalo <output id="sepal-length-value" for="sepal-length"></output></label>
+              <input type="range" id="sepal-length" min="4.3" max="7.9" step="0.001" value="5.797">
+              <label for="sepal-width">Ancho del sépalo <output id="sepal-width-value" for="sepal-width"></output></label>
+              <input type="range" id="sepal-width" min="2.2" max="4.4" step="0.001" value="3.196">
+              <button type="button" id="iris-reset">Restaurar promedios</button>
+              <div class="stat" id="iris-score" aria-live="polite"></div>
+              <p class="readout" id="iris-formula"></p>
+              <p class="readout" id="iris-full"></p>
+            </div>
+          </div>
+        </div>
+        <details><summary>Comprobar dos flores a mano</summary><p>Con C = 4.5079, la primera flor (1.4, 0.2) da Z = 2.7959 y clase +1. La segunda (6.0, 2.5) da Z = −6.1971 y clase −1. Para evaluar el modelo completo, calcula Z con las cuatro medidas reales de cada flor. Los aciertos de ambos cálculos corresponden al conjunto usado para entrenar. Reserva datos aparte para evaluar generalización.</p></details>
+        <label class="done"><input type="checkbox" data-chapter="iris"> Marcar como estudiado</label>
+      </section>
+
+      <section id="xor" class="chapter">
+        <p class="kicker">04 / XOR</p><h2>Cuando una recta no alcanza</h2>
+        <p class="lede">XOR vale +1 cuando las entradas son diferentes. Los dos positivos están en una diagonal y los dos negativos en la otra.</p>
+        <p>Si una recta separara los grupos, también separaría los dos segmentos que unen cada pareja. Ambos segmentos pasan por (0, 0), así que una separación estricta es imposible. Esta es una prueba de que XOR carece de <strong>separabilidad lineal</strong> en las dos entradas originales.</p>
+        <h3>Cómo lo resuelve tu Excel</h3>
+        <p>En <strong>XOR Perceptrones</strong> aparecen tres tablas. <code>OR</code> y <code>NAND</code> trabajan con las entradas originales. Luego <code>AND_XOR</code> combina las dos decisiones. OR detecta si alguna entrada es +1 y NAND descarta el caso en que ambas son +1.</p>
+        <div class="equation">XOR(x₁, x₂) = AND(OR(x₁, x₂), NAND(x₁, x₂))</div>
+        <div class="lab">
+          <h3>Recorre la red XOR</h3>
+          <fieldset class="inputs-xor"><legend>Entradas bipolares</legend>
+            <label>x₁ <select id="xor-first"><option value="-1">−1</option><option value="1">+1</option></select></label>
+            <label>x₂ <select id="xor-second"><option value="-1">−1</option><option value="1" selected>+1</option></select></label>
+          </fieldset>
+          <div class="flow xor-flow" aria-live="polite"><div><small>OR</small><strong id="xor-or">+1</strong></div><span aria-hidden="true">+</span><div><small>NAND</small><strong id="xor-nand">+1</strong></div><span aria-hidden="true">→</span><div><small>AND final</small><strong id="xor-out">+1</strong></div></div>
+          <p class="muted">La demostración usa las reglas de las compuertas. Prueba las cuatro combinaciones y sigue cada resultado.</p>
+        </div>
+        <label class="done"><input type="checkbox" data-chapter="xor"> Marcar como estudiado</label>
+      </section>
+
+      <section id="activaciones" class="chapter">
+        <p class="kicker">05 / ACTIVATION FUNCTIONS IN ANNs</p><h2>Funciones de activación</h2>
+        <p class="lede">Una red neuronal artificial (ANN) organiza neuronas en capas. Cada neurona recibe entradas, calcula una suma ponderada Z y aplica una función g para producir su activación a = g(Z).</p>
+        <p>En una <strong>capa oculta</strong>, las activaciones pasan a la capa siguiente como nuevas características. En una <strong>capa de salida</strong>, la activación puede dar al resultado la forma que exige la tarea, por ejemplo una distribución entre especies.</p>
+        <h3>Por qué importa la no linealidad</h3>
+        <p>Si cada capa solo multiplica por pesos y suma un sesgo, toda la red equivale a una sola transformación afín. En una dimensión, componer <code>2x + 1</code> con <code>3u + 4</code> da <code>6x + 7</code>. Intercalar una activación no lineal permite crear representaciones que distinguen patrones como XOR.</p>
+        <div class="lab">
+          <h3>Compara las curvas</h3>
+          <p>Elige una función y mueve Z. La pendiente local indica cuánto cambia la activación ante un cambio pequeño en Z.</p>
+          <div class="lab-grid">
+            <div><canvas id="activation-plot" class="plot" role="img" aria-label="Curva de la función de activación seleccionada y punto de evaluación."></canvas>
+              <div class="legend"><span><i class="line-key"></i> g(Z)</span><span id="derivative-key" hidden><i class="line-key dashed"></i> g′(Z)</span></div></div>
+            <div class="controls">
+              <label for="activation">Función</label>
+              <select id="activation"><option value="step">Escalón bipolar</option><option value="linear">Identidad</option><option value="sigmoid">Sigmoide</option><option value="tanh">Tanh</option><option value="relu" selected>ReLU</option><option value="leaky">Leaky ReLU</option><option value="gelu">GELU</option><option value="silu">SiLU / Swish</option></select>
+              <label for="activation-z">Entrada Z <output id="activation-z-value" for="activation-z"></output></label>
+              <input type="range" id="activation-z" min="-6" max="6" step="0.1" value="1.5">
+              <label class="check-inline"><input type="checkbox" id="show-gradient"> Mostrar derivada</label>
+              <div class="stat" id="activation-value" aria-live="polite"></div>
+              <p class="readout" id="activation-help"></p>
+            </div>
+          </div>
+        </div>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Función</th><th>Qué hace</th><th>Cuándo aparece</th></tr></thead><tbody>
+            <tr><td>Escalón bipolar</td><td>−1 si Z &lt; 0 y +1 si Z ≥ 0. La salida salta en cero.</td><td>Perceptrón clásico como el del Excel. Su pendiente es cero fuera del salto.</td></tr>
+            <tr><td>Identidad</td><td>g(Z) = Z. Su pendiente es 1.</td><td>Salida de regresión si puede tomar cualquier valor real.</td></tr>
+            <tr><td>Sigmoide</td><td>1/(1 + e<sup>−Z</sup>), con salida entre 0 y 1. En cero da 0.5.</td><td>Salida binaria o una salida por etiqueta independiente. Se satura en los extremos.</td></tr>
+            <tr><td>Tanh</td><td>Salida entre −1 y +1. En cero da 0. Es simétrica respecto al origen.</td><td>Algunas redes recurrentes. También se satura lejos de cero.</td></tr>
+            <tr><td>ReLU</td><td>max(0, Z). A la izquierda da cero y a la derecha conserva Z.</td><td>Capas ocultas. Una neurona puede quedar inactiva si siempre recibe valores negativos.</td></tr>
+            <tr><td>Leaky ReLU</td><td>Usa Z si Z ≥ 0 y αZ si Z &lt; 0, con α pequeño y positivo.</td><td>Capas ocultas cuando interesa un gradiente pequeño en el lado negativo.</td></tr>
+            <tr><td>GELU</td><td>Z · Φ(Z), donde Φ es la acumulada de la normal estándar. Transición suave.</td><td>Capas ocultas de algunas arquitecturas Transformer.</td></tr>
+            <tr><td>SiLU / Swish</td><td>Z · σ(Z), con σ sigmoide. Transición suave y salida ligeramente negativa para algunos Z.</td><td>Activación oculta en algunas redes modernas.</td></tr>
+          </tbody></table></div>
+        <h3>Derivadas y entrenamiento</h3>
+        <p>La <strong>derivada</strong> es la pendiente local. La <strong>pérdida</strong> mide cuánto difiere la predicción del objetivo. La <strong>retropropagación</strong> recorre las capas hacia atrás y aplica la regla de la cadena para calcular cómo afecta cada peso a la pérdida. El optimizador usa esas pendientes para actualizar parámetros.</p>
+        <p>Si multiplicas muchas pendientes pequeñas, la señal de aprendizaje puede volverse diminuta en capas anteriores. Esto se llama <strong>desvanecimiento del gradiente</strong>. Compara la sigmoide en Z = 0 y Z = 6. En ReLU la pendiente positiva vale 1, la negativa vale 0 y en Z = 0 no hay una derivada matemática única. Las bibliotecas suelen fijar un valor en ese punto.</p>
+        <h3>Softmax y la elección de la salida</h3>
+        <p>Un <strong>logit</strong> es un puntaje de salida antes de convertirlo en probabilidad. Softmax trabaja con todos los logits de un ejemplo a la vez. Eleva e a cada logit y divide entre la suma de esos resultados. Las salidas suman 1.</p>
+        <div class="lab">
+          <h4>Prueba Softmax con tres clases</h4>
+          <div class="softmax-grid">
+            <label>Logit A <input type="number" id="logit-a" value="2" min="-50" max="50" step="0.1"><output id="softmax-a" for="logit-a logit-b logit-c"></output></label>
+            <label>Logit B <input type="number" id="logit-b" value="1" min="-50" max="50" step="0.1"><output id="softmax-b" for="logit-a logit-b logit-c"></output></label>
+            <label>Logit C <input type="number" id="logit-c" value="0" min="-50" max="50" step="0.1"><output id="softmax-c" for="logit-a logit-b logit-c"></output></label>
+          </div>
+          <p id="softmax-total" class="readout" aria-live="polite"></p>
+        </div>
+        <ul class="study-list">
+          <li><strong>Binaria.</strong> Un logit y sigmoide para interpretar la probabilidad de la clase positiva. Un umbral de 0.5 equivale a un logit de 0.</li>
+          <li><strong>Multiclase excluyente.</strong> Un logit por clase y softmax para interpretar las probabilidades. Para predecir la clase, basta elegir el logit mayor.</li>
+          <li><strong>Multietiqueta.</strong> Un logit y una sigmoide por etiqueta, porque varias pueden ser verdaderas al mismo tiempo.</li>
+          <li><strong>Regresión.</strong> Identidad para predecir valores reales sin cota. La activación se puede adaptar si el objetivo tiene restricciones.</li>
+        </ul>
+        <p class="note"><strong>Al implementar.</strong> Algunas pérdidas reciben logits y calculan internamente la transformación de forma estable. Por ejemplo, PyTorch ofrece <code>BCEWithLogitsLoss</code> para binaria o multietiqueta y <code>CrossEntropyLoss</code> para multiclase. En esos casos conserva los logits como entrada de la pérdida.</p>
+        <label class="done"><input type="checkbox" data-chapter="activaciones"> Marcar como estudiado</label>
+      </section>
+
+      <section id="excel" class="chapter">
+        <p class="kicker">06 / GUÍA DE EXCEL</p><h2>Recrea las gráficas desde cero</h2>
+        <p class="lede">Abre el libro, sigue las fórmulas y usa un gráfico XY para que Excel trate las dos coordenadas como números.</p>
+        <h3>AND · Escoge x₁ y calcula x₂</h3>
+        <ol class="study-list">
+          <li>En <code>AA4:AA10</code> coloca valores de x₁ entre −1.5 y 1.5.</li>
+          <li>En <code>AB4</code> escribe la fórmula de abajo y cópiala hasta <code>AB10</code>. Las referencias con $ mantienen fijas las celdas de los pesos. <code>AA4</code> avanza con cada fila.</li>
+          <li>En <strong>Insertar → Dispersión (XY)</strong>, agrega tres series usando <strong>Seleccionar datos → Agregar</strong>. Usa <code>AD4:AD6 / AE4:AE6</code> para la clase −1, <code>AD7 / AE7</code> para +1 y <code>AA4:AA10 / AB4:AB10</code> para la frontera. En cada par va primero el rango X y luego el rango Y.</li>
+        </ol>
+        <pre><code>AB4   =-($I$55*AA4+$K$55)/$J$55</code></pre>
+        <h3>Iris · Fija el sépalo y despeja x₄</h3>
+        <ol class="study-list">
+          <li>En <code>R29:R31</code>, calcula los dos promedios del sépalo y la constante C.</li>
+          <li>En <code>AE4:AF5</code>, obtiene dos puntos. Los interceptos esperados son aproximadamente (0, 2.1990) y (4.8472, 0).</li>
+          <li>Usa <code>AA4:AA53 / AB4:AB53</code> para la clase +1 y <code>AC4:AC53 / AD4:AD53</code> para −1. Esos pares toman las medidas de F y G según la etiqueta en H. Agrega <code>AE4:AE5 / AF4:AF5</code> como tercera serie.</li>
+        </ol>
+        <pre><code>R29   =PROMEDIO(D4:D103)
+R30   =PROMEDIO(E4:E103)
+R31   =$K$203*R29+$L$203*R30+$O$203
+AE4   0
+AE5   =-$R$31/$M$203
+AF4   =-($M$203*AE4+$R$31)/$N$203
+
+Copia AF4 a AF5.</code></pre>
+        <p>Deja las clases con marcadores y la frontera con línea sólida. En inglés, <code>PROMEDIO</code> se llama <code>AVERAGE</code>. Si el gráfico luce extraño, revisa que cada serie tenga el mismo número de X e Y. Recuerda que la columna <code>y</code> contiene etiquetas y que el eje vertical debe tomar una medida o una entrada.</p>
+        <label class="done"><input type="checkbox" data-chapter="excel"> Marcar como estudiado</label>
+      </section>
+      <section id="practica" class="chapter">
+        <p class="kicker">07 / PRÁCTICA</p><h2>Pon a prueba lo aprendido</h2>
+        <p class="lede">Responde antes de abrir la solución. Después vuelve al laboratorio para comprobar tu razonamiento.</p>
+        <div class="practice">
+          <details><summary>1. ¿Qué predice AND para (1, 1) si w₀ = −1.12?</summary><p>Z = 0.05 + 1.05 − 1.12 = −0.02. Predice −1. El sesgo más negativo elevó la recta y dejó (1, 1) debajo.</p></details>
+          <details><summary>2. ¿Cuánto cambia el intercepto de Iris si x₂ sube de 3.196 a 3.396?</summary><p>C sube en 4 · 0.2 = 0.8. El intercepto sube en 0.8/2.05 ≈ 0.3902 cm. La pendiente sigue siendo −0.93/2.05 porque los pesos de pétalo siguen iguales.</p></details>
+          <details><summary>3. ¿Por qué tres capas con identidad no resuelven XOR con sus dos entradas originales?</summary><p>Componer transformaciones afines da otra transformación afín. Aplicar un umbral a ese puntaje produce una sola frontera recta, que no puede separar las diagonales de XOR.</p></details>
+          <details><summary>4. ¿Qué dan ReLU y Leaky ReLU para Z = −2, con α = 0.01?</summary><p>ReLU da 0 y su pendiente es 0. Leaky ReLU da −0.02 y su pendiente es 0.01. Compruébalo seleccionando cada función y mostrando su derivada.</p></details>
+          <details><summary>5. ¿Qué ocurre al sumar 5 a los tres logits de Softmax?</summary><p>Las probabilidades quedan iguales. Todos los exponenciales se multiplican por e⁵ y ese factor se cancela al dividir. El laboratorio resta el logit máximo para calcular esta misma distribución de forma estable.</p></details>
+          <details><summary>6. ¿Qué salida usarías para clasificar una flor en una de tres especies?</summary><p>Tres logits, uno por especie. Durante inferencia puedes usar softmax para leer probabilidades o elegir el mayor directamente. Con una pérdida que ya integra softmax y entropía cruzada, pásale los logits.</p></details>
+        </div>
+        <h3>Ejercicio integrador</h3>
+        <p>En una copia de Excel, construye un AND con w₁ = 1, w₂ = 1 y w₀ = −1. Predice los cuatro casos a mano, calcula dos puntos de Z = 0 y dibuja la recta. Después imagina que reemplazas el escalón por una sigmoide y usas 0.5 como umbral. ¿Qué cambia en la salida y qué pasa con la frontera?</p>
+        <details><summary>Verificación del ejercicio integrador</summary><p>Los puntajes son −3, −1, −1 y +1 para (−1,−1), (−1,+1), (+1,−1) y (+1,+1). Los puntos (0,1) y (1,0) trazan x₂ = 1 − x₁. La sigmoide produce valores continuos, pero con umbral 0.5 conserva la frontera y las decisiones de clase.</p></details>
+        <h3>Resumen</h3><p>Una suma ponderada produce el puntaje. La activación lo transforma. Igualar el puntaje al umbral te da la frontera de un perceptrón. Al conectar capas con activaciones no lineales, la red aprende nuevas representaciones y puede abordar problemas como XOR.</p>
+        <p><strong>Qué practicar después.</strong> Implementa la decisión de AND en Python con una función y un ciclo sobre cuatro casos. Después añade el entrenamiento fila por fila y compara tus pesos con la hoja.</p>
+        <details><summary>Prompt para continuar por tu cuenta</summary><p>Guíame para implementar el perceptrón AND en Python desde cero. Empieza con entradas, salida y pseudocódigo. Déjame intentar la función de predicción y luego comprueba mis cuatro resultados contra Perceptrones.xlsx.</p></details>
+        <label class="done"><input type="checkbox" data-chapter="practica"> Marcar como estudiado</label>
+        <div class="sources">
+          <h3>Fuentes para profundizar</h3>
+          <ul>
+            <li><a href="https://archive.ics.uci.edu/dataset/53/iris">UCI · Iris y sus variables</a></li>
+            <li><a href="https://developers.google.com/machine-learning/crash-course/neural-networks/activation-functions">Google ML Crash Course · Funciones de activación</a></li>
+            <li><a href="https://www.deeplearningbook.org/contents/mlp.html">Deep Learning · Redes feedforward y el ejemplo XOR</a></li>
+            <li><a href="https://docs.pytorch.org/docs/stable/nn.html">PyTorch · Funciones de activación y pérdidas</a></li>
+            <li><a href="https://support.microsoft.com/en-us/excel/present-your-data-in-a-scatter-chart-or-a-line-chart">Microsoft · Gráficas de dispersión XY</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+  <footer class="shell footer"><strong>Cuaderno de IA</strong><a href="#inicio">Volver al inicio ↑</a></footer>
+</body>
+</html>

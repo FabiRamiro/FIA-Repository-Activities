@@ -1,0 +1,30 @@
+tarea_investigacion:
+  description: >
+    Investiga el panorama actual y las controversisas sobre {topic}.
+    Enfócate en buscar impactos reales en los consumidores, trabajadores de la industria, manufactura e implicaciones
+    financieras.
+    Busca información verificable del año actual.
+  expected_output: >
+    Una lista de bullet points que contenga:
+    - 3 a 5 hechos concretos y actuales sobre el tema.
+    - El impacto económico o social detallado (consumidores, fábricas, empleados).
+    - La postura oficial de las empresas frente a la crítica de los usuarios.
+    - Lista de enlaces y fuentes utilizadas.
+    ES IMPORTANTE que NO redactes la noticia en párrafos, solo entrega los datos duros estructurados.
+  agent: investigador_noticia
+
+tarea_noticia:
+  description: >
+    Utilizando ÚNICAMENTE los datos proporcionados por la tarea de investigación, redacta el contenido
+    final sobre {topic} para redes sociales. Explica claramente cómo afecta esto a todos los involucrados.
+  expected_output: >
+    Un hilo de X (antes llamado Twitter) de 1 publicación en formato Markdown puro (sin bloques de
+    código extra).
+    - Cada publicación debe de estar en un numero considerable de caracteres para las redes sociales.
+    - El primer mensaje debe ser un gancho contundente para la retención del público.
+    - Desglosa el impacto a consumidores y trabajadores en los mensajes intermedios.
+    - Usa un formato limpio listo para copiar y pegar.
+    - No utilices emojis por mensaje.
+    - Termina con una pregunta abierta para generar interacción.
+    ES IMPORTANTE que NO inventes ni alucines ningún dato que no esté en la investigación previa.
+  agent: redactor_noticia

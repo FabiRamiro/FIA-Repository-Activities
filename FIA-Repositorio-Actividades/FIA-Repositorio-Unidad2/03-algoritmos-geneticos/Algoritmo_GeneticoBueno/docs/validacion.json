@@ -1,0 +1,32 @@
+[
+  {
+    "dataset": "Parábola · x² + x + 1",
+    "initial_mse": 5.5526298591721055,
+    "final_mse": 0.0,
+    "formula": "(1 + (x + (x * x)))"
+  },
+  {
+    "dataset": "Onda · sin(x) + x",
+    "initial_mse": 0.44005628913084144,
+    "final_mse": 0.0,
+    "formula": "(sin(x) + x)"
+  },
+  {
+    "dataset": "Cúbica · x³ − 2x",
+    "initial_mse": 91.19564662796074,
+    "final_mse": 0.12343029706693845,
+    "formula": "((sin(x) / -1) + (x * (0.909297 * ((x * x) + -1.1554))))"
+  },
+  {
+    "dataset": "Recta · 2x + 3",
+    "initial_mse": 6.4683544303797476,
+    "final_mse": 0.0,
+    "formula": "(x + (x + 3))"
+  },
+  {
+    "dataset": "Constante · 3",
+    "initial_mse": 0.0,
+    "final_mse": 0.0,
+    "formula": "3"
+  }
+]

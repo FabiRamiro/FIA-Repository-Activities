@@ -1,0 +1,42 @@
+{
+  "config": {
+    "population": 180,
+    "generations": 20,
+    "max_depth": 7,
+    "tournament": 5,
+    "elitism": 4,
+    "crossover_rate": 0.85,
+    "mutation_rate": 0.3,
+    "parsimony": 0.0,
+    "metric": "mse",
+    "immigration_rate": 0.1,
+    "adaptive_mutation": true,
+    "refine_constants": true,
+    "seed": 42,
+    "operators": [
+      "+",
+      "-",
+      "*",
+      "/",
+      "sin",
+      "cos"
+    ],
+    "pruning": true
+  },
+  "points": 20001,
+  "generations_saved": 21,
+  "initial_metrics": {
+    "mse": 62.70051416686199,
+    "nmse": 0.5421503829114663,
+    "r2": -0.007663909533855762,
+    "rmse": 7.9183656247272385
+  },
+  "final_metrics": {
+    "mse": 57.95652421183197,
+    "nmse": 0.5011306878607519,
+    "r2": 0.06857705161924066,
+    "rmse": 7.6129182454451705
+  },
+  "formula": "(13.8786 + ((-7.14508 * cos((0.519936 / x))) * cos((((-0.0293137 / x) * 0.520631) / x))))",
+  "seconds": 61.98395719996188
+}

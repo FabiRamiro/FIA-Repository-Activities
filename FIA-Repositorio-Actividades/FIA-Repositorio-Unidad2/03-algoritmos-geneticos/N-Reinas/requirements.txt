@@ -1,0 +1,2 @@
+# Python 3.10 o posterior. Solo se utiliza la biblioteca estándar.
+# No necesitas instalar paquetes con pip.

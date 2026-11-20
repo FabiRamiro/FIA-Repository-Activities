@@ -1,0 +1,162 @@
+[↩ Volver a el visualizador de grafos](../README.md)
+
+# Floyd–Warshall: todos los pares
+
+## Ejecutar
+
+Desde la carpeta `02-visualizador-grafos`:
+
+```powershell
+python .\FloydWarshall_13_69\main.py
+```
+
+La dependencia es la misma que utilizan tus otros programas: PySide6. Si no está instalada:
+
+```powershell
+python -m pip install -r .\FloydWarshall_13_69\requirements.txt
+```
+
+## Qué contiene
+
+Conserva el tema carbón, las fuentes, los controles y el dibujo del grafo de Bellman-Ford.
+Añade las dos matrices propias de Floyd–Warshall, visibles en pantalla con desplazamiento
+y completas en los PNG:
+
+- **D:** distancia de cada origen (fila) a cada destino (columna).
+- **R:** último intermedio `k` que mejoró ese par. Inicialmente contiene el destino
+  para una conexión directa, el propio nodo en la diagonal, o `—` si no hay camino.
+- **Cambios:** al pie de la ventana, cada mejora muestra los dos sumandos, el resultado,
+  el costo anterior y el intermedio. Un clic en cualquier celda explica ese par.
+- **Grafo:** muestra las distancias de la fila del origen elegido y su ruta al destino
+  cuando se puede reconstruir; las rutas anteriores al resultado son provisionales.
+
+R contiene intermedios, **no predecesores ni siguientes saltos**. La reconstrucción usa
+otra matriz interna, `siguiente`, que además permite conservar la arista correcta cuando
+hay conexiones paralelas. Las celdas que mejoran se destacan en negritas y con fondo verde;
+la fila y la columna de `k` tienen un fondo distinto y borde en la captura.
+
+Se usa orden **numérico** de los identificadores: 0, 1, 2, …, 78, 666. El PDF muestra
+orden de texto (0, 1, 10, …); por eso las matrices intermedias pueden diferir, sin cambiar
+el resultado final. No se ha renombrado ningún nodo del grafo original.
+
+## Qué capturas se guardan
+
+El criterio del ejemplo es una imagen por estado completo:
+
+1. Inicialización de las matrices.
+2. Una imagen después de procesar cada nodo intermedio `k`, incluso si no hubo cambios.
+3. Resultado y control de ciclos negativos.
+
+Con 30 nodos son **32 capturas**. No se guardan las 900 comparaciones individuales
+por iteración. Los PNG miden 4400 × 2672 píxeles para este grafo y contienen las dos
+matrices completas, el grafo, el intermedio, el resumen y la consulta origen-destino.
+Las cifras y matrices también quedan en los metadatos del PNG.
+
+`Capturar iteraciones` empieza desactivado para navegar sin el costo de dibujar y
+comprimir PNG. Al activarlo, guarda al avanzar; saltar al resultado encola las intermedias.
+`Guardar todos` exporta la sesión completa y permite pausar y continuar. Retroceder
+no duplica imágenes. Cambiar la consulta crea otra carpeta y reutiliza las matrices
+calculadas; editar pesos o abrir un JSON recalcula el algoritmo.
+Las carpetas se crean dentro de `FloydWarshall_13_69/capturas`.
+
+## Guardar en Excel
+
+El botón **Guardar Excel** exporta todas las matrices en un `.xlsx` sin depender
+de las capturas PNG. La hoja **Iteraciones** coloca D a la izquierda y R a la
+derecha, con cada estado debajo del anterior. La hoja **Resultado** contiene las
+matrices finales y la consulta seleccionada. El Excel usa fondo blanco, texto negro
+y encabezados sencillos. Las mejoras se resaltan en verde suave y la fila/columna
+del intermedio en gris claro.
+
+Los costos finitos se guardan como números, no como texto. `∞` significa sin
+camino, `−∞` significa sin mínimo finito por ciclo negativo y `—` significa sin
+recorrido. La diagonal inicial conserva 0, salvo bucles negativos. El archivo
+guarda instantáneas, no fórmulas de recálculo: si cambias pesos, exporta otra vez.
+No requiere Excel instalado ni nuevas dependencias de Python. Para reemplazar
+un archivo abierto en Excel, ciérralo primero.
+
+## Pesos positivos
+
+Floyd-Warshall usa el grafo **no dirigido con pesos positivos**, igual que Dijkstra.
+Estas ocho conexiones vuelven a tener peso positivo:
+
+| Conexión | Peso |
+| --- | ---: |
+| 24–11 | 7 |
+| 21–11 | 2 |
+| 6–9 | 7 |
+| 5–20 | 2 |
+| 3–69 | 6 |
+| 666–13 | 777 |
+| 9–10 | 3 |
+| 23–16 | 11 |
+
+Los 900 pares tienen distancias finitas. Para la consulta inicial:
+
+```text
+13 → 16 → 17 → 69 cuesta 3 + 7 + 4 = 14.
+```
+
+La versión dirigida con pesos negativos corresponde únicamente a Bellman-Ford.
+Floyd conserva la detección de ciclos negativos si se importa otro grafo:
+`∞` significa sin camino y `−∞` significa sin mínimo finito por ciclo negativo.
+
+## Primero entendamos el problema
+
+**Entradas:** nodos, conexiones, pesos y si las conexiones son dirigidas.
+**Proceso:** intentar mejorar todos los pares usando un nuevo nodo intermedio cada vez.
+**Salidas:** matriz de costos, información para reconstruir rutas y pares afectados por ciclos.
+Origen y destino en la interfaz solo seleccionan qué par consultar: Floyd calcula todos.
+
+La idea es preguntar: «¿De i a j me sale más barato pasar por k?».
+Si el costo directo conocido es 8 y pasar por k cuesta 4 + (-3) = 1, se guarda 1.
+
+```text
+Inicializar D: 0 en la diagonal, peso mínimo de las aristas directas, ∞ en el resto
+Inicializar R y siguiente
+Guardar captura inicial
+Para cada nodo k:
+    Tomar una copia de D antes de la iteración
+    Para cada origen i y destino j:
+        Si existen los tramos i → k y k → j:
+            candidato = D_anterior[i,k] + D_anterior[k,j]
+            Si candidato < D_anterior[i,j]:
+                Actualizar D[i,j], R[i,j] = k y siguiente[i,j]
+                Anotar la mejora
+    Guardar una captura de toda la iteración
+Detectar ciclos donde D[k,k] < 0
+Marcar -∞ los pares que pueden entrar al ciclo y salir hacia su destino
+Guardar resultado
+```
+
+Las copias de matrices evitan que una captura antigua cambie al seguir calculando.
+Leer la matriz de la iteración anterior también hace explícita la recurrencia de Floyd:
+se compara el camino anterior con el que permite usar `k`.
+
+## Código y responsabilidades
+
+- `grafo.py`: carga JSON y representa nodos, aristas y los dos sentidos de cada conexión.
+- `algoritmo.py`: hace el cálculo sin depender de la ventana. `Cambio` describe una mejora,
+  `Paso` contiene matrices de una iteración y `Recorrido` permite consultar rutas.
+- `dibujo.py` y `tema.py`: conservan el dibujo y el estilo de los otros programas.
+- `interfaz.py`: controla navegación, consulta de pares, edición de pesos y exportación.
+- `capturas.py`: dibuja imágenes completas, independientes del zoom y desplazamiento.
+- `excel.py`: escribe el libro Excel con las matrices ya calculadas. Usa `zipfile`
+  y `xml.etree.ElementTree`, incluidos en Python, porque un XLSX contiene XML dentro de un ZIP.
+
+## Pruebas
+
+```powershell
+python -m unittest discover -s .\FloydWarshall_13_69 -v
+```
+
+Se comprueba que los pesos coincidan con Dijkstra y que las distancias de los
+900 pares coincidan con un cálculo independiente mediante una cola de prioridad.
+También se comprueba la ruta 13 → 16 → 17 → 69 y su costo 14.
+
+**Práctica:** cambia la consulta a dos nodos, selecciona una iteración y explica una
+celda en negritas usando sus dos sumandos. El grafo predeterminado ya tiene
+pesos positivos y permite practicar rutas finitas.
+
+**Prompt de práctica:** «Explícame una iteración de Floyd–Warshall: identifica i, j y k,
+calcula el costo candidato y muestra cómo cambian D y R sin saltarte la comparación».

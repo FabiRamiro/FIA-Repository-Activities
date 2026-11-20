@@ -1,0 +1,91 @@
+[
+  {
+    "folder": ".11e78cc6-eaca-40fe-8dfa-c5b15e362d18",
+    "bytes": 876243925,
+    "manifest_id": "openai.chatgpt",
+    "manifest_version": "26.5825.51511",
+    "exists_after_cleanup": false
+  },
+  {
+    "folder": ".32f786eb-cc9f-4a67-a64e-7fa946da03a3",
+    "bytes": 765601076,
+    "manifest_id": "openai.chatgpt",
+    "manifest_version": "26.5818.31338",
+    "exists_after_cleanup": false
+  },
+  {
+    "folder": ".46ae1072-14da-44e8-9e86-f2d3b80b0f02",
+    "bytes": 35948463,
+    "manifest_id": "ms-mssql.sql-database-projects-vscode",
+    "manifest_version": "1.6.2",
+    "exists_after_cleanup": false
+  },
+  {
+    "folder": ".82436d2c-690f-4325-93b3-7fa473f161e1",
+    "bytes": 912103642,
+    "manifest_id": "openai.chatgpt",
+    "manifest_version": "26.5715.61943",
+    "exists_after_cleanup": true
+  },
+  {
+    "folder": ".d42170a1-3020-40c1-89f3-7af9cc4f0e13",
+    "bytes": 67453589,
+    "exists_after_cleanup": false
+  },
+  {
+    "folder": ".dfb6976f-ae30-4723-8e45-ec7890de799f",
+    "bytes": 3643662,
+    "manifest_id": "ms-mssql.mssql",
+    "manifest_version": "1.44.0",
+    "exists_after_cleanup": false
+  },
+  {
+    "folder": ".fdb02d3d-3e91-44e2-95e6-08c24c22cfa5",
+    "bytes": 80873735,
+    "manifest_id": "ms-python.vscode-pylance",
+    "manifest_version": "2025.12.100",
+    "exists_after_cleanup": false
+  },
+  {
+    "folder": "anthropic.claude-code-2.1.299-win32-x64",
+    "bytes": 281097193,
+    "manifest_id": "Anthropic.claude-code",
+    "manifest_version": "2.1.299",
+    "exists_after_cleanup": false
+  },
+  {
+    "folder": "ban.spellright-3.0.154",
+    "bytes": 23952553,
+    "manifest_id": "ban.spellright",
+    "manifest_version": "3.0.154",
+    "exists_after_cleanup": false
+  },
+  {
+    "folder": "ms-python.vscode-pylance-2026.4.100",
+    "bytes": 219745908,
+    "manifest_id": "ms-python.vscode-pylance",
+    "manifest_version": "2026.4.100",
+    "exists_after_cleanup": false
+  },
+  {
+    "folder": "vadimcn.vscode-lldb-1.12.2",
+    "bytes": 142244223,
+    "manifest_id": "vadimcn.vscode-lldb",
+    "manifest_version": "1.12.2",
+    "exists_after_cleanup": true
+  },
+  {
+    "folder": "vscjava.vscode-gradle-3.18.0",
+    "bytes": 37339429,
+    "manifest_id": "vscjava.vscode-gradle",
+    "manifest_version": "3.18.0",
+    "exists_after_cleanup": false
+  },
+  {
+    "folder": "vscjava.vscode-java-dependency-0.27.6",
+    "bytes": 1216189,
+    "manifest_id": "vscjava.vscode-java-dependency",
+    "manifest_version": "0.27.6",
+    "exists_after_cleanup": false
+  }
+]

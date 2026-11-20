@@ -1,0 +1,242 @@
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{left=2.7cm,right=2.7cm,top=2.7cm,bottom=2.7cm,headheight=15pt}
+\usepackage{titlesec}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{parskip}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=blue,
+    pdftitle={Historia de la Inteligencia Artificial},
+    pdfauthor={Osvaldo Fabian Ramiro Balboa}
+}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[L]{Historia de la Inteligencia Artificial}
+\fancyhead[R]{\thepage}
+
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection.}{0.6em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection.}{0.6em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection.}{0.6em}{}
+
+\title{\textbf{Historia de la Inteligencia Artificial}}
+\author{Osvaldo Fabian Ramiro Balboa}
+\date{5 de septiembre de 2026}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace*{2cm}
+{\LARGE \textbf{Historia de la Inteligencia Artificial}\par}
+\vspace{0.5cm}
+{\Large \textbf{Fundamentos de la Inteligencia Artificial}\par}
+\vspace{2.5cm}
+{\large Osvaldo Fabian Ramiro Balboa\par}
+\vspace{0.3cm}
+{\large Dr. Said Polanco Martag\'on\par}
+\vfill
+{\large 5 de septiembre de 2026\par}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+% =========================================================
+\section{Introducci\'on}
+% =========================================================
+
+La inteligencia artificial no es un invento reciente ni el producto exclusivo de la \'ultima d\'ecada. Es, en realidad, el resultado de casi ochenta a\~nos de trabajo te\'orico, de decepciones institucionales y de renacimientos que casi nadie esperaba. Haenlein y Kaplan lo explican bien cuando se\~nalan que la inteligencia artificial fue establecida como disciplina acad\'emica en la d\'ecada de 1950 y permaneci\'o durante m\'as de medio siglo como un \'area de relativa oscuridad cient\'ifica e inter\'es pr\'actico limitado, hasta que el auge del Big Data y las mejoras en la capacidad de c\'omputo la llevaron al entorno empresarial y a la conversaci\'on p\'ublica (Haenlein y Kaplan, 2019).
+
+Este reporte tiene como objetivo construir una cronolog\'ia t\'ecnica de la inteligencia artificial que relacione los avances te\'oricos de cada \'epoca con los lenguajes de programaci\'on y con la capacidad de c\'omputo disponible en su momento. Para esto se revisaron ocho art\'iculos acad\'emicos proporcionados como material de trabajo, entre los que destacan el an\'alisis hist\'orico de Haenlein y Kaplan (2019) publicado en California Management Review, el recuento de Buchanan (2005) en AI Magazine, la reflexi\'on de Grosz (2012) sobre el test de Turing, el trabajo de Milkowski (2022) sobre la ingenier\'ia conceptual de Turing, el estudio de Abramson sobre la influencia de Descartes en Turing, el an\'alisis de Natale y Henrickson (2024) sobre la creatividad de las m\'aquinas, y la revisi\'on de Zhang, Cheok, Pan, Cai y Yan (2023) sobre la evoluci\'on de los transformers generativos.
+
+Se abordan cuatro grandes etapas: primero, la llamada IA simb\'olica, fundamentada en la manipulaci\'on de s\'imbolos y reglas l\'ogicas expl\'icitas, despu\'es, el invierno de la IA, un periodo de desilusi\'on y recorte presupuestal derivado de expectativas que no se cumplieron, en tercer lugar, el auge del aprendizaje autom\'atico, que sustituy\'o el paradigma de reglas expl\'icitas por el aprendizaje estad\'istico a partir de datos, y por \'ultimo, la era del Big Data y el aprendizaje profundo, en la que la disponibilidad de enormes vol\'umenes de informaci\'on y de hardware paralelo permiti\'o por fin implementar arquitecturas neuronales descritas d\'ecadas antes pero que resultaban, hasta entonces, computacionalmente inviables.
+
+Vale la pena aclarar algo desde ahora: los documentos consultados para este trabajo no abordan de manera directa el tema del TinyML ni de la inteligencia artificial en microcontroladores. Como esta secci\'on forma parte del contenido m\'inimo solicitado, se incluye apoy\'andose en dos referencias externas, ampliamente reconocidas en ese campo, que se se\~nalan con claridad en su momento para no confundirlas con el resto del material, que s\'i proviene de los documentos del proyecto.
+
+Finalmente, el reporte cierra con un an\'alisis cr\'itico sobre c\'omo la capacidad de c\'omputo actual ha sido el factor habilitador, m\'as que el conceptual, para la implementaci\'on de redes neuronales profundas cuyos fundamentos eran conocidos desde hace d\'ecadas, y con una reflexi\'on personal sobre las implicaciones de esta trayectoria.
+
+% =========================================================
+\section{Desarrollo Cronol\'ogico de la Inteligencia Artificial}
+% =========================================================
+
+\subsection{Antecedentes filos\'oficos y matem\'aticos, antes de 1950}
+
+La idea de una m\'aquina capaz de razonar antecede por siglos a la computadora electr\'onica. Ren\'e Descartes plante\'o en 1637 lo que hoy se conoce como el ``test del lenguaje'': un criterio para distinguir a un ser humano de un aut\'omata basado en la capacidad de producir respuestas apropiadas ante cualquier situaci\'on posible, algo que Descartes consideraba imposible para una m\'aquina, ya que estas s\'olo pod\'ian reaccionar de forma fija ante est\'imulos espec\'ificos (Abramson, 2011). Es interesante notar que, seg\'un el propio Abramson, Alan Turing probablemente conoc\'ia este argumento de Descartes y lo ten\'ia presente al escribir su art\'iculo de 1950, de modo que el test de Turing puede leerse como una respuesta directa, casi tres siglos despu\'es, al problema planteado por Descartes.
+
+Gottfried Wilhelm Leibniz, por su parte, vislumbr\'o la posibilidad de dispositivos de razonamiento mec\'anico basados en reglas de la l\'ogica. Tanto Leibniz como Blaise Pascal dise\~naron m\'aquinas calculadoras que mecanizaban la aritm\'etica, sin llegar a afirmar que dichos dispositivos pudieran pensar. Estas ideas se alimentaron tambi\'en de la ciencia ficci\'on, desde los aut\'omatas de Julio Verne hasta el Tiktok de L. Frank Baum, descrito en 1907 como un hombre mec\'anico perfecto que piensa, habla, act\'ua y hace todo menos vivir (Buchanan, 2005).
+
+Un antecedente que suele pasarse por alto es el de Ada Lovelace, quien a mediados del siglo diecinueve colabor\'o con Charles Babbage en el dise\~no de la M\'aquina Anal\'itica y escribi\'o notas donde se\~nalaba que una m\'aquina de este tipo jam\'as podr\'ia originar nada por s\'i misma, sino solamente ejecutar lo que sus programadores le indicaran, esta idea se conoce hoy como la ``objeci\'on de Lovelace'' y ha sido, durante mucho tiempo, uno de los argumentos m\'as citados en contra de la posibilidad de una creatividad genuinamente maquinal (Natale y Henrickson, 2024).
+
+El verdadero parteaguas te\'orico llega con Alan Turing. En 1936 formaliza el concepto de m\'aquina universal de c\'omputo, y en 1950 publica su art\'iculo ``Computing Machinery and Intelligence'', donde propone el llamado juego de la imitaci\'on, hoy conocido como el test de Turing: un criterio para juzgar si una m\'aquina exhibe comportamiento inteligente (Haenlein y Kaplan, 2019). Milkowski propone leer esta contribuci\'on no s\'olo como un criterio operacional estrecho, sino como un ejercicio de ingenier\'ia conceptual dirigido a una comprensi\'on te\'orica del pensamiento en t\'erminos mecanicistas (Milkowski, 2022). Grosz coincide en que el art\'iculo de Turing sigue siendo, siete d\'ecadas despu\'es, un punto de referencia obligado, aunque considera que si Turing escribiera hoy probablemente propondr\'ia una prueba distinta, dado cu\'anto ha cambiado la manera en que las personas usan las computadoras (Grosz, 2012).
+
+La idea de la m\'aquina universal de Turing sigue siendo, d\'ecadas despu\'es, objeto de estudio activo. Zenil, retomando el trabajo de Gregory Chaitin, defiende la idea de que compresi\'on es comprensi\'on: un modelo cient\'ifico es mejor entre m\'as pueda explicar con menos, y esto mismo puede verse en su investigaci\'on sobre autom\'atas celulares, donde muestra que la universalidad de Turing es mucho m\'as com\'un entre los programas de c\'omputo de lo que antes se supon\'ia, al punto de que casi cualquier programa, dadas las condiciones iniciales adecuadas, es capaz de computaci\'on universal (Zenil, 2019). Esta reflexi\'on resulta relevante para la inteligencia artificial porque, en el fondo, buena parte del aprendizaje autom\'atico consiste precisamente en eso: comprimir patrones observados en los datos dentro de un n\'umero manejable de par\'ametros.
+
+En esta misma \'epoca convergen aportaciones de m\'ultiples disciplinas que, con el tiempo, se integrar\'ian en la inteligencia artificial: la cibern\'etica de Norbert Wiener, el trabajo de Warren McCulloch y Walter Pitts sobre redes neuronales en organismos simples, la teor\'ia de la informaci\'on de Claude Shannon, la teor\'ia de juegos de John von Neumann y Oskar Morgenstern, y la ling\"u\'istica generativa de Noam Chomsky (Buchanan, 2005). Como se\~nala el propio Buchanan, s\'olo en el \'ultimo medio siglo se cont\'o con dispositivos computacionales y lenguajes de programaci\'on lo suficientemente potentes como para construir pruebas experimentales de las ideas sobre lo que es la inteligencia.
+
+\subsection{La primavera de la IA: la conferencia de Dartmouth de 1956}
+
+El t\'ermino inteligencia artificial fue acu\~nado formalmente en 1956, cuando John McCarthy y Marvin Minsky organizaron el Dartmouth Summer Research Project on Artificial Intelligence, un taller de aproximadamente ocho semanas financiado por la Fundaci\'on Rockefeller que reuni\'o a quienes ser\'ian considerados los padres fundadores del campo, entre ellos Nathaniel Rochester, quien m\'as tarde dise\~n\'o la IBM 701, y el matem\'atico Claude Shannon (Haenlein y Kaplan, 2019). Este evento marca el inicio de lo que Haenlein y Kaplan llaman la primavera de la IA, y es tambi\'en la reuni\'on donde Newell, Shaw y Simon presentaron su programa LT, capaz de inventar demostraciones de teoremas de l\'ogica (Buchanan, 2005).
+
+\subsection{El verano de la IA: los primeros \'exitos y los lenguajes simb\'olicos}
+
+La conferencia de Dartmouth fue seguida por casi dos d\'ecadas de \'exitos notables. Entre 1964 y 1966, Joseph Weizenbaum desarroll\'o en el MIT el programa ELIZA, capaz de simular una conversaci\'on humana y de intentar superar el test de Turing. Por su parte, Herbert Simon, Cliff Shaw y Allen Newell crearon el General Problem Solver, capaz de resolver de forma autom\'atica problemas como las Torres de Han\'oi (Haenlein y Kaplan, 2019). Arthur Samuel, mientras tanto, escribi\'o durante la d\'ecada de 1950 su famoso programa de damas para la IBM 704, notable porque aprend\'ia a mejorar su propio desempe\~no jugando contra humanos y contra otras computadoras, a pesar de las severas limitaciones de memoria y velocidad de aquel hardware (Buchanan, 2005).
+
+Todo este trabajo estuvo condicionado, y a la vez impulsado, por la aparici\'on de lenguajes dise\~nados espec\'ificamente para la manipulaci\'on de s\'imbolos. Buchanan lo resume as\'i: los lenguajes de manipulaci\'on simb\'olica como Lisp, IPL y POP, junto con los sistemas de tiempo compartido, sobre una base de avances de hardware tanto en procesadores como en memoria, dieron a los programadores nuevo poder durante las d\'ecadas de 1950 y 1960 (Buchanan, 2005). Vale mencionar que antes de la invenci\'on de la recolecci\'on autom\'atica de memoria, la gesti\'on de memoria era responsabilidad directa del programador, lo cual limitaba much\'isimo la complejidad de los programas que se pod\'ian escribir.
+
+De entre estos lenguajes, LISP, dise\~nado por John McCarthy, se convirti\'o en el m\'as usado por la comunidad de IA simb\'olica, gracias a su capacidad para tratar el c\'odigo mismo como un dato manipulable, algo muy \'util para sistemas que necesitaban representar y transformar conocimiento. Hacia mediados de la d\'ecada de 1960, el programa Dendral fue descrito por Goldstein y Papert como un cambio de paradigma dentro de la inteligencia artificial, al inaugurar los llamados sistemas basados en conocimiento, poco despu\'es apareci\'o MYCIN, uno de los sistemas expertos m\'edicos m\'as influyentes de la \'epoca (Buchanan, 2005).
+
+\subsection{El invierno de la IA}
+
+El optimismo de los pioneros choc\'o r\'apidamente con la realidad t\'ecnica. En 1970, Marvin Minsky lleg\'o a declarar a la revista Life que, en un plazo de entre tres y ocho a\~nos, se desarrollar\'ia una m\'aquina con la inteligencia general de un ser humano promedio (Haenlein y Kaplan, 2019). Apenas tres a\~nos m\'as tarde, en 1973, el Congreso de los Estados Unidos comenz\'o a criticar con fuerza el gasto en investigaci\'on de inteligencia artificial, y ese mismo a\~no el matem\'atico brit\'anico James Lighthill public\'o un reporte, encargado por el British Science Research Council, en el que afirmaba que las m\'aquinas nunca alcanzar\'ian m\'as que el nivel de un aficionado experimentado en juegos como el ajedrez. Como consecuencia, el gobierno brit\'anico retir\'o el financiamiento a la investigaci\'on de IA en todas las universidades excepto tres (Edimburgo, Sussex y Essex), y el gobierno estadounidense sigui\'o un camino parecido poco despu\'es (Haenlein y Kaplan, 2019). Este periodo marca el llamado invierno de la IA.
+
+Un factor t\'ecnico que contribuy\'o a esta crisis fue el trabajo de Marvin Minsky y Seymour Papert sobre los perceptrones. En 1969, ambos demostraron formalmente que las computadoras de la \'epoca no ten\'ian el poder de procesamiento suficiente para el trabajo que exig\'ian las redes neuronales artificiales, lo cual estanc\'o la l\'inea de investigaci\'on conexionista que se hab\'ia originado con la teor\'ia del aprendizaje hebbiano, propuesta por Donald Hebb en 1949 (Haenlein y Kaplan, 2019). Conviene subrayar algo aqu\'i: esta limitaci\'on no era conceptual, sino computacional. El modelo matem\'atico era, en lo esencial, correcto, lo que faltaba era el hardware capaz de entrenarlo en un tiempo razonable.
+
+\subsection{El oto\~no de la IA: sistemas expertos comerciales y Deep Blue}
+
+Durante la d\'ecada de 1980, Jap\'on impuls\'o un fuerte financiamiento a la inteligencia artificial a trav\'es de su proyecto de computadoras de quinta generaci\'on, a lo cual respondi\'o la agencia estadounidense DARPA aumentando tambi\'en su presupuesto, aunque, seg\'un Haenlein y Kaplan, no se lograron avances adicionales relevantes en los a\~nos siguientes (Haenlein y Kaplan, 2019). Este periodo, que los autores llaman el oto\~no de la IA, se caracteriza por la comercializaci\'on de los sistemas expertos: colecciones de reglas que asumen que la inteligencia humana puede formalizarse mediante enunciados condicionales del tipo si entonces.
+
+El ejemplo m\'as visible de esta etapa es Deep Blue, el programa de ajedrez de IBM que en 1997 venci\'o al campe\'on mundial Gary Kasparov, procesando doscientos millones de posibles movimientos por segundo y calculando el movimiento \'optimo mirando veinte jugadas adelante mediante un m\'etodo llamado b\'usqueda en \'arbol, con ello, de paso, se demostr\'o que una de las afirmaciones de Lighthill hab\'ia estado equivocada (Haenlein y Kaplan, 2019). Pero, como se\~nalan los mismos autores, los sistemas expertos funcionan bien s\'olo en \'areas que se prestan a este tipo de formalizaci\'on: un sistema experto no puede entrenarse f\'acilmente para reconocer rostros, ni siquiera para distinguir una fotograf\'ia de un panecillo de una de un perro chihuahua, precisamente porque estas tareas requieren interpretar datos externos, aprender de ellos y adaptarse de forma flexible, que son las caracter\'isticas que en realidad definen a la inteligencia artificial en sentido amplio.
+
+\subsection{El renacimiento conexionista: Deep Learning y AlphaGo}
+
+El regreso de las redes neuronales, ahora bajo el nombre de aprendizaje profundo, no lleg\'o mediante un descubrimiento te\'orico radical, sino gracias a la confluencia de datos masivos y de hardware m\'as capaz. El hito m\'as visible de este resurgimiento fue AlphaGo, un programa de Google DeepMind que venci\'o al campe\'on mundial del juego de Go usando una combinaci\'on de redes neuronales profundas y b\'usqueda en \'arbol (Haenlein y Kaplan, 2019, quienes a su vez citan a Silver et al., 2016, autores del art\'iculo original publicado en Nature). El juego de Go es sustancialmente m\'as complejo que el ajedrez, ya que en la apertura existen 361 movimientos posibles frente a 20 en el ajedrez, por lo que durante mucho tiempo se crey\'o que las computadoras jam\'as podr\'ian superar a los humanos en \'el (Haenlein y Kaplan, 2019).
+
+\subsection{Redes recurrentes, LSTM y el l\'imite de las secuencias largas}
+
+En paralelo, la investigaci\'on en redes neuronales recurrentes permiti\'o modelar datos secuenciales como el lenguaje natural. Las redes de memoria de largo y corto plazo, conocidas como LSTM e introducidas por Hochreiter y Schmidhuber en 1997, buscaban resolver el problema de que las redes recurrentes tradicionales pierden memoria de eventos lejanos en una secuencia. Sin embargo, estas arquitecturas segu\'ian sufriendo problemas de gradientes que se desvanecen o que explotan al procesar secuencias muy largas (Zhang et al., 2023). Este obst\'aculo t\'ecnico ser\'ia finalmente resuelto por una arquitectura completamente distinta: el transformer.
+
+\subsection{La era del Big Data, los transformers y los modelos de lenguaje a gran escala}
+
+El art\'iculo ``Attention is All You Need'', publicado en 2017 por un equipo de investigadores de Google encabezado por Vaswani, introdujo la arquitectura transformer, basada en un mecanismo de autoatenci\'on que permite ponderar la importancia relativa de las distintas partes de una secuencia de entrada, superando las limitaciones de las redes recurrentes y de las LSTM para capturar dependencias de largo alcance (Zhang et al., 2023). Esta arquitectura es la base de los modelos generativos preentrenados, la familia GPT, y de la actual generaci\'on de modelos de lenguaje a gran escala.
+
+Zhang y sus colegas explican que uno de los factores que impuls\'o el auge de los transformers fue el crecimiento constante del poder de c\'omputo junto con la disponibilidad de conjuntos de datos a gran escala: entrenar modelos de transformers, especialmente los m\'as grandes, requiere recursos computacionales considerables, y esto s\'olo fue posible gracias a los avances en las tecnolog\'ias de GPU y TPU, junto con la disponibilidad de enormes cantidades de datos para entrenarlos (Zhang et al., 2023). Los mismos autores documentan que entrenar un modelo del tama\~no de GPT tres, con 175 mil millones de par\'ametros, requiere del orden de 3.14 por diez a la 23 operaciones de punto flotante, lo que se traduce en aproximadamente 355 a\~nos de c\'omputo usando una sola GPU y en cerca de 700 gigabytes de memoria, una cifra que excede por mucho la capacidad de una sola tarjeta gr\'afica y que obliga a repartir el entrenamiento entre m\'ultiples GPU en cl\'usteres de alto rendimiento (Zhang et al., 2023). Los mismos autores advierten, adem\'as, que estas exigencias computacionales significan que s\'olo organizaciones con financiamiento sustancial pueden entrenar los modelos m\'as avanzados, lo cual genera preocupaciones sobre la democratizaci\'on de la inteligencia artificial (Zhang et al., 2023).
+
+En cuanto al lenguaje de programaci\'on, el propio art\'iculo de Zhang y colaboradores presenta su tutorial de construcci\'on de un transformer generativo utilizando fragmentos de c\'odigo escritos en Python, algo consistente con la posici\'on que este lenguaje ocupa hoy como est\'andar de facto en la implementaci\'on de modelos de aprendizaje profundo, apoy\'andose en bibliotecas especializadas que delegan el c\'omputo pesado a rutinas optimizadas de m\'as bajo nivel.
+
+\subsection{Tabla resumen de la cronolog\'ia t\'ecnica}
+
+La tabla 1 sintetiza la relaci\'on entre las etapas de la inteligencia artificial documentadas en las fuentes revisadas y los lenguajes de programaci\'on que estas mismas fuentes asocian a cada periodo.
+
+\begin{longtable}{p{2.7cm} p{3.4cm} p{5.2cm} p{2.4cm}}
+\toprule
+\textbf{Periodo} & \textbf{Etapa} & \textbf{Hitos documentados} & \textbf{Lenguaje(s)} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Periodo} & \textbf{Etapa} & \textbf{Hitos documentados} & \textbf{Lenguaje(s)} \\
+\midrule
+\endhead
+Antes de 1950 & Antecedentes filos\'oficos & Descartes y el test del lenguaje (1637), Lovelace y Babbage, Turing y la m\'aquina universal (1936) & Sin lenguaje de alto nivel \\
+De 1950 a 1956 & Formalizaci\'on te\'orica & ``Computing Machinery and Intelligence'' (1950) & C\'odigo de m\'aquina \\
+De 1956 a 1973 & Primavera y verano de la IA & Conferencia de Dartmouth, ELIZA, General Problem Solver, Dendral, MYCIN & LISP, IPL, POP \\
+De 1973 a comienzos de los ochenta & Invierno de la IA & Reporte Lighthill, recortes de financiamiento, l\'imite de los perceptrones (Minsky y Papert, 1969) & LISP en declive \\
+D\'ecada de 1980 y hasta 1997 & Oto\~no de la IA & Sistemas expertos comerciales, proyecto japon\'es de quinta generaci\'on, Deep Blue vence a Kasparov (1997) & LISP \\
+Hasta 2016 & Renacimiento conexionista & LSTM (1997), AlphaGo vence al campe\'on de Go & Sin dato en las fuentes \\
+De 2017 en adelante & Era del Big Data y los transformers & Transformer de Vaswani et al. (2017), modelos GPT & Python \\
+Actualidad, sin cobertura en las fuentes del proyecto & Edge AI y TinyML & Modelos comprimidos para microcontroladores & Python para el entrenamiento, C y C++ para la inferencia \\
+\bottomrule
+\caption{Cronolog\'ia t\'ecnica de la inteligencia artificial seg\'un los documentos revisados.}
+\label{tab:cronologia}
+\end{longtable}
+
+% =========================================================
+\section{La Transici\'on hacia el Machine Learning y el TinyML}
+% =========================================================
+
+\subsection{Del paradigma basado en reglas al paradigma basado en datos}
+
+La transici\'on de la IA simb\'olica al machine learning representa un cambio de paradigma, no una simple mejora incremental. Mientras que un sistema experto codifica de forma expl\'icita el conocimiento humano en reglas escritas por ingenieros del conocimiento, un sistema de aprendizaje autom\'atico infiere patrones directamente a partir de ejemplos, ajustando de manera iterativa los par\'ametros de un modelo estad\'istico. Como ya se mencion\'o, esta idea no es nueva, pues se remonta al aprendizaje hebbiano de 1949, pero su viabilidad pr\'actica dependi\'o por completo de dos condiciones que no se cumplieron sino hasta mucho despu\'es: datos suficientes y hardware capaz de procesarlos (Haenlein y Kaplan, 2019).
+
+Aqu\'i resulta \'util el llamado efecto de la IA que describen Haenlein y Kaplan: en cuanto una capacidad de inteligencia artificial alcanza un uso generalizado, deja de percibirse como inteligencia artificial propiamente dicha (Haenlein y Kaplan, 2019). Esto explica, al menos en parte, por qu\'e el aprendizaje autom\'atico, hoy omnipresente en motores de recomendaci\'on y en detecci\'on de fraude, rara vez genera el mismo asombro que provoc\'o en su momento el ajedrez de Deep Blue o el Go de AlphaGo.
+
+\subsection{TinyML: una nota sobre fuentes externas al proyecto}
+
+Como se advirti\'o en la introducci\'on, ninguno de los ocho documentos proporcionados para este trabajo aborda el tema del TinyML. Dado que este punto forma parte del contenido m\'inimo solicitado para el reporte, se incluye a continuaci\'on una descripci\'on breve, apoyada \'unicamente en dos fuentes externas y ampliamente citadas en la literatura especializada: el libro de Warden y Situnayake (2019) y el reporte de Soro (2021).
+
+El t\'ermino TinyML fue acu\~nado por Pete Warden para describir aplicaciones de aprendizaje autom\'atico que usan modelos miniaturizados capaces de realizar inferencia con un consumo energ\'etico extremadamente bajo, en dispositivos de tipo microcontrolador que carecen de un sistema operativo con los recursos de Linux, Windows o macOS (Warden y Situnayake, 2019). Este campo se ubica en la intersecci\'on entre el aprendizaje autom\'atico, el dise\~no de hardware de bajo consumo y los sistemas embebidos, y se caracteriza por restricciones extremas: presupuestos de memoria de decenas o cientos de kilobytes, almacenamiento inferior a un megabyte y consumos de energ\'ia del orden de miliwatts (Soro, 2021).
+
+Para lograr que una red neuronal quepa en estas condiciones se recurre a t\'ecnicas de compresi\'on como la cuantizaci\'on, que consiste en representar los pesos con enteros de ocho bits en lugar de n\'umeros de punto flotante de treinta y dos bits, o la poda de conexiones poco relevantes. En t\'erminos de flujo de trabajo, lo habitual es entrenar el modelo en Python usando alguna biblioteca de aprendizaje profundo, para despu\'es convertirlo y desplegarlo mediante un motor de inferencia escrito en C o C++, pensado para maximizar la eficiencia en el dispositivo final. Esta tendencia resulta interesante porque, en cierto sentido, invierte la relaci\'on entre teor\'ia y c\'omputo que dominaba en la d\'ecada anterior: si en los a\~nos 2010 el reto era conseguir tanto c\'omputo como fuera posible, en TinyML el reto es justo el contrario, comprimir un modelo que ya funciona bien para que quepa donde los recursos son, por dise\~no, muy limitados.
+
+% =========================================================
+\section{An\'alisis Cr\'itico: C\'omputo Actual y Redes Neuronales Profundas}
+% =========================================================
+
+Uno de los hallazgos m\'as claros al reconstruir esta cronolog\'ia es que gran parte de la teor\'ia matem\'atica detr\'as del aprendizaje profundo actual no es nueva. El aprendizaje hebbiano, que sostiene que las conexiones neuronales se refuerzan cuando se activan de forma correlacionada, data de 1949. Sin embargo, como demostraron Minsky y Papert en 1969, las computadoras de la \'epoca carec\'ian del poder de procesamiento necesario para entrenar redes de m\'ultiples capas en un tiempo pr\'actico, lo que freno la investigaci\'on conexionista durante m\'as de una d\'ecada (Haenlein y Kaplan, 2019).
+
+Esta observaci\'on tiene una implicaci\'on que vale la pena subrayar: la brecha entre la posibilidad te\'orica y la viabilidad pr\'actica de las redes neuronales profundas fue, sobre todo, una brecha de c\'omputo y no de conocimiento. La idea matem\'atica ya estaba ah\'i desde los a\~nos cuarenta y cincuenta, lo que faltaba era la capacidad material para ponerla a prueba a una escala \'util.
+
+El cambio decisivo lleg\'o cuando la disponibilidad de hardware especializado, junto con conjuntos de datos cada vez m\'as grandes, hizo posible entrenar modelos con muchos m\'as par\'ametros de los que antes eran viables. Zhang y sus colegas lo describen con claridad al se\~nalar que la posibilidad de entrenar modelos de transformers, sobre todo los m\'as grandes, se volvi\'o realidad gracias a los avances en las tecnolog\'ias de GPU y TPU, combinados con la disponibilidad de vastas cantidades de datos para entrenarlos (Zhang et al., 2023). El caso de GPT tres, que seg\'un los mismos autores requiri\'o del orden de 3.14 por diez a la 23 operaciones de punto flotante y cerca de 700 gigabytes de memoria s\'olo para almacenar sus par\'ametros, ilustra hasta qu\'e punto el c\'omputo dej\'o de ser un asunto secundario para convertirse en una variable estrat\'egica, y en una barrera de entrada que concentra el desarrollo de los modelos m\'as avanzados en un n\'umero reducido de organizaciones con capital suficiente para financiar cl\'usteres de alto rendimiento (Zhang et al., 2023).
+
+Algo parecido ocurre con la propia arquitectura transformer. Su aparici\'on en 2017 no reemplaz\'o tanto el conocimiento existente sobre redes recurrentes como resolvi\'o su principal cuello de botella pr\'actico, que era la dificultad de paralelizar el procesamiento secuencial de las redes recurrentes tradicionales, mediante un mecanismo de atenci\'on que s\'i puede paralelizarse en hardware gr\'afico (Zhang et al., 2023). Visto as\'i, muchos de los avances m\'as citados de la \'ultima d\'ecada son, en el fondo, reformulaciones dise\~nadas para aprovechar mejor el hardware disponible, m\'as que descubrimientos matem\'aticos completamente nuevos, aunque tampoco habr\'ia que restarles m\'erito por eso, ya que dar con la reformulaci\'on correcta no es cosa menor.
+
+Por \'ultimo, conviene se\~nalar que el movimiento hacia el TinyML, aunque no est\'a documentado en las fuentes del proyecto, introduce una tensi\'on interesante en esta narrativa. Si el relato dominante de la \'ultima d\'ecada es que m\'as c\'omputo permite implementar lo que antes era s\'olo teor\'ia, el TinyML plantea el problema inverso: c\'omo reducir de manera deliberada los requerimientos de un modelo que ya es viable, para que funcione bajo restricciones extremas de energ\'ia y memoria. Esto sugiere que la relaci\'on entre teor\'ia y c\'omputo en la inteligencia artificial no va en una sola direcci\'on.
+
+% =========================================================
+\section{Conclusi\'on}
+% =========================================================
+
+Al hacer la cronolog\'ia, lo que m\'as me llama la atenci\'on es que la inteligencia artificial no avanz\'o siguiendo una l\'inea recta de descubrimientos cada vez m\'as sofisticados, sino a trav\'es de una sucesi\'on de ciclos en los que la ambici\'on conceptual se adelant\'o, una y otra vez, a la capacidad material para realizarla. El invierno de la IA que documentan Haenlein y Kaplan no me parece, visto en retrospectiva, un fracaso del pensamiento cient\'ifico, sino m\'as bien la consecuencia casi predecible de haber prometido resultados que dependian de recursos computacionales que, sencillamente, todav\'ia no exist\'ian. Y creo que esta lecci\'on aplica m\'as all\'a de la inteligencia artificial: la distancia entre lo que sabemos que es posible en teor\'ia y lo que de verdad podemos construir suele depender, ante todo, de ingenier\'ia y de recursos disponibles, no s\'olo de buenas ideas.
+
+Tambi\'en me parece revelador el papel que jugaron los lenguajes de programaci\'on como se\~nal de los cambios de paradigma que fue atravesando el campo. El tr\'ansito de LISP, un lenguaje pensado para manipular s\'imbolos y reglas l\'ogicas de forma expl\'icita, hacia Python, que en el fondo funciona como una interfaz sobre bibliotecas num\'ericas optimizadas en niveles m\'as bajos, refleja de manera bastante concreta el cambio de una inteligencia artificial basada en el conocimiento expl\'icito hacia una basada en el aprendizaje estad\'istico impl\'icito a partir de datos. No creo que esta transici\'on haya sido casualidad, dif\'icilmente se puede entrenar una red con millones de par\'ametros en un lenguaje pensado originalmente para representar \'arboles de decisi\'on l\'ogica.
+
+Por otro lado, aunque el TinyML no estaba entre los temas cubiertos por los documentos que revis\'e para este trabajo, me hizo reconsiderar la idea, bastante extendida, de que m\'as c\'omputo es siempre mejor. Es cierto que el Big Data y el hardware paralelo permitieron por fin implementar las redes neuronales profundas que Minsky y Papert consideraban inviables en 1969, pero tambi\'en parece cierto que buena parte del futuro cercano del campo depender\'a de la habilidad contraria, es decir, de comprimir y optimizar modelos para que quepan en dispositivos con memoria de apenas kilobytes. Esto me sugiere que la siguiente etapa de la inteligencia artificial no ser\'a necesariamente m\'as grande, sino m\'as adaptada al contexto espec\'ifico en el que se vaya a usar, ya sea un centro de datos con miles de tarjetas gr\'aficas o un sensor alimentado por bater\'ia.
+
+Como comentario final, esta investigaci\'on tambi\'en me dej\'o una postura m\'as cautelosa frente a los discursos que presentan a la inteligencia artificial actual como una ruptura radical con el pasado. Muchos de los componentes matem\'aticos de los modelos contempor\'aneos, como las redes neuronales o los algoritmos de aprendizaje basados en gradientes, llevan d\'ecadas conocidos entre la comunidad cient\'ifica, lo verdaderamente nuevo, en todo caso, es la infraestructura que finalmente los volvi\'o pr\'acticos a gran escala. Y me parece que entender esa distinci\'on, entre la idea y la infraestructura que la hace posible, es justo lo que permite no sobreestimar la novedad conceptual de los avances recientes, sin por eso subestimar el tama\~no del salto de ingenier\'ia que representaron.
+
+% =========================================================
+\section*{Bibliograf\'ia}
+\addcontentsline{toc}{section}{Bibliograf\'ia}
+% =========================================================
+
+\subsection*{Fuentes documentales del proyecto}
+
+\begin{sloppypar}
+\begin{enumerate}[leftmargin=1.2cm,itemsep=8pt]
+
+\item Abramson, D. (2011). Descartes' influence on Turing. \textit{Studies in History and Philosophy of Science}. Publicaci\'on en l\'inea previa a la asignaci\'on de volumen y n\'umero. \url{https://doi.org/10.1016/j.shpsa.2011.09.004}
+
+\item Buchanan, B. G. (2005). A (very) brief history of artificial intelligence. \textit{AI Magazine}, 26(4), 53--60.
+
+\item Grosz, B. J. (2012). What question would Turing pose today? \textit{AI Magazine}, 33(4), 73--81.
+
+\item Haenlein, M., y Kaplan, A. (2019). A brief history of artificial intelligence: On the past, present, and future of artificial intelligence. \textit{California Management Review}, 61(4), 5--14. \url{https://doi.org/10.1177/0008125619864925}
+
+\item Milkowski, M. (2022). Turing's conceptual engineering. \textit{Philosophies}, 7(3), art\'iculo 69. \url{https://doi.org/10.3390/philosophies7030069}
+
+\item Natale, S., y Henrickson, L. (2024). The Lovelace effect: Perceptions of creativity in machines. \textit{New Media \& Society}, 26(4), 1909--1926. \url{https://doi.org/10.1177/14614448221077278}
+
+\item Zenil, H. (2019). Compression is comprehension: The unreasonable effectiveness of digital computation in the natural world (arXiv:1904.10258). arXiv. \url{https://arxiv.org/abs/1904.10258}
+
+\item Zhang, E. Y., Cheok, A. D., Pan, Z., Cai, J., y Yan, Y. (2023). From Turing to transformers: A comprehensive review and tutorial on the evolution and applications of generative transformer models. \textit{Sci}, 5(4), art\'iculo 46. \url{https://doi.org/10.3390/sci5040046}
+
+\end{enumerate}
+
+\subsection*{Fuentes complementarias, no incluidas entre los documentos del proyecto}
+
+\begin{enumerate}[leftmargin=1.2cm,itemsep=8pt]
+
+\item Soro, S. (2021). \textit{TinyML for ubiquitous edge AI} (arXiv:2102.01255). arXiv. \url{https://arxiv.org/abs/2102.01255}
+
+\item Warden, P., y Situnayake, D. (2019). \textit{TinyML: Machine learning with TensorFlow Lite on Arduino and ultra low power microcontrollers}. O'Reilly Media.
+
+\end{enumerate}
+\end{sloppypar}
+
+\end{document}                      

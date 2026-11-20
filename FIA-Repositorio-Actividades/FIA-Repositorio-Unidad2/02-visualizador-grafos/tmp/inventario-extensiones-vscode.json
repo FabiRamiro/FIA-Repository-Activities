@@ -1,0 +1,3155 @@
+[
+  {
+    "id": "xabikos.javascriptsnippets",
+    "version": "1.8.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\xabikos.javascriptsnippets-1.8.0",
+    "display": "JavaScript (ES6) code snippets",
+    "description": "Code snippets for JavaScript in ES6 syntax",
+    "categories": [
+      "Snippets"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/xabikos/vscode-javascript"
+    },
+    "obsolete": false,
+    "bytes": 22624,
+    "group": "Web y JavaScript",
+    "explanation_es": "Plantillas breves para escribir estructuras habituales de JavaScript moderno.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=xabikos.javascriptsnippets"
+  },
+  {
+    "id": "jakebathman.mysql-syntax",
+    "version": "1.3.1",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\jakebathman.mysql-syntax-1.3.1",
+    "display": "MySQL Syntax",
+    "description": "MySQL syntax highlighting support",
+    "categories": [
+      "Languages"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/jakebathman/mysql-syntax"
+    },
+    "obsolete": false,
+    "bytes": 46510,
+    "group": "Bases de datos",
+    "explanation_es": "Colorea y reconoce la sintaxis de consultas MySQL; no instala un servidor MySQL.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=jakebathman.mysql-syntax"
+  },
+  {
+    "id": "donjayamanne.python-extension-pack",
+    "version": "1.7.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\donjayamanne.python-extension-pack-1.7.0",
+    "display": "Python Extension Pack",
+    "description": "Popular Visual Studio Code extensions for Python",
+    "categories": [
+      "Extension Packs"
+    ],
+    "pack": [
+      "njpwerner.autodocstring",
+      "ms-python.python",
+      "wholroyd.jinja",
+      "batisteo.vscode-django",
+      "VisualStudioExptTeam.vscodeintellicode",
+      "KevinRose.vsc-python-indent",
+      "donjayamanne.python-environment-manager"
+    ],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DonJayamanne/python-extension-pack"
+    },
+    "obsolete": false,
+    "bytes": 56116,
+    "group": "Python",
+    "explanation_es": "Paquete que reúne extensiones para Python, documentación, plantillas y entornos.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=donjayamanne.python-extension-pack"
+  },
+  {
+    "id": "bracketpaircolordlw.bracket-pair-color-dlw",
+    "version": "0.0.6",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\bracketpaircolordlw.bracket-pair-color-dlw-0.0.6",
+    "display": "Bracket Pair Color DLW",
+    "description": "Quickly 'Bracket Pair Color DLW' setting with a simple command",
+    "categories": [
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/EmersonGarrido/bracket-pair-dlw.git"
+    },
+    "obsolete": false,
+    "bytes": 15184,
+    "group": "Edición y productividad",
+    "explanation_es": "Añade un comando para activar o desactivar el coloreado de pares de paréntesis y llaves que ofrece VS Code.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=bracketpaircolordlw.bracket-pair-color-dlw"
+  },
+  {
+    "id": "ms-azuretools.vscode-docker",
+    "version": "2.0.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\ms-azuretools.vscode-docker-2.0.0",
+    "display": "Docker",
+    "description": "Makes it easy to create, manage, and debug containerized applications.",
+    "categories": [],
+    "pack": [],
+    "dependencies": [
+      "ms-azuretools.vscode-containers"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/microsoft/vscode-docker"
+    },
+    "obsolete": false,
+    "bytes": 144691,
+    "group": "Contenedores y acceso remoto",
+    "explanation_es": "Entrada de compatibilidad del antiguo Docker: su README explica que ahora es un paquete asociado a Container Tools.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker"
+  },
+  {
+    "id": "akamud.vscode-theme-onedark",
+    "version": "2.3.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\akamud.vscode-theme-onedark-2.3.0",
+    "display": "Atom One Dark Theme",
+    "description": "One Dark Theme based on Atom",
+    "categories": [
+      "Themes"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/akamud/vscode-theme-onedark"
+    },
+    "obsolete": false,
+    "bytes": 56036,
+    "group": "Apariencia y entretenimiento",
+    "explanation_es": "Tema de colores inspirado en One Dark de Atom.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onedark"
+  },
+  {
+    "id": "mcagampan.dark-horizon",
+    "version": "0.4.2",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\mcagampan.dark-horizon-0.4.2",
+    "display": "Dark Horizon",
+    "description": "An elegant dark theme with vibrant foreground colors.",
+    "categories": [
+      "Themes"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/mcagampan/dark-horizon"
+    },
+    "obsolete": false,
+    "bytes": 253299,
+    "group": "Apariencia y entretenimiento",
+    "explanation_es": "Tema oscuro con colores de texto vivos.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=mcagampan.dark-horizon"
+  },
+  {
+    "id": "mgesbert.python-path",
+    "version": "0.0.14",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\mgesbert.python-path-0.0.14",
+    "display": "Python Path",
+    "description": "Python imports utils.",
+    "categories": [
+      "Programming Languages",
+      "Snippets",
+      "Formatters",
+      "Other",
+      "Extension Packs"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/mgesbert/vscode-python-path.git"
+    },
+    "obsolete": false,
+    "bytes": 407173,
+    "group": "Python",
+    "explanation_es": "Copia rutas de módulos Python y genera instrucciones import para archivos o símbolos seleccionados.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=mgesbert.python-path"
+  },
+  {
+    "id": "arcticicestudio.nord-visual-studio-code",
+    "version": "0.19.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\arcticicestudio.nord-visual-studio-code-0.19.0",
+    "display": "Nord",
+    "description": "An arctic, north-bluish clean and elegant Visual Studio Code theme.",
+    "categories": [
+      "Themes"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/arcticicestudio/nord-visual-studio-code"
+    },
+    "obsolete": false,
+    "bytes": 198215,
+    "group": "Apariencia y entretenimiento",
+    "explanation_es": "Tema de colores fríos y azulados.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=arcticicestudio.nord-visual-studio-code"
+  },
+  {
+    "id": "sirtori.indenticator",
+    "version": "0.7.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\sirtori.indenticator-0.7.0",
+    "display": "Indenticator",
+    "description": "Highlights your current indent depth",
+    "categories": [
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/SirTori/indenticator"
+    },
+    "obsolete": false,
+    "bytes": 184909,
+    "group": "Edición y productividad",
+    "explanation_es": "Resalta el nivel de sangría del bloque donde está el cursor.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=sirtori.indenticator"
+  },
+  {
+    "id": "bierner.color-info",
+    "version": "0.7.2",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\bierner.color-info-0.7.2",
+    "display": "Color Info",
+    "description": "Provides quick information about css colors",
+    "categories": [
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/mattbierner/vscode-color-info.git"
+    },
+    "obsolete": false,
+    "bytes": 223720,
+    "group": "Web y JavaScript",
+    "explanation_es": "Muestra información y representaciones de colores escritos en CSS.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=bierner.color-info"
+  },
+  {
+    "id": "vvhg1.theme-easy-eyes",
+    "version": "1.2.1",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\vvhg1.theme-easy-eyes-1.2.1",
+    "display": "Easy Eyes Theme",
+    "description": "Designed to reduce eye strain and improve code readability with carefully selected color palette and highlighting",
+    "categories": [
+      "Themes"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": "https://github.com/vvhg1/easyeyes.git",
+    "obsolete": false,
+    "bytes": 378498,
+    "group": "Apariencia y entretenimiento",
+    "explanation_es": "Tema con una paleta pensada para facilitar la lectura.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=vvhg1.theme-easy-eyes"
+  },
+  {
+    "id": "dheovani.svg-viewer",
+    "version": "1.1.2",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\dheovani.svg-viewer-1.1.2",
+    "display": "SVG-Viewer",
+    "description": "JS SVG viewer for VSCode",
+    "categories": [
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": "https://github.com/Dheovani/SVG-Viewer",
+    "obsolete": false,
+    "bytes": 27807,
+    "group": "Imágenes y documentos",
+    "explanation_es": "Permite previsualizar imágenes vectoriales SVG dentro del editor.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=dheovani.svg-viewer"
+  },
+  {
+    "id": "kisstkondoros.vscode-gutter-preview",
+    "version": "0.32.2",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\kisstkondoros.vscode-gutter-preview-0.32.2",
+    "display": "Image preview",
+    "description": "Shows image preview in the gutter and on hover",
+    "categories": [
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/kisstkondoros/gutter-preview.git"
+    },
+    "obsolete": false,
+    "bytes": 1786051,
+    "group": "Imágenes y documentos",
+    "explanation_es": "Muestra miniaturas de imágenes al pasar el cursor y en el margen del editor.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview"
+  },
+  {
+    "id": "tushortz.python-extended-snippets",
+    "version": "0.0.1",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\tushortz.python-extended-snippets-0.0.1",
+    "display": "Python Extended",
+    "description": "Python Extended is a vscode snippet that makes it easy to write codes in python by providing completion options along with all arguments.",
+    "categories": [
+      "Snippets"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/tushortz/vscode-Python-Extended.git"
+    },
+    "obsolete": false,
+    "bytes": 1498497,
+    "group": "Python",
+    "explanation_es": "Plantillas de código Python y opciones de completado de argumentos.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=tushortz.python-extended-snippets"
+  },
+  {
+    "id": "idered.npm",
+    "version": "1.7.4",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\idered.npm-1.7.4",
+    "display": "NPM",
+    "description": "Manage npm dependencies from sidebar. Supports npm, yarn, pnpm, bun.",
+    "categories": [
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Idered/iridium"
+    },
+    "obsolete": false,
+    "bytes": 632455,
+    "group": "Web y JavaScript",
+    "explanation_es": "Administra dependencias de proyectos desde una barra lateral; contempla npm, yarn, pnpm y bun.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=idered.npm"
+  },
+  {
+    "id": "aaron-bond.better-comments",
+    "version": "3.0.2",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\aaron-bond.better-comments-3.0.2",
+    "display": "Better Comments",
+    "description": "Improve your code commenting by annotating with alert, informational, TODOs, and more!",
+    "categories": [
+      "Formatters"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/aaron-bond/better-comments"
+    },
+    "obsolete": false,
+    "bytes": 356849,
+    "group": "Edición y productividad",
+    "explanation_es": "Distingue visualmente comentarios informativos, advertencias y pendientes TODO.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments"
+  },
+  {
+    "id": "formulahendry.auto-rename-tag",
+    "version": "0.1.10",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\formulahendry.auto-rename-tag-0.1.10",
+    "display": "Auto Rename Tag",
+    "description": "Auto rename paired HTML/XML tag",
+    "categories": [
+      "Other",
+      "Programming Languages"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/formulahendry/vscode-auto-rename-tag.git"
+    },
+    "obsolete": false,
+    "bytes": 2706684,
+    "group": "Web y JavaScript",
+    "explanation_es": "Al cambiar una etiqueta HTML/XML, actualiza también su pareja de apertura o cierre.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag"
+  },
+  {
+    "id": "franneck94.vscode-c-cpp-config",
+    "version": "6.3.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\franneck94.vscode-c-cpp-config-6.3.0",
+    "display": "C/C++ Config",
+    "description": "Creates important config files for C/C++ projects.",
+    "categories": [
+      "Programming Languages",
+      "Snippets"
+    ],
+    "pack": [],
+    "dependencies": [
+      "ms-vscode.cpptools",
+      "vadimcn.vscode-lldb"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/franneck94/vscode-c-cpp-config.git"
+    },
+    "obsolete": false,
+    "bytes": 763321,
+    "group": "C y C++",
+    "explanation_es": "Ayuda a generar archivos de configuración de proyectos C/C++.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=franneck94.vscode-c-cpp-config"
+  },
+  {
+    "id": "thekalinga.bootstrap4-vscode",
+    "version": "6.1.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\thekalinga.bootstrap4-vscode-6.1.0",
+    "display": "Bootstrap 4, Font awesome 4, Font Awesome 5 Free & Pro snippets",
+    "description": "Bootstrap 4 snippets based on documentation + Font awesome 4 + Font Awesome 5 Free & Pro snippets",
+    "categories": [
+      "Snippets"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/1tontech/bootstrap4-snippets.git"
+    },
+    "obsolete": false,
+    "bytes": 1276987,
+    "group": "Web y JavaScript",
+    "explanation_es": "Plantillas de Bootstrap 4 y de iconos Font Awesome.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=thekalinga.bootstrap4-vscode"
+  },
+  {
+    "id": "ms-vscode-remote.remote-ssh-edit",
+    "version": "0.87.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\ms-vscode-remote.remote-ssh-edit-0.87.0",
+    "display": "Remote - SSH: Editing Configuration Files",
+    "description": "Editar archivos de configuración SSH",
+    "categories": [
+      "Programming Languages",
+      "Snippets"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Microsoft/vscode-remote-release.git"
+    },
+    "obsolete": false,
+    "bytes": 86546,
+    "group": "Contenedores y acceso remoto",
+    "explanation_es": "Ayuda a editar archivos de configuración de conexiones SSH.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh-edit"
+  },
+  {
+    "id": "hakcorp.php-awesome-snippets",
+    "version": "1.1.3",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\hakcorp.php-awesome-snippets-1.1.3",
+    "display": "PHP Awesome Snippets",
+    "description": "A fullset of snippets for PHP devs to boost coding productivity.",
+    "categories": [
+      "Snippets",
+      "Programming Languages"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/h4kst3r/php-awesome-snippets"
+    },
+    "obsolete": false,
+    "bytes": 724040,
+    "group": "PHP",
+    "explanation_es": "Plantillas de código para tareas habituales de PHP.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=hakcorp.php-awesome-snippets"
+  },
+  {
+    "id": "ms-vscode.remote-explorer",
+    "version": "0.5.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\ms-vscode.remote-explorer-0.5.0",
+    "display": "Explorador remoto",
+    "description": "Vea las máquinas remotas para SSH y Tunnel.",
+    "categories": [
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Microsoft/vscode-remote-release.git"
+    },
+    "obsolete": false,
+    "bytes": 104578,
+    "group": "Contenedores y acceso remoto",
+    "explanation_es": "Panel para explorar conexiones a equipos remotos mediante SSH y túneles.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=ms-vscode.remote-explorer"
+  },
+  {
+    "id": "loczek.next-js-ts-snippets",
+    "version": "2.0.3",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\loczek.next-js-ts-snippets-2.0.3",
+    "display": "Next JS/TS Snippets",
+    "description": "A collection of Javascript and Typescript snippets for a awesome React framework called NEXT",
+    "categories": [
+      "Snippets"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/loczek/next-snippets.git"
+    },
+    "obsolete": false,
+    "bytes": 93841,
+    "group": "Web y JavaScript",
+    "explanation_es": "Plantillas de JavaScript y TypeScript para proyectos Next.js.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=loczek.next-js-ts-snippets"
+  },
+  {
+    "id": "barrsan.reui",
+    "version": "1.2.5",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\barrsan.reui-1.2.5",
+    "display": "ReUI",
+    "description": "A VS Code theme based on React's website colors",
+    "categories": [
+      "Themes"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/barrsan/reui-vscode-theme"
+    },
+    "obsolete": false,
+    "bytes": 1629764,
+    "group": "Apariencia y entretenimiento",
+    "explanation_es": "Tema de colores inspirado en la web de React; no añade herramientas de React.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=barrsan.reui"
+  },
+  {
+    "id": "kevinrose.vsc-python-indent",
+    "version": "1.21.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\kevinrose.vsc-python-indent-1.21.0",
+    "display": "Python Indent",
+    "description": "Correct Python indentation",
+    "categories": [
+      "Formatters",
+      "Keymaps",
+      "Programming Languages"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/kbrose/vsc-python-indent"
+    },
+    "obsolete": false,
+    "bytes": 2161478,
+    "group": "Python",
+    "explanation_es": "Ayuda a insertar la sangría correcta al escribir código Python.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=kevinrose.vsc-python-indent"
+  },
+  {
+    "id": "formulahendry.auto-close-tag",
+    "version": "0.5.15",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\formulahendry.auto-close-tag-0.5.15",
+    "display": "Auto Close Tag",
+    "description": "Automatically add HTML/XML close tag, same as Visual Studio IDE or Sublime Text",
+    "categories": [
+      "Other",
+      "Programming Languages"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/formulahendry/vscode-auto-close-tag.git"
+    },
+    "obsolete": false,
+    "bytes": 926676,
+    "group": "Web y JavaScript",
+    "explanation_es": "Inserta automáticamente la etiqueta de cierre en HTML y XML.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag"
+  },
+  {
+    "id": "christian-kohler.path-intellisense",
+    "version": "2.10.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\christian-kohler.path-intellisense-2.10.0",
+    "display": "Path Intellisense",
+    "description": "Visual Studio Code plugin that autocompletes filenames",
+    "categories": [
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/ChristianKohler/PathIntellisense.git"
+    },
+    "obsolete": false,
+    "bytes": 396501,
+    "group": "Edición y productividad",
+    "explanation_es": "Autocompleta nombres de archivos y carpetas mientras escribes rutas.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense"
+  },
+  {
+    "id": "eserozvataf.one-dark-pro-monokai-darker",
+    "version": "1.1.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\eserozvataf.one-dark-pro-monokai-darker-1.1.0",
+    "display": "One Dark Pro Monokai Darker Theme",
+    "description": "A Darker One Dark Pro variation with Monokai scheme",
+    "categories": [
+      "Themes"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/eserozvataf/vscode-one-dark-pro-monokai-darker.git"
+    },
+    "obsolete": false,
+    "bytes": 1920624,
+    "group": "Apariencia y entretenimiento",
+    "explanation_es": "Tema oscuro que combina variantes de One Dark y Monokai.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=eserozvataf.one-dark-pro-monokai-darker"
+  },
+  {
+    "id": "ms-mssql.sql-bindings-vscode",
+    "version": "0.4.1",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\ms-mssql.sql-bindings-vscode-0.4.1",
+    "display": "SQL Bindings",
+    "description": "Enables users to develop and publish Azure Functions with Azure SQL bindings",
+    "categories": [],
+    "pack": [],
+    "dependencies": [
+      "ms-mssql.mssql"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Microsoft/azuredatastudio.git"
+    },
+    "obsolete": false,
+    "bytes": 3703906,
+    "group": "Bases de datos",
+    "explanation_es": "Ayuda a desarrollar Azure Functions conectadas a Azure SQL mediante bindings; es una herramienta especializada.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=ms-mssql.sql-bindings-vscode"
+  },
+  {
+    "id": "njpwerner.autodocstring",
+    "version": "0.6.1",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\njpwerner.autodocstring-0.6.1",
+    "display": "autoDocstring - Python Docstring Generator",
+    "description": "Generates python docstrings automatically",
+    "categories": [
+      "Snippets",
+      "Formatters",
+      "Programming Languages"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/NilsJPWerner/autoDocstring"
+    },
+    "obsolete": false,
+    "bytes": 665783,
+    "group": "Python",
+    "explanation_es": "Genera plantillas de docstrings, es decir, textos de documentación dentro de funciones y clases.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring"
+  },
+  {
+    "id": "beardedbear.beardedtheme",
+    "version": "10.1.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\beardedbear.beardedtheme-10.1.0",
+    "display": "Bearded Theme",
+    "description": "The theme with a long beard.",
+    "categories": [
+      "Themes"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/BeardedBear/bearded-theme"
+    },
+    "obsolete": false,
+    "bytes": 2870507,
+    "group": "Apariencia y entretenimiento",
+    "explanation_es": "Colección de temas de colores Bearded Theme.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=beardedbear.beardedtheme"
+  },
+  {
+    "id": "batisteo.vscode-django",
+    "version": "1.15.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\batisteo.vscode-django-1.15.0",
+    "display": "Django",
+    "description": "Beautiful syntax and scoped snippets for perfectionists with deadlines",
+    "categories": [
+      "Programming Languages",
+      "Snippets"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/vscode-django/vscode-django"
+    },
+    "obsolete": false,
+    "bytes": 817347,
+    "group": "Python",
+    "explanation_es": "Reconoce sintaxis y ofrece plantillas para trabajar con Django y sus plantillas HTML.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=batisteo.vscode-django"
+  },
+  {
+    "id": "christian-kohler.npm-intellisense",
+    "version": "1.4.5",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\christian-kohler.npm-intellisense-1.4.5",
+    "display": "npm Intellisense",
+    "description": "Visual Studio Code plugin that autocompletes npm modules in import statements",
+    "categories": [
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/ChristianKohler/NpmIntellisense.git"
+    },
+    "obsolete": false,
+    "bytes": 1821984,
+    "group": "Web y JavaScript",
+    "explanation_es": "Sugiere nombres de paquetes npm al escribir instrucciones import.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense"
+  },
+  {
+    "id": "unthrottled.doki-theme",
+    "version": "88.1.18",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\unthrottled.doki-theme-88.1.18",
+    "display": "Doki Theme",
+    "description": "Cute anime character themes!",
+    "categories": [
+      "Themes",
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/doki-theme/doki-theme-vscode.git"
+    },
+    "obsolete": false,
+    "bytes": 2045758,
+    "group": "Apariencia y entretenimiento",
+    "explanation_es": "Colección de temas inspirados en personajes de anime.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=unthrottled.doki-theme"
+  },
+  {
+    "id": "lakshits11.best-themes-redefined",
+    "version": "0.4.6",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\lakshits11.best-themes-redefined-0.4.6",
+    "display": "Best Themes Redefined 🚀",
+    "description": "🎨🚀 A never seen collection of 92 hand crafted themes no where to be found on Internet 💻",
+    "categories": [
+      "Themes"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": null,
+    "obsolete": false,
+    "bytes": 5989552,
+    "group": "Apariencia y entretenimiento",
+    "explanation_es": "Colección de numerosos temas de colores; no son herramientas de programación distintas.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=lakshits11.best-themes-redefined"
+  },
+  {
+    "id": "formulahendry.code-runner",
+    "version": "0.12.2",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\formulahendry.code-runner-0.12.2",
+    "display": "Code Runner",
+    "description": "Run C, C++, Java, JS, PHP, Python, Perl, Ruby, Go, Lua, Groovy, PowerShell, CMD, BASH, F#, C#, VBScript, TypeScript, CoffeeScript, Scala, Swift, Julia, Crystal, OCaml, R, AppleScript, Elixir, VB.NET, Clojure, Haxe, Obj-C, Rust, Racket, Scheme, AutoHotkey, AutoIt, Kotlin, Dart, Pascal, Haskell, Nim, D, Lisp, Kit, V, SCSS, Sass, CUDA, Less, Fortran, Ring, Standard ML, Zig, Mojo, Erlang, SPWN, Pkl, Gleam",
+    "categories": [
+      "Programming Languages",
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/formulahendry/vscode-code-runner.git"
+    },
+    "obsolete": false,
+    "bytes": 1475464,
+    "group": "Edición y productividad",
+    "explanation_es": "Ejecuta archivos o fragmentos de varios lenguajes usando las herramientas correspondientes que tengas instaladas.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner"
+  },
+  {
+    "id": "visualstudioexptteam.intellicode-api-usage-examples",
+    "version": "0.2.9",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\visualstudioexptteam.intellicode-api-usage-examples-0.2.9",
+    "display": "Ejemplos de uso de la API de IntelliCode",
+    "description": "Vea ejemplos de código relevantes de GitHub para obtener más de 100 000 API diferentes directamente en el editor.",
+    "categories": [
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/MicrosoftDocs/intellicode"
+    },
+    "obsolete": false,
+    "bytes": 7770871,
+    "group": "Asistentes y completado",
+    "explanation_es": "Muestra ejemplos de uso de funciones y API a partir de código público de GitHub.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=visualstudioexptteam.intellicode-api-usage-examples"
+  },
+  {
+    "id": "naumovs.color-highlight",
+    "version": "2.8.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\naumovs.color-highlight-2.8.0",
+    "display": "Color Highlight",
+    "description": "Highlight web colors in your editor",
+    "categories": [
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/naumovs/vscode-ext-color-highlight.git"
+    },
+    "obsolete": false,
+    "bytes": 1102616,
+    "group": "Web y JavaScript",
+    "explanation_es": "Resalta visualmente los colores escritos en el código.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight"
+  },
+  {
+    "id": "beardedbear.beardedicons",
+    "version": "1.22.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\beardedbear.beardedicons-1.22.0",
+    "display": "Bearded Icons",
+    "description": "The icons with a long beard.",
+    "categories": [
+      "Other",
+      "Themes"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/BeardedBear/bearded-icons"
+    },
+    "obsolete": false,
+    "bytes": 492371,
+    "group": "Apariencia y entretenimiento",
+    "explanation_es": "Cambia los iconos de archivos y carpetas del explorador.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=beardedbear.beardedicons"
+  },
+  {
+    "id": "formulahendry.vscode-mysql",
+    "version": "0.5.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\formulahendry.vscode-mysql-0.5.0",
+    "display": "MySQL",
+    "description": "MySQL management tool",
+    "categories": [
+      "Programming Languages",
+      "Azure"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/formulahendry/vscode-mysql.git"
+    },
+    "obsolete": false,
+    "bytes": 1805942,
+    "group": "Bases de datos",
+    "explanation_es": "Permite conectarse a MySQL y administrar consultas desde VS Code.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=formulahendry.vscode-mysql"
+  },
+  {
+    "id": "frhtylcn.pythonsnippets",
+    "version": "1.0.2",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\frhtylcn.pythonsnippets-1.0.2",
+    "display": "python snippets",
+    "description": "Code snippets for python",
+    "categories": [
+      "Snippets"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/ylcnfrht/vscode-python-snippet-pack"
+    },
+    "obsolete": false,
+    "bytes": 6929658,
+    "group": "Python",
+    "explanation_es": "Colección de plantillas para escribir código Python con abreviaturas.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=frhtylcn.pythonsnippets"
+  },
+  {
+    "id": "oderwat.indent-rainbow",
+    "version": "8.3.1",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\oderwat.indent-rainbow-8.3.1",
+    "display": "indent-rainbow",
+    "description": "Makes indentation easier to read",
+    "categories": [
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "url": "https://github.com/oderwat/vscode-indent-rainbow.git",
+      "type": "git"
+    },
+    "obsolete": false,
+    "bytes": 8863632,
+    "group": "Edición y productividad",
+    "explanation_es": "Colorea la sangría por niveles para ver mejor la estructura de los bloques.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow"
+  },
+  {
+    "id": "dsznajder.es7-react-js-snippets",
+    "version": "4.4.3",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\dsznajder.es7-react-js-snippets-4.4.3",
+    "display": "ES7+ React/Redux/React-Native snippets",
+    "description": "Extensions for React, React-Native and Redux in JS/TS with ES7+ syntax. Customizable. Built-in integration with prettier.",
+    "categories": [
+      "Snippets"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dsznajder/vscode-es7-javascript-react-snippets"
+    },
+    "obsolete": false,
+    "bytes": 21293070,
+    "group": "Web y JavaScript",
+    "explanation_es": "Plantillas para React, Redux y React Native en JavaScript y TypeScript.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets"
+  },
+  {
+    "id": "visualstudioexptteam.vscodeintellicode-insiders",
+    "version": "1.1.10",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\visualstudioexptteam.vscodeintellicode-insiders-1.1.10",
+    "display": "IntelliCode Insiders",
+    "description": "AI-assisted development",
+    "categories": [
+      "Other"
+    ],
+    "pack": [
+      "visualstudioexptteam.vscodeintellicode-completions"
+    ],
+    "dependencies": [
+      "ms-dotnettools.vscode-dotnet-runtime"
+    ],
+    "repository": {
+      "url": "https://github.com/MicrosoftDocs/intellicode"
+    },
+    "obsolete": false,
+    "bytes": 12735675,
+    "group": "Asistentes y completado",
+    "explanation_es": "Variante de pruebas de IntelliCode que incorpora su extensión de completado.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=visualstudioexptteam.vscodeintellicode-insiders"
+  },
+  {
+    "id": "zignd.html-css-class-completion",
+    "version": "1.20.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\zignd.html-css-class-completion-1.20.0",
+    "display": "IntelliSense for CSS class names in HTML",
+    "description": "CSS class name completion for the HTML class attribute based on the definitions found in your workspace.",
+    "categories": [
+      "Programming Languages",
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "url": "https://github.com/Zignd/HTML-CSS-Class-Completion"
+    },
+    "obsolete": false,
+    "bytes": 7679961,
+    "group": "Web y JavaScript",
+    "explanation_es": "Sugiere clases CSS al escribir el atributo class en HTML, a partir de los archivos del proyecto.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=zignd.html-css-class-completion"
+  },
+  {
+    "id": "burkeholland.simple-react-snippets",
+    "version": "1.2.8",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\burkeholland.simple-react-snippets-1.2.8",
+    "display": "Simple React Snippets",
+    "description": "Dead simple React snippets you will actually use",
+    "categories": [
+      "Snippets"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/burkeholland/simple-react-snippets.git"
+    },
+    "obsolete": false,
+    "bytes": 6180626,
+    "group": "Web y JavaScript",
+    "explanation_es": "Otra colección de plantillas para React, más enfocada en estructuras frecuentes.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=burkeholland.simple-react-snippets"
+  },
+  {
+    "id": "twxs.cmake",
+    "version": "0.0.17",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\twxs.cmake-0.0.17",
+    "display": "CMake",
+    "description": "CMake langage support for Visual Studio Code",
+    "categories": [
+      "Languages",
+      "Snippets",
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/twxs/vs.language.cmake.git"
+    },
+    "obsolete": false,
+    "bytes": 8526965,
+    "group": "C y C++",
+    "explanation_es": "Reconoce y colorea archivos del lenguaje de configuración CMake.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=twxs.cmake"
+  },
+  {
+    "id": "almenon.arepl",
+    "version": "3.0.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\almenon.arepl-3.0.0",
+    "display": "AREPL for python",
+    "description": "real-time python scratchpad",
+    "categories": [
+      "Other",
+      "Debuggers"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/almenon/arepl-vscode.git"
+    },
+    "obsolete": false,
+    "bytes": 17436912,
+    "group": "Python",
+    "explanation_es": "Espacio de pruebas que ejecuta Python y muestra resultados conforme editas.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=almenon.arepl"
+  },
+  {
+    "id": "donjayamanne.python-environment-manager",
+    "version": "1.2.7",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\donjayamanne.python-environment-manager-1.2.7",
+    "display": "Python Environment Manager (deprecated)",
+    "description": "View and manage Python environments & packages.",
+    "categories": [
+      "Programming Languages",
+      "Machine Learning",
+      "Other",
+      "Data Science"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DonJayamanne/vscode-python-manager"
+    },
+    "obsolete": false,
+    "bytes": 22124348,
+    "group": "Python",
+    "explanation_es": "Administrador de entornos y paquetes Python. Su nombre instalado lo marca como deprecated: herramienta descontinuada.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=donjayamanne.python-environment-manager"
+  },
+  {
+    "id": "wix.vscode-import-cost",
+    "version": "3.3.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\wix.vscode-import-cost-3.3.0",
+    "display": "Import Cost",
+    "description": "Display import/require package size in the editor",
+    "categories": [
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/wix/import-cost.git"
+    },
+    "obsolete": false,
+    "bytes": 46692707,
+    "group": "Web y JavaScript",
+    "explanation_es": "Estima y muestra el tamaño que aportan paquetes importados en JavaScript/TypeScript.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost"
+  },
+  {
+    "id": "lqyld.vscode-icons-iconify",
+    "version": "0.1.2",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\lqyld.vscode-icons-iconify-0.1.2",
+    "display": "vscode-icons-iconify",
+    "description": "Visual Studio Code icon from Iconify",
+    "categories": [
+      "Themes"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/LQYld/vscode-icons"
+    },
+    "obsolete": false,
+    "bytes": 7760532,
+    "group": "Apariencia y entretenimiento",
+    "explanation_es": "Tema de iconos de archivos basado en vscode-icons e Iconify.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=lqyld.vscode-icons-iconify"
+  },
+  {
+    "id": "shyykoserhiy.vscode-spotify",
+    "version": "3.2.1",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\shyykoserhiy.vscode-spotify-3.2.1",
+    "display": "vscode-spotify",
+    "description": "Use Spotify inside vscode.",
+    "categories": [
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/ShyykoSerhiy/vscode-spotify.git"
+    },
+    "obsolete": false,
+    "bytes": 9235538,
+    "group": "Apariencia y entretenimiento",
+    "explanation_es": "Integra controles o funciones de Spotify en VS Code.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=shyykoserhiy.vscode-spotify"
+  },
+  {
+    "id": "pranaygp.vscode-css-peek",
+    "version": "4.4.3",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\pranaygp.vscode-css-peek-4.4.3",
+    "display": "CSS Peek",
+    "description": "Allow peeking to css ID and class strings as definitions from html files to respective CSS. Allows peek and goto definition.",
+    "categories": [
+      "Programming Languages"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/pranaygp/vscode-css-peek"
+    },
+    "obsolete": false,
+    "bytes": 26046366,
+    "group": "Web y JavaScript",
+    "explanation_es": "Permite saltar desde una clase o identificador HTML a su definición CSS.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek"
+  },
+  {
+    "id": "visualstudioexptteam.vscodeintellicode",
+    "version": "1.3.2",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\visualstudioexptteam.vscodeintellicode-1.3.2",
+    "display": "IntelliCode",
+    "description": "Desarrollo asistido por inteligencia artificial",
+    "categories": [
+      "Other"
+    ],
+    "pack": [
+      "visualstudioexptteam.intellicode-api-usage-examples"
+    ],
+    "dependencies": [],
+    "repository": {
+      "url": "https://github.com/MicrosoftDocs/intellicode"
+    },
+    "obsolete": false,
+    "bytes": 68728429,
+    "group": "Asistentes y completado",
+    "explanation_es": "Asistencia para sugerencias de código mediante IntelliCode.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=visualstudioexptteam.vscodeintellicode"
+  },
+  {
+    "id": "visualstudioexptteam.vscodeintellicode-completions",
+    "version": "2.0.1",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\visualstudioexptteam.vscodeintellicode-completions-2.0.1",
+    "display": "Finalizaciones de IntelliCode",
+    "description": "Finalizaciones de IntelliCode: finalización automática de código controlada por IA",
+    "categories": [
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "url": "https://github.com/MicrosoftDocs/intellicode"
+    },
+    "obsolete": false,
+    "bytes": 191575161,
+    "group": "Asistentes y completado",
+    "explanation_es": "Completado de código asistido por inteligencia artificial de la familia IntelliCode.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=visualstudioexptteam.vscodeintellicode-completions"
+  },
+  {
+    "id": "nickfode.latex-formatter",
+    "version": "1.0.5",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\nickfode.latex-formatter-1.0.5",
+    "display": "latex-formatter",
+    "description": "Simple LaTex formatter.",
+    "categories": [
+      "Other",
+      "Formatters"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/nfode/latex-formatter"
+    },
+    "obsolete": false,
+    "bytes": 490283,
+    "group": "LaTeX y referencias",
+    "explanation_es": "Da formato al código fuente LaTeX para ordenarlo.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=nickfode.latex-formatter"
+  },
+  {
+    "id": "jeffersonqin.latex-snippets-jeff",
+    "version": "1.2.3",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\jeffersonqin.latex-snippets-jeff-1.2.3",
+    "display": "LaTeX Snippets",
+    "description": "Useful Snippets for LaTeX",
+    "categories": [
+      "Snippets"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/JeffersonQin/LaTeX-Snippets-Jeff"
+    },
+    "obsolete": false,
+    "bytes": 2750742,
+    "group": "LaTeX y referencias",
+    "explanation_es": "Plantillas para escribir comandos y estructuras LaTeX.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=jeffersonqin.latex-snippets-jeff"
+  },
+  {
+    "id": "oijaz.unicode-latex",
+    "version": "1.2.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\oijaz.unicode-latex-1.2.0",
+    "display": "Unicode Latex",
+    "description": "Insert unicode symbols for latex names",
+    "categories": [
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": "oijazsh/unicode-latex",
+    "obsolete": false,
+    "bytes": 75122,
+    "group": "LaTeX y referencias",
+    "explanation_es": "Convierte nombres de símbolos de estilo LaTeX en caracteres Unicode.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=oijaz.unicode-latex"
+  },
+  {
+    "id": "orangex4.latex-sympy-calculator",
+    "version": "1.6.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\orangex4.latex-sympy-calculator-1.6.0",
+    "display": "Latex Sympy Calculator",
+    "description": "Convert Latex to Sympy and calculate it in Latex or Markdown.",
+    "categories": [
+      "Data Science",
+      "Notebooks"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/OrangeX4/Latex-Sympy-Calculator"
+    },
+    "obsolete": false,
+    "bytes": 632572,
+    "group": "LaTeX y referencias",
+    "explanation_es": "Usa expresiones LaTeX y SymPy para realizar cálculos en documentos LaTeX o Markdown.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=orangex4.latex-sympy-calculator"
+  },
+  {
+    "id": "bnavetta.zoterolatex",
+    "version": "0.4.1",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\bnavetta.zoterolatex-0.4.1",
+    "display": "Zotero LaTeX",
+    "description": "Zotero LaTeX support",
+    "categories": [
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/bnavetta/vscode-zotero-latex"
+    },
+    "obsolete": false,
+    "bytes": 122043,
+    "group": "LaTeX y referencias",
+    "explanation_es": "Integra funciones de Zotero para insertar o manejar referencias al escribir LaTeX.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=bnavetta.zoterolatex"
+  },
+  {
+    "id": "tecosaur.latex-utilities",
+    "version": "0.4.14",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\tecosaur.latex-utilities-0.4.14",
+    "display": "LaTeX Utilities",
+    "description": "An add-on to LaTeX Workshop that provides some fancy features that are less vital to the basic experience editing a LaTeX document, but can be rather nice to have.",
+    "categories": [
+      "Programming Languages",
+      "Snippets"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/tecosaur/LaTeX-Utilities.git"
+    },
+    "obsolete": false,
+    "bytes": 834981,
+    "group": "LaTeX y referencias",
+    "explanation_es": "Complemento de LaTeX Workshop con utilidades adicionales de edición.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=tecosaur.latex-utilities"
+  },
+  {
+    "id": "moyu.snapcode",
+    "version": "1.1.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\moyu.snapcode-1.1.0",
+    "display": "Snapcode",
+    "description": "📸  Snapcode for your code",
+    "categories": [
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/moyus/snapcode.git"
+    },
+    "obsolete": false,
+    "bytes": 92070,
+    "group": "Imágenes y documentos",
+    "explanation_es": "Genera imágenes de fragmentos de código para compartirlos; deriva de Polacode.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=moyu.snapcode"
+  },
+  {
+    "id": "daryoushalipourtirotir.php-xampp-runner",
+    "version": "0.0.1",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\daryoushalipourtirotir.php-xampp-runner-0.0.1",
+    "display": "PHP XAMPP Runner",
+    "description": "A VSCode extension to run PHP files on XAMPP local server.",
+    "categories": [
+      "Programming Languages"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/tirotir-ir/TirotirPHP.git"
+    },
+    "obsolete": false,
+    "bytes": 72266,
+    "group": "PHP",
+    "explanation_es": "Ejecuta archivos PHP mediante un servidor local XAMPP ya disponible.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=daryoushalipourtirotir.php-xampp-runner"
+  },
+  {
+    "id": "inferrinizzard.prettier-sql-vscode",
+    "version": "1.6.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\inferrinizzard.prettier-sql-vscode-1.6.0",
+    "display": "Prettier SQL VSCode",
+    "description": "VSCode Extension to format SQL files",
+    "categories": [
+      "Formatters",
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/sql-formatter-org/sql-formatter"
+    },
+    "obsolete": false,
+    "bytes": 1527888,
+    "group": "Bases de datos",
+    "explanation_es": "Formatea consultas y archivos SQL; no administra el servidor de base de datos.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=inferrinizzard.prettier-sql-vscode"
+  },
+  {
+    "id": "tcwalther.cython",
+    "version": "0.1.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\tcwalther.cython-0.1.0",
+    "display": "Cython",
+    "description": "Cython syntax highlighting - based on Peter Varo's textmate theme",
+    "categories": [
+      "Languages"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": null,
+    "obsolete": false,
+    "bytes": 145635,
+    "group": "Cython y Python con C++",
+    "explanation_es": "Resaltado de sintaxis para archivos Cython.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=tcwalther.cython"
+  },
+  {
+    "id": "guyskk.language-cython",
+    "version": "0.0.8",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\guyskk.language-cython-0.0.8",
+    "display": "Language-Cython",
+    "description": "Syntax highlighter for Cython",
+    "categories": [
+      "Programming Languages"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": "https://github.com/guyskk/language-cython-for-vscode",
+    "obsolete": false,
+    "bytes": 397671,
+    "group": "Cython y Python con C++",
+    "explanation_es": "Otra extensión de resaltado de sintaxis Cython.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=guyskk.language-cython"
+  },
+  {
+    "id": "ktnrg45.vscode-cython",
+    "version": "1.0.3",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\ktnrg45.vscode-cython-1.0.3",
+    "display": "Cython VSCode",
+    "description": "Cython syntax checker + highlighter, Go to Definitions, type analysis, and more.",
+    "categories": [
+      "Programming Languages"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/ktnrg45/vs-code-cython.git"
+    },
+    "obsolete": false,
+    "bytes": 12236623,
+    "group": "Cython y Python con C++",
+    "explanation_es": "Reconoce sintaxis Cython y añade comprobación, navegación a definiciones y análisis de tipos.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=ktnrg45.vscode-cython"
+  },
+  {
+    "id": "sheiksshajeenahamed.cython-forge",
+    "version": "0.0.3",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\sheiksshajeenahamed.cython-forge-0.0.3",
+    "display": "Cython Forge",
+    "description": "Helps to build Cython files",
+    "categories": [
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/shajeen/vscode-cython-builder.git"
+    },
+    "obsolete": false,
+    "bytes": 1614755,
+    "group": "Cython y Python con C++",
+    "explanation_es": "Ayuda a construir o compilar archivos Cython.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=sheiksshajeenahamed.cython-forge"
+  },
+  {
+    "id": "itaiin.vscode-cython-annotate",
+    "version": "0.1.6",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\itaiin.vscode-cython-annotate-0.1.6",
+    "display": "vscode-cython-annotate",
+    "description": "Show cython source annotations",
+    "categories": [
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/itaiin/vscode-cython-annotate.git"
+    },
+    "obsolete": false,
+    "bytes": 1232592,
+    "group": "Cython y Python con C++",
+    "explanation_es": "Muestra anotaciones del código Cython para examinar su traducción y comportamiento.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=itaiin.vscode-cython-annotate"
+  },
+  {
+    "id": "ecostadelle.cython-syntax-fixed",
+    "version": "1.0.1",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\ecostadelle.cython-syntax-fixed-1.0.1",
+    "display": "Cython Syntax Highlighting Fixed",
+    "description": "An updated version of the Cython syntax highlighting extension with bug fixes and Linux compatibility.",
+    "categories": [
+      "Programming Languages"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/ecostadelle/cython-syntax.git"
+    },
+    "obsolete": false,
+    "bytes": 158164,
+    "group": "Cython y Python con C++",
+    "explanation_es": "Variante corregida de una extensión de resaltado de sintaxis Cython.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=ecostadelle.cython-syntax-fixed"
+  },
+  {
+    "id": "whoami730.cython-enhanced",
+    "version": "1.0.5",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\whoami730.cython-enhanced-1.0.5",
+    "display": "Cython Enhanced",
+    "description": "Cython syntax checker + highlighter, Go to Definitions, type analysis, and more.",
+    "categories": [
+      "Programming Languages"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/whoami730/cython-enhanced.git"
+    },
+    "obsolete": false,
+    "bytes": 14017253,
+    "group": "Cython y Python con C++",
+    "explanation_es": "Otra herramienta de Cython con resaltado, comprobación y navegación de código.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=whoami730.cython-enhanced"
+  },
+  {
+    "id": "franneck94.vscode-cpython-extension-pack",
+    "version": "0.1.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\franneck94.vscode-cpython-extension-pack-0.1.0",
+    "display": "CPython Extension Pack",
+    "description": "Extensions for CPython and Cython developement.",
+    "categories": [
+      "Extension Packs"
+    ],
+    "pack": [
+      "tcwalther.cython",
+      "benjamin-simmonds.pythoncpp-debug"
+    ],
+    "dependencies": [],
+    "repository": {
+      "url": "https://github.com/franneck94/vscode-cpython-extension-pack"
+    },
+    "obsolete": false,
+    "bytes": 54095,
+    "group": "Cython y Python con C++",
+    "explanation_es": "Paquete orientado al desarrollo CPython/Cython; incluye herramientas de Cython y depuración mixta.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=franneck94.vscode-cpython-extension-pack"
+  },
+  {
+    "id": "benjamin-simmonds.pythoncpp-debug",
+    "version": "0.3.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\benjamin-simmonds.pythoncpp-debug-0.3.0",
+    "display": "Python C++ Debugger",
+    "description": "Extension for starting the Python & C++ debugger on the same process in VScode",
+    "categories": [
+      "Debuggers",
+      "Data Science"
+    ],
+    "pack": [],
+    "dependencies": [
+      "ms-python.python",
+      "ms-vscode.cpptools"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/benibenj/vscode-pythonCpp/"
+    },
+    "obsolete": false,
+    "bytes": 1030316,
+    "group": "Cython y Python con C++",
+    "explanation_es": "Ayuda a iniciar depuradores de Python y C++ sobre el mismo proceso.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=benjamin-simmonds.pythoncpp-debug"
+  },
+  {
+    "id": "bocovo.dbml-erd-visualizer",
+    "version": "0.8.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\bocovo.dbml-erd-visualizer-0.8.0",
+    "display": "DBML Entity-Relationship Diagrams visualizer",
+    "description": "A VS Code extension for viewing the ERD (Entity Relationship Diagram) database schema from a dbml file in your VS Code Editor.",
+    "categories": [
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/BOCOVO/db-schema-visualizer"
+    },
+    "obsolete": false,
+    "bytes": 5985211,
+    "group": "Bases de datos",
+    "explanation_es": "Visualiza diagramas de entidades y relaciones a partir de archivos DBML, un lenguaje para describir tablas.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=bocovo.dbml-erd-visualizer"
+  },
+  {
+    "id": "mechatroner.rainbow-csv",
+    "version": "3.24.1",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\mechatroner.rainbow-csv-3.24.1",
+    "display": "Rainbow CSV",
+    "description": "Highlight CSV and TSV files, Run SQL-like queries",
+    "categories": [
+      "Data Science",
+      "Other",
+      "Programming Languages"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/mechatroner/vscode_rainbow_csv"
+    },
+    "obsolete": false,
+    "bytes": 3010860,
+    "group": "Bases de datos",
+    "explanation_es": "Colorea columnas de CSV/TSV y permite consultas similares a SQL sobre esos archivos.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv"
+  },
+  {
+    "id": "ecmel.vscode-html-css",
+    "version": "2.0.14",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\ecmel.vscode-html-css-2.0.14",
+    "display": "HTML CSS Support",
+    "description": "CSS Intellisense for HTML",
+    "categories": [
+      "Programming Languages"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/ecmel/vscode-html-css.git"
+    },
+    "obsolete": false,
+    "bytes": 25525,
+    "group": "Web y JavaScript",
+    "explanation_es": "Añade sugerencias de CSS al editar HTML.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css"
+  },
+  {
+    "id": "ms-vscode.cpptools-extension-pack",
+    "version": "1.5.1",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\ms-vscode.cpptools-extension-pack-1.5.1",
+    "display": "C/C++ Extension Pack",
+    "description": "Popular extensions for C++ development in Visual Studio Code.",
+    "categories": [
+      "Extension Packs",
+      "Programming Languages"
+    ],
+    "pack": [
+      "ms-vscode.cpptools",
+      "ms-vscode.cpptools-themes",
+      "ms-vscode.cpp-devtools",
+      "ms-vscode.cmake-tools"
+    ],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/microsoft/vscode-cpptools.git",
+      "directory": "ExtensionPack"
+    },
+    "obsolete": false,
+    "bytes": 10583,
+    "group": "C y C++",
+    "explanation_es": "Paquete que reúne soporte C/C++, herramientas de desarrollo y CMake.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools-extension-pack"
+  },
+  {
+    "id": "ritwickdey.liveserver",
+    "version": "5.7.10",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\ritwickdey.liveserver-5.7.10",
+    "display": "Live Server",
+    "description": "Launch a development local Server with live reload feature for static & dynamic pages",
+    "categories": [
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/ritwickdey/vscode-live-server.git"
+    },
+    "obsolete": false,
+    "bytes": 15818653,
+    "group": "Web y JavaScript",
+    "explanation_es": "Sirve páginas del proyecto mediante un servidor local y recarga el navegador al guardar cambios.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=ritwickdey.liveserver"
+  },
+  {
+    "id": "alexcvzz.vscode-sqlite",
+    "version": "0.14.1",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\alexcvzz.vscode-sqlite-0.14.1",
+    "display": "SQLite",
+    "description": "Explore and query SQLite databases.",
+    "categories": [
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "url": "https://github.com/AlexCovizzi/vscode-sqlite",
+      "type": "git"
+    },
+    "obsolete": false,
+    "bytes": 5398945,
+    "group": "Bases de datos",
+    "explanation_es": "Explora bases SQLite y permite ejecutar consultas.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite"
+  },
+  {
+    "id": "nei.sql-viewer",
+    "version": "0.0.6",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\nei.sql-viewer-0.0.6",
+    "display": "SQL Viewer",
+    "description": "A comprehensive SQL viewer with syntax highlighting and query execution capabilities",
+    "categories": [
+      "Other",
+      "Programming Languages",
+      "Data Science"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": null,
+    "obsolete": false,
+    "bytes": 31830536,
+    "group": "Bases de datos",
+    "explanation_es": "Visor y herramienta de consultas SQL según su descripción instalada.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=nei.sql-viewer"
+  },
+  {
+    "id": "reditorsupport.r-syntax",
+    "version": "0.1.4",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\reditorsupport.r-syntax-0.1.4",
+    "display": "R Syntax",
+    "description": "R Synxtax Highlight for Visual Studio Code",
+    "categories": [
+      "Programming Languages"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/REditorSupport/vscode-R-syntax"
+    },
+    "obsolete": false,
+    "bytes": 162165,
+    "group": "R",
+    "explanation_es": "Resaltado de sintaxis para archivos del lenguaje R.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=reditorsupport.r-syntax"
+  },
+  {
+    "id": "esbenp.prettier-vscode",
+    "version": "12.4.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\esbenp.prettier-vscode-12.4.0",
+    "display": "Prettier - Code formatter",
+    "description": "Code formatter using prettier",
+    "categories": [
+      "Formatters"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/prettier/prettier-vscode.git"
+    },
+    "obsolete": false,
+    "bytes": 14689588,
+    "group": "Edición y productividad",
+    "explanation_es": "Ordena automáticamente el formato de código de lenguajes compatibles, como JavaScript, HTML y CSS.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"
+  },
+  {
+    "id": "pflannery.vscode-versionlens",
+    "version": "1.28.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\pflannery.vscode-versionlens-1.28.0",
+    "display": "Version Lens",
+    "description": "Shows the latest version for each package using code lens",
+    "categories": [
+      "Programming Languages",
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://gitlab.com/versionlens/vscode-versionlens.git"
+    },
+    "obsolete": false,
+    "bytes": 2856334,
+    "group": "Web y JavaScript",
+    "explanation_es": "Muestra información de versiones de dependencias junto al código o manifiesto del proyecto.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=pflannery.vscode-versionlens"
+  },
+  {
+    "id": "isaacwilson.scepter",
+    "version": "1.1.7",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\isaacwilson.scepter-1.1.7",
+    "display": "Scepter Theme",
+    "description": "A dark theme based on halcyon. Improves readability!",
+    "categories": [
+      "Themes"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/wisac/scepter-theme"
+    },
+    "obsolete": false,
+    "bytes": 708046,
+    "group": "Apariencia y entretenimiento",
+    "explanation_es": "Tema oscuro Scepter, inspirado en Halcyon.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=isaacwilson.scepter"
+  },
+  {
+    "id": "ms-vsliveshare.vsliveshare",
+    "version": "1.1.122",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\ms-vsliveshare.vsliveshare-1.1.122",
+    "display": "Live Share",
+    "description": "Real-time collaborative development from the comfort of your favorite tools.",
+    "categories": [
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "url": "https://github.com/MicrosoftDocs/live-share"
+    },
+    "obsolete": false,
+    "bytes": 26593849,
+    "group": "Contenedores y acceso remoto",
+    "explanation_es": "Permite colaborar con otras personas en una sesión de edición compartida.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=ms-vsliveshare.vsliveshare"
+  },
+  {
+    "id": "anbuselvanrocky.bootstrap5-vscode",
+    "version": "0.5.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\anbuselvanrocky.bootstrap5-vscode-0.5.0",
+    "display": "Bootstrap 5 Quick Snippets",
+    "description": "Collection of Bootstrap 5 Snippets that will make your life easier.",
+    "categories": [
+      "Snippets"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/anburocky3/bootstrap5-snippets.git"
+    },
+    "obsolete": false,
+    "bytes": 240864,
+    "group": "Web y JavaScript",
+    "explanation_es": "Plantillas de componentes y estructuras Bootstrap 5.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=anbuselvanrocky.bootstrap5-vscode"
+  },
+  {
+    "id": "ms-python.debugpy",
+    "version": "2026.6.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64",
+    "display": "Python Debugger",
+    "description": "Python Debugger extension using debugpy.",
+    "categories": [
+      "Debuggers"
+    ],
+    "pack": [],
+    "dependencies": [
+      "ms-python.python"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/microsoft/vscode-python-debugger.git"
+    },
+    "obsolete": false,
+    "bytes": 36881111,
+    "group": "Python",
+    "explanation_es": "Permite detener y recorrer la ejecución Python, inspeccionando variables mediante debugpy.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=ms-python.debugpy"
+  },
+  {
+    "id": "hossaini.bootstrap-intellisense",
+    "version": "3.2.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\hossaini.bootstrap-intellisense-3.2.0",
+    "display": "Bootstrap IntelliSense",
+    "description": "Enhance Bootstrap development with CSS class autocompletion for efficient coding in Visual Studio Code.",
+    "categories": [
+      "Linters",
+      "Snippets"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/aviiceena/bootstrap-intellisense"
+    },
+    "obsolete": false,
+    "bytes": 819831,
+    "group": "Web y JavaScript",
+    "explanation_es": "Sugiere clases CSS de Bootstrap mientras escribes.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=hossaini.bootstrap-intellisense"
+  },
+  {
+    "id": "ms-python.black-formatter",
+    "version": "2026.6.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\ms-python.black-formatter-2026.6.0",
+    "display": "Black Formatter",
+    "description": "Compatibilidad con formato para archivos de Python con formateador Black.",
+    "categories": [
+      "Programming Languages",
+      "Formatters"
+    ],
+    "pack": [],
+    "dependencies": [
+      "ms-python.python"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/microsoft/vscode-black-formatter.git"
+    },
+    "obsolete": false,
+    "bytes": 16275731,
+    "group": "Python",
+    "explanation_es": "Aplica el formateador Black al código Python.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter"
+  },
+  {
+    "id": "midudev.better-svg",
+    "version": "0.5.1",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\midudev.better-svg-0.5.1",
+    "display": "Better SVG",
+    "description": "Preview your SVG with color picker, zoom controls, and SVGO optimization.",
+    "categories": [
+      "Programming Languages",
+      "Visualization",
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/midudev/better-svg"
+    },
+    "obsolete": false,
+    "bytes": 740948,
+    "group": "Imágenes y documentos",
+    "explanation_es": "Previsualiza SVG y ofrece controles de zoom, selección de color y optimización mediante SVGO.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=midudev.better-svg"
+  },
+  {
+    "id": "bmewburn.vscode-intelephense-client",
+    "version": "1.18.5",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\bmewburn.vscode-intelephense-client-1.18.5",
+    "display": "PHP Intelephense",
+    "description": "PHP code intelligence for Visual Studio Code",
+    "categories": [
+      "Programming Languages",
+      "Linters",
+      "Formatters"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/bmewburn/vscode-intelephense.git"
+    },
+    "obsolete": false,
+    "bytes": 26431801,
+    "group": "PHP",
+    "explanation_es": "Autocompletado, navegación y análisis del código PHP mediante Intelephense.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client"
+  },
+  {
+    "id": "shardulm94.trailing-spaces",
+    "version": "0.4.4",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\shardulm94.trailing-spaces-0.4.4",
+    "display": "Trailing Spaces",
+    "description": "Highlight trailing spaces and delete them in a flash!",
+    "categories": [
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/shardulm94/vscode-trailingspaces.git"
+    },
+    "obsolete": false,
+    "bytes": 60873,
+    "group": "Edición y productividad",
+    "explanation_es": "Resalta y permite quitar espacios sobrantes al final de las líneas.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces"
+  },
+  {
+    "id": "mtxr.sqltools-driver-sqlite",
+    "version": "0.5.4",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\mtxr.sqltools-driver-sqlite-0.5.4",
+    "display": "SQLTools SQLite",
+    "description": "SQLTools SQLite",
+    "categories": [
+      "Programming Languages",
+      "Snippets",
+      "Formatters",
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [
+      "mtxr.sqltools"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/mtxr/vscode-sqltools.git",
+      "directory": "packages/drivers.sqlite"
+    },
+    "obsolete": false,
+    "bytes": 782604,
+    "group": "Bases de datos",
+    "explanation_es": "Controlador que permite a SQLTools conectarse a bases SQLite; complementa SQLTools.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools-driver-sqlite"
+  },
+  {
+    "id": "mtxr.sqltools",
+    "version": "0.28.6",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\mtxr.sqltools-0.28.6",
+    "display": "SQLTools",
+    "description": "Connecting users to many of the most commonly used databases. Welcome to database management done right.",
+    "categories": [
+      "Programming Languages",
+      "Snippets",
+      "Formatters",
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "url": "https://github.com/mtxr/vscode-sqltools.git",
+      "type": "git"
+    },
+    "obsolete": false,
+    "bytes": 3532446,
+    "group": "Bases de datos",
+    "explanation_es": "Cliente para conectar y consultar distintos motores de bases de datos mediante controladores.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools"
+  },
+  {
+    "id": "dbaeumer.vscode-eslint",
+    "version": "3.0.34",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\dbaeumer.vscode-eslint-3.0.34",
+    "display": "ESLint",
+    "description": "Integrates ESLint JavaScript into VS Code.",
+    "categories": [
+      "Programming Languages",
+      "Linters"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Microsoft/vscode-eslint.git"
+    },
+    "obsolete": false,
+    "bytes": 924830,
+    "group": "Web y JavaScript",
+    "explanation_es": "Muestra reglas y avisos de ESLint para detectar problemas y mantener convenciones en JavaScript/TypeScript.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint"
+  },
+  {
+    "id": "bradlc.vscode-tailwindcss",
+    "version": "0.16.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\bradlc.vscode-tailwindcss-0.16.0",
+    "display": "Tailwind CSS IntelliSense",
+    "description": "Intelligent Tailwind CSS tooling for VS Code",
+    "categories": [
+      "Linters",
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/tailwindlabs/tailwindcss-intellisense.git"
+    },
+    "obsolete": false,
+    "bytes": 7105942,
+    "group": "Web y JavaScript",
+    "explanation_es": "Autocompleta clases Tailwind CSS y muestra información sobre sus estilos.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss"
+  },
+  {
+    "id": "johnpapa.angular2",
+    "version": "22.0.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\johnpapa.angular2-22.0.0",
+    "display": "Angular Snippets (Version 22)",
+    "description": "Angular version 22 snippets by John Papa",
+    "categories": [
+      "Snippets",
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/johnpapa/vscode-angular-snippets.git"
+    },
+    "obsolete": false,
+    "bytes": 2520969,
+    "group": "Web y JavaScript",
+    "explanation_es": "Plantillas para escribir componentes y otras estructuras Angular.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=johnpapa.angular2"
+  },
+  {
+    "id": "tomoki1207.pdf",
+    "version": "1.2.2",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\tomoki1207.pdf-1.2.2",
+    "display": "vscode-pdf",
+    "description": "Display pdf file in VSCode.",
+    "categories": [
+      "Programming Languages"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/tomoki1207/vscode-pdfviewer.git"
+    },
+    "obsolete": false,
+    "bytes": 8925063,
+    "group": "Imágenes y documentos",
+    "explanation_es": "Abre archivos PDF dentro de VS Code.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf"
+  },
+  {
+    "id": "ms-vscode.live-server",
+    "version": "0.4.20",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\ms-vscode.live-server-0.4.20",
+    "display": "Live Preview",
+    "description": "Hosts a local server in your workspace for you to preview your webpages on.",
+    "categories": [
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/microsoft/vscode-livepreview"
+    },
+    "obsolete": false,
+    "bytes": 1289359,
+    "group": "Web y JavaScript",
+    "explanation_es": "Previsualiza páginas del proyecto con un servidor local; cumple una función parecida a Live Server.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server"
+  },
+  {
+    "id": "wallabyjs.quokka-vscode",
+    "version": "1.0.769",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\wallabyjs.quokka-vscode-1.0.769",
+    "display": "Quokka.js",
+    "description": "JavaScript and TypeScript playground in your editor.",
+    "categories": [
+      "Debuggers",
+      "Testing",
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {},
+    "obsolete": false,
+    "bytes": 91093648,
+    "group": "Web y JavaScript",
+    "explanation_es": "Entorno de pruebas que ejecuta JavaScript/TypeScript y muestra valores mientras editas.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=wallabyjs.quokka-vscode"
+  },
+  {
+    "id": "ms-vscode.cpp-devtools",
+    "version": "0.6.18",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\ms-vscode.cpp-devtools-0.6.18",
+    "display": "C/C++ DevTools",
+    "description": "Enhanced development tools for C++ in VS Code",
+    "categories": [
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": null,
+    "obsolete": false,
+    "bytes": 493278,
+    "group": "C y C++",
+    "explanation_es": "Herramientas adicionales de desarrollo C/C++, incluidas por otros paquetes del ecosistema.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpp-devtools"
+  },
+  {
+    "id": "vadimcn.vscode-lldb",
+    "version": "1.12.3",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\vadimcn.vscode-lldb-1.12.3",
+    "display": "CodeLLDB",
+    "description": "Debugger for native code, powered by LLDB. Debug C++, Rust, and other compiled languages.",
+    "categories": [
+      "Debuggers"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/vadimcn/codelldb.git"
+    },
+    "obsolete": false,
+    "bytes": 141666196,
+    "group": "C y C++",
+    "explanation_es": "Depurador basado en LLDB para C++, Rust y otros lenguajes compilados.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb"
+  },
+  {
+    "id": "ms-vscode-remote.remote-ssh",
+    "version": "0.128.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\ms-vscode-remote.remote-ssh-0.128.0",
+    "display": "Remote - SSH",
+    "description": "Abra cualquier carpeta en un equipo remoto mediante SSH y aproveche el conjunto de características completo de VS Code.",
+    "categories": [
+      "Other"
+    ],
+    "pack": [
+      "ms-vscode-remote.remote-ssh-edit",
+      "ms-vscode.remote-explorer"
+    ],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Microsoft/vscode-remote-release.git"
+    },
+    "obsolete": false,
+    "bytes": 2817271,
+    "group": "Contenedores y acceso remoto",
+    "explanation_es": "Permite abrir carpetas y trabajar en otro equipo por una conexión SSH.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh"
+  },
+  {
+    "id": "jakobhoeg.vscode-pokemon",
+    "version": "5.0.2",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\jakobhoeg.vscode-pokemon-5.0.2",
+    "display": "vscode-pokemon",
+    "description": "Pokémon for your VS Code",
+    "categories": [
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "github",
+      "url": "https://github.com/jakobhoeg/vscode-pokemon"
+    },
+    "obsolete": false,
+    "bytes": 13936603,
+    "group": "Apariencia y entretenimiento",
+    "explanation_es": "Muestra Pokémon interactivos en el editor; es una personalización recreativa.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=jakobhoeg.vscode-pokemon"
+  },
+  {
+    "id": "ms-ceintl.vscode-language-pack-es",
+    "version": "1.131.2026090407",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\ms-ceintl.vscode-language-pack-es-1.131.2026090407",
+    "display": "Spanish Language Pack for Visual Studio Code",
+    "description": "Language pack extension for Spanish",
+    "categories": [
+      "Language Packs"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Microsoft/vscode-loc"
+    },
+    "obsolete": false,
+    "bytes": 2922541,
+    "group": "Edición y productividad",
+    "explanation_es": "Traduce la interfaz de VS Code al español.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=ms-ceintl.vscode-language-pack-es"
+  },
+  {
+    "id": "ms-vscode.cmake-tools",
+    "version": "1.24.42",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\ms-vscode.cmake-tools-1.24.42",
+    "display": "CMake Tools",
+    "description": "Extended CMake support in Visual Studio Code",
+    "categories": [
+      "Other",
+      "Debuggers",
+      "Programming Languages"
+    ],
+    "pack": [
+      "ms-vscode.cpp-devtools"
+    ],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/microsoft/vscode-cmake-tools"
+    },
+    "obsolete": false,
+    "bytes": 27644906,
+    "group": "C y C++",
+    "explanation_es": "Configura, construye y ayuda a depurar proyectos que utilizan CMake.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools"
+  },
+  {
+    "id": "aflalo.dbml-formatter",
+    "version": "0.0.8",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\aflalo.dbml-formatter-0.0.8",
+    "display": "DBML Formatter - The best and only DBML formatter",
+    "description": "Format .dbml files with ease",
+    "categories": [
+      "Formatters",
+      "Programming Languages",
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/idoaflalo/dbml-formatter"
+    },
+    "obsolete": false,
+    "bytes": 47892526,
+    "group": "Bases de datos",
+    "explanation_es": "Da formato a archivos DBML para mantener ordenada la descripción de tablas y relaciones.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=aflalo.dbml-formatter"
+  },
+  {
+    "id": "whizkydee.material-palenight-theme",
+    "version": "2.0.5",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\whizkydee.material-palenight-theme-2.0.5",
+    "display": "Palenight Theme",
+    "description": "An elegant and juicy material-inspired theme for Visual Studio Code.",
+    "categories": [
+      "Themes",
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "url": "https://github.com/whizkydee/vscode-palenight-theme",
+      "type": "git"
+    },
+    "obsolete": false,
+    "bytes": 200235,
+    "group": "Apariencia y entretenimiento",
+    "explanation_es": "Tema de colores Palenight inspirado en Material Design.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=whizkydee.material-palenight-theme"
+  },
+  {
+    "id": "james-yu.latex-workshop",
+    "version": "10.19.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\james-yu.latex-workshop-10.19.0",
+    "display": "LaTeX Workshop",
+    "description": "Boost LaTeX typesetting efficiency with preview, compile, autocomplete, colorize, and more.",
+    "categories": [
+      "Programming Languages",
+      "Snippets",
+      "Linters",
+      "Formatters"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/James-Yu/LaTeX-Workshop.git"
+    },
+    "obsolete": false,
+    "bytes": 28988436,
+    "group": "LaTeX y referencias",
+    "explanation_es": "Entorno principal de edición LaTeX: compilación, vista previa, autocompletado y navegación.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=james-yu.latex-workshop"
+  },
+  {
+    "id": "xdebug.php-debug",
+    "version": "1.40.2",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\xdebug.php-debug-1.40.2",
+    "display": "PHP Debug",
+    "description": "Debug support for PHP with Xdebug",
+    "categories": [
+      "Debuggers"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/xdebug/vscode-php-debug.git"
+    },
+    "obsolete": false,
+    "bytes": 5843473,
+    "group": "PHP",
+    "explanation_es": "Integra la depuración PHP mediante Xdebug; permite pausas y revisión de variables.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=xdebug.php-debug"
+  },
+  {
+    "id": "ms-dotnettools.vscode-dotnet-runtime",
+    "version": "3.2.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\ms-dotnettools.vscode-dotnet-runtime-3.2.0",
+    "display": ".NET Install Tool",
+    "description": "This extension installs and manages different versions of the .NET SDK and Runtime.",
+    "categories": [
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dotnet/vscode-dotnet-runtime.git"
+    },
+    "obsolete": false,
+    "bytes": 6064700,
+    "group": "Contenedores y acceso remoto",
+    "explanation_es": "Instala y administra versiones de .NET que pueden necesitar otras extensiones; no significa que programes en C#.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.vscode-dotnet-runtime"
+  },
+  {
+    "id": "ms-azuretools.vscode-containers",
+    "version": "2.5.2",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\ms-azuretools.vscode-containers-2.5.2",
+    "display": "Container Tools",
+    "description": "Makes it easy to create, manage, and debug containerized applications.",
+    "categories": [
+      "Programming Languages",
+      "Linters",
+      "Azure"
+    ],
+    "pack": [],
+    "dependencies": [
+      "vscode.docker",
+      "vscode.yaml"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/microsoft/vscode-containers"
+    },
+    "obsolete": false,
+    "bytes": 4495093,
+    "group": "Contenedores y acceso remoto",
+    "explanation_es": "Crea y administra imágenes, contenedores y otros recursos de Docker/Podman.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-containers"
+  },
+  {
+    "id": "katsute.code-background",
+    "version": "6.1.1",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\katsute.code-background-6.1.1",
+    "display": "Background",
+    "description": "The most advanced background image extension for VSCode",
+    "categories": [
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/KatsuteDev/Background.git"
+    },
+    "obsolete": false,
+    "bytes": 286597,
+    "group": "Apariencia y entretenimiento",
+    "explanation_es": "Añade imágenes de fondo al editor.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=katsute.code-background"
+  },
+  {
+    "id": "qwtel.sqlite-viewer",
+    "version": "26.9.1",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\qwtel.sqlite-viewer-26.9.1-win32-x64",
+    "display": "SQLite Viewer",
+    "description": "SQLite Viewer for VS Code",
+    "categories": [
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/qwtel/sqlite-viewer-vscode"
+    },
+    "obsolete": false,
+    "bytes": 15657272,
+    "group": "Bases de datos",
+    "explanation_es": "Otra extensión para visualizar bases SQLite dentro de VS Code.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=qwtel.sqlite-viewer"
+  },
+  {
+    "id": "angular.ng-template",
+    "version": "22.2.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\angular.ng-template-22.2.0",
+    "display": "Angular Language Service",
+    "description": "Editor services for Angular templates",
+    "categories": [
+      "Programming Languages"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/angular/angular.git",
+      "directory": "vscode-ng-language-service"
+    },
+    "obsolete": false,
+    "bytes": 63873262,
+    "group": "Web y JavaScript",
+    "explanation_es": "Analiza plantillas Angular para ofrecer sugerencias, navegación y diagnóstico.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=angular.ng-template"
+  },
+  {
+    "id": "usernamehw.errorlens",
+    "version": "3.29.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\usernamehw.errorlens-3.29.0",
+    "display": "Error Lens",
+    "description": "Improve highlighting of errors, warnings and other language diagnostics.",
+    "categories": [
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/usernamehw/vscode-error-lens"
+    },
+    "obsolete": false,
+    "bytes": 197857,
+    "group": "Edición y productividad",
+    "explanation_es": "Muestra errores y advertencias junto a la línea correspondiente de forma más visible.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens"
+  },
+  {
+    "id": "wholroyd.jinja",
+    "version": "0.0.10",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\wholroyd.jinja-0.0.10",
+    "display": "Jinja",
+    "description": "Jinja template language support for Visual Studio Code",
+    "categories": [
+      "Programming Languages",
+      "Snippets"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/wholroyd/vscode-jinja.git"
+    },
+    "obsolete": false,
+    "bytes": 96964,
+    "group": "Python",
+    "explanation_es": "Reconoce la sintaxis de plantillas Jinja, utilizadas por herramientas como Flask.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=wholroyd.jinja"
+  },
+  {
+    "id": "ms-mssql.sql-database-projects-vscode",
+    "version": "1.8.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\ms-mssql.sql-database-projects-vscode-1.8.0",
+    "display": "SQL Database Projects",
+    "description": "Enables users to develop and publish database schemas for MSSQL Databases",
+    "categories": [],
+    "pack": [],
+    "dependencies": [
+      "ms-mssql.mssql",
+      "ms-mssql.data-workspace-vscode"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Microsoft/vscode-mssql.git"
+    },
+    "obsolete": false,
+    "bytes": 419610,
+    "group": "Bases de datos",
+    "explanation_es": "Ayuda a desarrollar y publicar esquemas de bases SQL Server mediante proyectos de base de datos.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=ms-mssql.sql-database-projects-vscode"
+  },
+  {
+    "id": "ms-mssql.data-workspace-vscode",
+    "version": "0.7.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\ms-mssql.data-workspace-vscode-0.7.0",
+    "display": "Data Workspace",
+    "description": "Additional common functionality for database projects",
+    "categories": [],
+    "pack": [],
+    "dependencies": [
+      "ms-mssql.mssql"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/microsoft/vscode-mssql.git"
+    },
+    "obsolete": false,
+    "bytes": 32468,
+    "group": "Bases de datos",
+    "explanation_es": "Funciones compartidas que sirven de apoyo a las herramientas de proyectos de bases de datos.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=ms-mssql.data-workspace-vscode"
+  },
+  {
+    "id": "ms-mssql.mssql",
+    "version": "1.46.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\ms-mssql.mssql-1.46.0",
+    "display": "SQL Server (mssql)",
+    "description": "Design and optimize schemas for SQL Server, Azure SQL, and SQL Database in Fabric using a modern, lightweight extension built for developers",
+    "categories": [
+      "Programming Languages",
+      "Azure"
+    ],
+    "pack": [
+      "ms-mssql.data-workspace-vscode",
+      "ms-mssql.sql-database-projects-vscode",
+      "ms-mssql.sql-bindings-vscode",
+      "ms-dotnettools.vscode-dotnet-runtime"
+    ],
+    "dependencies": [
+      "vscode.sql"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Microsoft/vscode-mssql.git"
+    },
+    "obsolete": false,
+    "bytes": 387488380,
+    "group": "Bases de datos",
+    "explanation_es": "Herramientas para conectarse, consultar y trabajar con SQL Server y Azure SQL.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql"
+  },
+  {
+    "id": "ms-vscode.powershell",
+    "version": "2025.4.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\ms-vscode.powershell-2025.4.0",
+    "display": "PowerShell",
+    "description": "Develop PowerShell modules, commands and scripts in Visual Studio Code!",
+    "categories": [
+      "Debuggers",
+      "Formatters",
+      "Programming Languages",
+      "Snippets",
+      "Linters",
+      "Themes"
+    ],
+    "pack": [],
+    "dependencies": [
+      "vscode.powershell"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/PowerShell/vscode-powershell.git"
+    },
+    "obsolete": false,
+    "bytes": 315552661,
+    "group": "Edición y productividad",
+    "explanation_es": "Soporte de edición, comandos y depuración para scripts PowerShell.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=ms-vscode.powershell"
+  },
+  {
+    "id": "mathematic.vscode-latex",
+    "version": "2.2.3",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\mathematic.vscode-latex-2.2.3",
+    "display": "LaTeX",
+    "description": "LaTeX language support for Visual Studio Code.",
+    "categories": [
+      "Programming Languages",
+      "Formatters",
+      "Snippets",
+      "Linters"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/mathematic-inc/vscode-latex.git"
+    },
+    "obsolete": false,
+    "bytes": 1133290,
+    "group": "LaTeX y referencias",
+    "explanation_es": "Soporte adicional del lenguaje LaTeX; se solapa en parte con LaTeX Workshop.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=mathematic.vscode-latex"
+  },
+  {
+    "id": "shahilkumar.docxreader",
+    "version": "1.4.3",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\shahilkumar.docxreader-1.4.3",
+    "display": "Docx/ODT Viewer",
+    "description": "Docx/ODT files Rendered inside VSCode",
+    "categories": [
+      "Visualization"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/skfrost19/Docx-Viewer.git"
+    },
+    "obsolete": false,
+    "bytes": 10557936,
+    "group": "Imágenes y documentos",
+    "explanation_es": "Permite visualizar documentos DOCX y ODT dentro del editor.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=shahilkumar.docxreader"
+  },
+  {
+    "id": "reditorsupport.r",
+    "version": "3.0.1",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\reditorsupport.r-3.0.1",
+    "display": "R",
+    "description": "R Extension for Visual Studio Code",
+    "categories": [
+      "Programming Languages",
+      "Snippets",
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [
+      "REditorSupport.r-syntax"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/REditorSupport/vscode-R"
+    },
+    "obsolete": false,
+    "bytes": 6403575,
+    "group": "R",
+    "explanation_es": "Soporte para trabajar con el lenguaje R dentro de VS Code.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=reditorsupport.r"
+  },
+  {
+    "id": "pkief.material-icon-theme",
+    "version": "5.39.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\pkief.material-icon-theme-5.39.0",
+    "display": "Material Icon Theme",
+    "description": "Material Design Icons for Visual Studio Code",
+    "categories": [
+      "Themes"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/material-extensions/vscode-material-icon-theme.git"
+    },
+    "obsolete": false,
+    "bytes": 2019960,
+    "group": "Apariencia y entretenimiento",
+    "explanation_es": "Tema de iconos para reconocer tipos de archivos y carpetas.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=pkief.material-icon-theme"
+  },
+  {
+    "id": "oracle.oracle-java",
+    "version": "27.0.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\oracle.oracle-java-27.0.0",
+    "display": "Java",
+    "description": "Java Platform Extension for Visual Studio Code",
+    "categories": [
+      "Programming Languages",
+      "Debuggers",
+      "Testing",
+      "Snippets",
+      "Linters",
+      "Formatters",
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/oracle/javavscode"
+    },
+    "obsolete": false,
+    "bytes": 315744231,
+    "group": "Java",
+    "explanation_es": "Soporte Java de Oracle: otra implementación de las herramientas del lenguaje Java.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=oracle.oracle-java"
+  },
+  {
+    "id": "vscjava.vscode-maven",
+    "version": "0.46.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\vscjava.vscode-maven-0.46.0",
+    "display": "Maven for Java",
+    "description": "Manage Maven projects, execute goals, generate project from archetype, improve user experience for Java developers.",
+    "categories": [
+      "Programming Languages",
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Microsoft/vscode-maven.git"
+    },
+    "obsolete": false,
+    "bytes": 18636700,
+    "group": "Java",
+    "explanation_es": "Administra proyectos Maven y ejecuta sus tareas de construcción y dependencias.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-maven"
+  },
+  {
+    "id": "openai.codex-audio",
+    "version": "26.1007.21434",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\openai.codex-audio-26.1007.21434",
+    "display": "Codex Audio",
+    "description": "Local microphone support for Codex dictation, including remote workspaces.",
+    "categories": [],
+    "pack": [],
+    "dependencies": [],
+    "repository": null,
+    "obsolete": false,
+    "bytes": 4601911,
+    "group": "Asistentes y completado",
+    "explanation_es": "Soporte local de micrófono para el dictado de Codex, incluidos espacios de trabajo remotos.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=openai.codex-audio"
+  },
+  {
+    "id": "openai.chatgpt",
+    "version": "26.51007.21434",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\openai.chatgpt-26.51007.21434-win32-x64",
+    "display": "Codex – OpenAI’s coding agent",
+    "description": "Codex is a coding agent that works with you everywhere you code — included in ChatGPT Plus, Pro, Business, Edu, and Enterprise plans.",
+    "categories": [
+      "AI",
+      "Chat"
+    ],
+    "pack": [
+      "openai.codex-audio"
+    ],
+    "dependencies": [],
+    "repository": null,
+    "obsolete": false,
+    "bytes": 1452150540,
+    "group": "Asistentes y completado",
+    "explanation_es": "Asistente Codex para trabajar con código desde VS Code. Su identificador interno sigue siendo openai.chatgpt.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=openai.chatgpt"
+  },
+  {
+    "id": "teabyii.ayu",
+    "version": "1.4.1",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\teabyii.ayu-1.4.1",
+    "display": "Ayu",
+    "description": "A simple theme with bright colors and comes in three versions — dark, light and mirage for all day long comfortable work.",
+    "categories": [
+      "Themes"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/ayu-theme/vscode-ayu"
+    },
+    "obsolete": false,
+    "bytes": 6142603,
+    "group": "Apariencia y entretenimiento",
+    "explanation_es": "Tema Ayu con variantes clara, oscura y mirage.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=teabyii.ayu"
+  },
+  {
+    "id": "redhat.java",
+    "version": "1.57.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\redhat.java-1.57.0-win32-x64",
+    "display": "Language Support for Java(TM) by Red Hat",
+    "description": "Java Linting, Intellisense, formatting, refactoring, Maven/Gradle support and more...",
+    "categories": [
+      "Programming Languages",
+      "Linters",
+      "Formatters",
+      "Snippets"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/redhat-developer/vscode-java"
+    },
+    "obsolete": false,
+    "bytes": 186835812,
+    "group": "Java",
+    "explanation_es": "Soporte Java de Red Hat: análisis, autocompletado, formato, navegación y refactorización.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=redhat.java"
+  },
+  {
+    "id": "vscjava.vscode-java-pack",
+    "version": "0.31.2",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\vscjava.vscode-java-pack-0.31.2",
+    "display": "Extension Pack for Java",
+    "description": "Popular extensions for Java development that provides Java IntelliSense, debugging, testing, Maven/Gradle support, project management and more",
+    "categories": [
+      "Programming Languages",
+      "Linters",
+      "Debuggers",
+      "Formatters",
+      "Snippets",
+      "Extension Packs"
+    ],
+    "pack": [
+      "redhat.java",
+      "vscjava.vscode-java-debug",
+      "vscjava.vscode-java-test",
+      "vscjava.vscode-maven",
+      "vscjava.vscode-gradle",
+      "vscjava.vscode-java-dependency"
+    ],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Microsoft/vscode-java-pack"
+    },
+    "obsolete": false,
+    "bytes": 6705672,
+    "group": "Java",
+    "explanation_es": "Paquete de herramientas Java: soporte del lenguaje, depuración, pruebas, proyectos, Maven y Gradle.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack"
+  },
+  {
+    "id": "vscjava.vscode-java-debug",
+    "version": "0.60.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\vscjava.vscode-java-debug-0.60.0",
+    "display": "Debugger for Java",
+    "description": "A lightweight Java debugger for Visual Studio Code",
+    "categories": [
+      "Debuggers",
+      "Programming Languages",
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Microsoft/vscode-java-debug.git"
+    },
+    "obsolete": false,
+    "bytes": 4010491,
+    "group": "Java",
+    "explanation_es": "Permite ejecutar Java paso a paso e inspeccionar variables mediante un depurador.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-debug"
+  },
+  {
+    "id": "vscjava.vscode-java-test",
+    "version": "0.47.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\vscjava.vscode-java-test-0.47.0",
+    "display": "Test Runner for Java",
+    "description": "Run and debug JUnit or TestNG test cases.",
+    "categories": [
+      "Testing"
+    ],
+    "pack": [],
+    "dependencies": [
+      "redhat.java",
+      "vscjava.vscode-java-debug"
+    ],
+    "repository": {
+      "url": "https://github.com/Microsoft/vscode-java-test"
+    },
+    "obsolete": false,
+    "bytes": 6108978,
+    "group": "Java",
+    "explanation_es": "Ejecuta y depura pruebas automáticas Java de JUnit o TestNG.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-test"
+  },
+  {
+    "id": "ms-python.vscode-python-envs",
+    "version": "1.40.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\ms-python.vscode-python-envs-1.40.0-win32-x64",
+    "display": "Python Environments",
+    "description": "Provides a unified python environment experience",
+    "categories": [
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/microsoft/vscode-python-environments.git"
+    },
+    "obsolete": false,
+    "bytes": 11664851,
+    "group": "Python",
+    "explanation_es": "Ayuda a crear, seleccionar y administrar entornos de Python.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-python-envs"
+  },
+  {
+    "id": "ms-vscode.js-debug-nightly",
+    "version": "2026.10.1417",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\ms-vscode.js-debug-nightly-2026.10.1417",
+    "display": "JavaScript Debugger (Nightly)",
+    "description": "An extension for debugging Node.js programs and Chrome.",
+    "categories": [
+      "Debuggers"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Microsoft/vscode-pwa.git"
+    },
+    "obsolete": false,
+    "bytes": 3694958,
+    "group": "Web y JavaScript",
+    "explanation_es": "Versión de pruebas del depurador JavaScript para Node.js y Chrome.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=ms-vscode.js-debug-nightly"
+  },
+  {
+    "id": "ms-python.python",
+    "version": "2026.10.0",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\ms-python.python-2026.10.0-win32-x64",
+    "display": "Python",
+    "description": "Python language support with extension access points for IntelliSense (Pylance), Debugging (Python Debugger), linting, formatting, refactoring, unit tests, and more.",
+    "categories": [
+      "Programming Languages",
+      "Debuggers",
+      "Other",
+      "Data Science",
+      "Machine Learning"
+    ],
+    "pack": [
+      "ms-python.vscode-pylance",
+      "ms-python.debugpy",
+      "ms-python.vscode-python-envs"
+    ],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Microsoft/vscode-python"
+    },
+    "obsolete": false,
+    "bytes": 31110127,
+    "group": "Python",
+    "explanation_es": "Integración principal de Python: selección del intérprete y acceso a ejecución, pruebas, análisis y depuración mediante complementos.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=ms-python.python"
+  },
+  {
+    "id": "ms-vscode.cpptools",
+    "version": "1.35.4",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\ms-vscode.cpptools-1.35.4-win32-x64",
+    "display": "C/C++",
+    "description": "C/C++ IntelliSense, debugging, and code browsing.",
+    "categories": [
+      "Programming Languages",
+      "Debuggers",
+      "Formatters",
+      "Linters",
+      "Snippets"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Microsoft/vscode-cpptools.git"
+    },
+    "obsolete": false,
+    "bytes": 282800883,
+    "group": "C y C++",
+    "explanation_es": "Autocompletado, navegación y depuración para C/C++ de Microsoft.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools"
+  },
+  {
+    "id": "vscjava.vscode-java-dependency",
+    "version": "0.27.7",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\vscjava.vscode-java-dependency-0.27.7",
+    "display": "Project Manager for Java",
+    "description": "Administrar proyectos Java en Visual Studio Code",
+    "categories": [],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Microsoft/vscode-java-dependency.git"
+    },
+    "obsolete": false,
+    "bytes": 988840,
+    "group": "Java",
+    "explanation_es": "Panel para organizar proyectos Java, dependencias y archivos del proyecto.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-dependency"
+  },
+  {
+    "id": "vscjava.vscode-gradle",
+    "version": "3.18.1",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\vscjava.vscode-gradle-3.18.1",
+    "display": "Gradle for Java",
+    "description": "Manage Gradle Projects, run Gradle tasks and provide better Gradle file authoring experience in VS Code",
+    "categories": [
+      "Programming Languages",
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/microsoft/vscode-gradle/"
+    },
+    "obsolete": false,
+    "bytes": 37244394,
+    "group": "Java",
+    "explanation_es": "Administra proyectos Gradle y permite ejecutar sus tareas desde el editor.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-gradle"
+  },
+  {
+    "id": "anthropic.claude-code",
+    "version": "2.1.300",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\anthropic.claude-code-2.1.300-win32-x64",
+    "display": "Claude Code for VS Code",
+    "description": "Claude Code for VS Code: Harness the power of Claude Code without leaving your IDE",
+    "categories": [
+      "AI",
+      "Chat"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": null,
+    "obsolete": false,
+    "bytes": 282777164,
+    "group": "Asistentes y completado",
+    "explanation_es": "Integra el asistente Claude Code en VS Code.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code"
+  },
+  {
+    "id": "ms-python.vscode-pylance",
+    "version": "2026.4.101",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\ms-python.vscode-pylance-2026.4.101",
+    "display": "Pylance",
+    "description": "A performant, feature-rich language server for Python in VS Code",
+    "categories": [
+      "Programming Languages"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/microsoft/pylance-release"
+    },
+    "obsolete": false,
+    "bytes": 160695901,
+    "group": "Python",
+    "explanation_es": "Analiza Python para ofrecer autocompletado, navegación y comprobación de tipos.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance"
+  },
+  {
+    "id": "ban.spellright",
+    "version": "3.0.156",
+    "folder": "C:\\Users\\fabi7\\.vscode\\extensions\\ban.spellright-3.0.156",
+    "display": "Spell Right",
+    "description": "Multilingual, Offline and Lightweight Spellchecker",
+    "categories": [
+      "Other"
+    ],
+    "pack": [],
+    "dependencies": [],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/bartosz-antosik/vscode-spellright.git"
+    },
+    "obsolete": false,
+    "bytes": 26296562,
+    "group": "Edición y productividad",
+    "explanation_es": "Corrector ortográfico multilingüe para textos y comentarios.",
+    "marketplace": "https://marketplace.visualstudio.com/items?itemName=ban.spellright"
+  }
+]

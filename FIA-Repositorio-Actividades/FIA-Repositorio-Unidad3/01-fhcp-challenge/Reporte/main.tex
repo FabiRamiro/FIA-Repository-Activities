@@ -1,0 +1,144 @@
+% Reporte técnico y comparativo. Compilar con: latexmk -pdf main.tex
+% Antes, desde la raíz del repositorio: python Reporte/actualizar.py  (tablas y figuras)
+\documentclass[letterpaper,11pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish,es-noshorthands,es-tabla,es-nodecimaldot]{babel}
+\usepackage[margin=2.5cm,headheight=14pt]{geometry}
+\usepackage{microtype}
+\usepackage{graphicx,eso-pic}
+\usepackage{tikz}
+\usepackage{amsmath,amssymb}
+\usepackage{array,booktabs,tabularx,adjustbox}
+\usepackage{enumitem,float,subcaption}
+\usepackage[table]{xcolor}
+\usepackage{titlesec,fancyhdr}
+\usepackage{lastpage,imakeidx}
+\usepackage[font=small,labelfont=bf,labelsep=period]{caption}
+\usepackage[hidelinks]{hyperref}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\graphicspath{{figuras/}}
+
+% --- Diseño interior de tesis; la portada conserva su composición original ---
+\definecolor{vino}{RGB}{96,29,54}
+\definecolor{oro}{RGB}{165,137,93}
+\definecolor{papel}{RGB}{250,250,249}
+\definecolor{gristexto}{RGB}{82,82,82}
+\titleformat{\chapter}[display]
+  {\normalfont\color{vino}}
+  {\small\scshape\chaptertitlename\ \thechapter}
+  {0.35cm}
+  {\Huge\bfseries}
+  [\vspace{0.2cm}{\color{oro}\titlerule[0.5pt]}]
+\titlespacing*{\chapter}{0pt}{-8pt}{24pt}
+\titleformat{\section}{\normalfont\large\bfseries\color{vino}}{\thesection}{0.65em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{0.65em}{}
+\titlespacing*{\section}{0pt}{2.2ex plus .5ex}{1.0ex}
+\titlespacing*{\subsection}{0pt}{1.8ex plus .4ex}{.8ex}
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{0pt}
+\setlist{itemsep=2pt,topsep=4pt}
+\captionsetup{labelfont={bf,color=vino}}
+\hypersetup{colorlinks=true,linkcolor=vino,citecolor=vino,urlcolor=gristexto}
+\newcommand{\marcaUPV}{\includegraphics[height=1.1cm]{figuras/identidad_upv_bis.png}}
+\newcommand{\numeraciontesis}{Página \thepage}
+\newcommand{\encabezadoderecho}{%
+  \begin{minipage}[b]{7.1cm}\raggedleft
+    {\scriptsize\scshape\color{vino}Universidad Politécnica de Victoria}\\[-1pt]
+    {\tiny\color{gristexto}Reporte técnico y comparativo}
+  \end{minipage}}
+\fancypagestyle{tesis}{%
+  \fancyhf{}
+  \fancyhead[L]{\marcaUPV}
+  \fancyhead[R]{\encabezadoderecho}
+  \fancyfoot[L]{\scriptsize\color{gristexto}Fundamentos de Inteligencia Artificial}
+  \fancyfoot[R]{\scriptsize\color{gristexto}\numeraciontesis}
+  \renewcommand{\headrulewidth}{0.35pt}
+  \renewcommand{\footrulewidth}{0.35pt}}
+\fancypagestyle{plain}{\fancyhf{}\fancyhead[L]{\marcaUPV}
+  \fancyhead[R]{\encabezadoderecho}
+  \fancyfoot[L]{\scriptsize\color{gristexto}Fundamentos de Inteligencia Artificial}
+  \fancyfoot[R]{\scriptsize\color{gristexto}\numeraciontesis}
+  \renewcommand{\headrulewidth}{0.35pt}\renewcommand{\footrulewidth}{0.35pt}}
+\newcommand{\fondotesis}{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[papel] (current page.south west) rectangle (current page.north east);
+    \fill[gray!3] (current page.north west) --
+      ([xshift=8cm]current page.north west) --
+      ([yshift=-5cm]current page.north west) -- cycle;
+    \fill[gray!2] (current page.north east) --
+      ([yshift=-12cm]current page.north east) --
+      ([xshift=-5cm]current page.north east) -- cycle;
+    \fill[oro!3] (current page.south east) --
+      ([yshift=8cm]current page.south east) --
+      ([xshift=-7cm]current page.south east) -- cycle;
+  \end{tikzpicture}}
+\makeindex[columns=2,title=Índice analítico,intoc]
+\newcommand{\filas}{\rowcolors{2}{vino!5}{white}}
+\newcommand{\alg}[1]{\textsf{#1}}
+\input{tablas/datos}
+
+% --- Portada (igual que la plantilla del equipo) -------------------------------
+\newcommand{\programa}{}
+\newcommand{\alumno}{JOSE EMILIANO PUGA SAUCEDO, OSVALDO FABIAN RAMIRO BALBOA, BARBIE VIRIDIANA LUMBRERAS OLVERA, JESUS JUAREZ RAMIREZ y ISRAEL ELISEO CISNEROS SALAS}
+\newcommand{\profesor}{Dr. Said Polanco Martagon}
+\newcommand{\materia}{Fundamentos de Inteligencia Artificial}
+\newcommand{\fecha}{Noviembre 2026}
+\newcommand\AddBackground{
+  \IfFileExists{Portada.pdf}{
+    \AddToShipoutPicture*{
+      \put(0,0){\includegraphics[width=\paperwidth,height=\paperheight]{Portada.pdf}}
+    }
+  }{}
+}
+
+\begin{document}
+\begin{titlepage}
+  \AddBackground
+  \centering
+  \vspace*{1cm}
+  \large\textbf{UNIVERSIDAD POLITECNICA DE VICTORIA}\\[0.5cm]
+  \normalsize\textbf{\programa}\\[2cm]
+  \normalsize\textbf{REPORTE TÉCNICO Y COMPARATIVO:\\ CICLO HAMILTONIANO CON METAHEURÍSTICAS}\\[0.3cm]
+  \normalsize\textbf{\materia}\\[1cm]
+  \large\textbf{PRESENTA}\\[0.5cm]
+  \normalsize \alumno\\[0.8cm]
+  \large\textbf{PROFESOR}\\[0.5cm]
+  \normalsize \profesor\\[1.2cm]
+  \normalsize Fecha: \fecha\\[1cm]
+\end{titlepage}
+
+\newgeometry{left=2.65cm,right=2.65cm,top=3.15cm,bottom=2.7cm,
+  headheight=37pt,headsep=0.45cm,footskip=0.85cm}
+\AddToShipoutPictureBG{\fondotesis}
+\pagestyle{tesis}
+\renewcommand{\baselinestretch}{1.07}\normalsize
+\pagenumbering{roman}
+\phantomsection
+\addcontentsline{toc}{chapter}{Índice general}
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+\renewcommand{\numeraciontesis}{Página \thepage{} de \pageref{LastPage}}
+
+\input{capitulos/introduccion}
+\input{capitulos/grafo}
+\input{capitulos/representacion}
+\input{capitulos/algoritmos}
+\input{capitulos/diseno}
+\input{capitulos/comparativa}
+\input{capitulos/benchmarking}
+\input{capitulos/conclusiones}
+
+\appendix
+\input{capitulos/anexo_codigo}
+
+\clearpage
+\phantomsection
+\addcontentsline{toc}{chapter}{Referencias}
+\renewcommand{\bibname}{Referencias}
+\input{fuentes}
+\clearpage
+\printindex
+\end{document}

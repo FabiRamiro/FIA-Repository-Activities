@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#12111b">
+  <meta name="description" content="Un jardín de evolución. N-Reinas con algoritmos genéticos en Python y movimientos animados en Three.js.">
+  <title>Sakura Queens — Un jardín de lógica</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+  <script type="importmap">{"imports":{"three":"/vendor/three.module.js","three/addons/":"/vendor/"}}</script>
+</head>
+<body>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="i-flower" viewBox="0 0 24 24"><path d="M12 10C3-4 1 10 9 12-6 15 6 23 11 15c-3 15 12 9 3-1 14 5 10-11 0-4C22-3 8-5 12 10Z" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="2" fill="#15121f"/></symbol>
+    <symbol id="i-crown" viewBox="0 0 24 24"><path d="m3 6 4 4 5-6 5 6 4-4-3 13H6L3 6ZM7 22h10"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m8 4 12 8-12 8Z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14" stroke-width="4"/></symbol>
+    <symbol id="i-next" viewBox="0 0 24 24"><path d="m5 5 10 7-10 7ZM19 5v14"/></symbol>
+    <symbol id="i-reset" viewBox="0 0 24 24"><path d="M4 10a8 8 0 1 1 1 7M4 4v6h6"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path d="m14 6-6 6 6 6"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path d="m10 6 6 6-6 6"/></symbol>
+    <symbol id="i-expand" viewBox="0 0 24 24"><path d="M4 9V4h5m6 0h5v5M4 15v5h5m6 0h5v-5"/></symbol>
+    <symbol id="i-orbit" viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(-30 12 12)"/><path d="M12 2v20"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m7 7-5 5 5 5m10-10 5 5-5 5M14 4l-4 16"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l11-2v13M9 8l11-2"/><ellipse cx="6" cy="18" rx="3" ry="2"/><ellipse cx="17" cy="16" rx="3" ry="2"/></symbol>
+    <symbol id="i-volume-off" viewBox="0 0 24 24"><path d="m11 5-6 5H2v4h3l6 5ZM16 9l6 6m0-6-6 6"/></symbol>
+  </defs></svg>
+
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Sakura Queens, inicio"><svg class="brand-flower"><use href="#i-flower"/></svg><span>SAKURA<span class="brand-light">QUEENS</span><small>桜の女王 · UN JARDÍN DE LÓGICA</small></span></a>
+    <nav aria-label="Navegación principal"><a href="#garden" class="nav-active">El jardín</a><button data-open="learn">Cómo funciona <span>↗</span></button><button data-open="about">Sobre el proyecto</button></nav>
+    <span class="engine-badge"><span class="status-dot"></span> Python + Three.js</span>
+  </header>
+
+  <main>
+    <section class="intro" id="garden">
+      <div><p class="eyebrow"><span></span> EL ARTE DE ENCONTRAR EL EQUILIBRIO</p><h1>Donde la lógica <em>florece.</em></h1><p class="intro-text">Un tablero. N reinas. Ningún encuentro.<br class="mobile-break"> Encuentra la armonía entre todas las posibilidades.</p></div>
+      <div class="intro-note"><span class="japanese">静かな知恵</span><span>UN PEQUEÑO RETO.<br>UN MUNDO DE SOLUCIONES.</span></div>
+    </section>
+
+    <div class="workspace">
+      <section class="board-card" aria-label="Tablero interactivo de N-Reinas">
+        <div class="board-top"><div class="scene-name"><svg class="icon"><use href="#i-flower"/></svg><span>El santuario de las reinas</span><span class="scene-tag">ESCENA 01</span></div><button class="icon-button" id="fullscreen" aria-label="Ampliar tablero" title="Ampliar tablero"><svg class="icon"><use href="#i-expand"/></svg></button></div>
+        <div class="board-scene" id="board-scene">
+          <div class="scene-art" aria-hidden="true"></div><div class="scene-vignette" aria-hidden="true"></div>
+          <div id="three-container" role="img" aria-label="Tablero 3D. Arrastra para girar; usa la rueda para acercar."></div>
+          <div class="scene-label"><span class="status-dot"></span><span id="scene-status">Preparando el jardín…</span></div>
+          <span class="vertical-poem" aria-hidden="true">一 手 一 花<br>一 歩 一 心</span>
+          <div class="scene-bottom"><span class="board-dimension" id="board-dimension">08 <span>×</span> 08</span><button class="view-reset" id="reset-camera"><svg class="icon"><use href="#i-orbit"/></svg> Restablecer vista</button></div>
+          <div class="render-error" id="render-error" hidden></div>
+        </div>
+        <div class="board-toolbar"><span><span class="legend-dot"></span> Reina sakura <i></i><span class="legend-dot mint"></span> Posición válida</span><span class="orbit-help"><svg class="icon"><use href="#i-orbit"/></svg> Arrastra para girar · Scroll para acercar</span><button class="icon-button" id="sound-toggle" aria-label="Activar ambiente sonoro" aria-pressed="false" title="Ambiente sonoro"><svg class="icon"><use href="#i-volume-off"/></svg></button></div>
+      </section>
+
+      <aside class="control-column" aria-label="Controles del ejercicio">
+        <section class="control-card configuration">
+          <div class="section-heading"><span class="tiny-number">01</span><h2>Prepara tu jardín</h2><svg class="icon muted"><use href="#i-crown"/></svg></div>
+          <div class="size-heading"><label for="board-size">Número de reinas</label><output for="board-size" id="size-value">8<span> REINAS</span></output></div>
+          <div class="number-field"><input type="number" min="1" step="1" value="8" id="board-size" aria-describedby="size-hint" inputmode="numeric" required><span>N × N</span></div><div class="range-labels"><span id="size-hint">Tablero de <b id="size-preview">8 × 8</b> · N sin máximo fijo</span></div>
+          <div class="size-presets" aria-label="Tamaños de ejemplo"><button data-size="8">8</button><button data-size="16">16</button><button data-size="32">32</button><button data-size="64">64</button><button data-size="100">100</button></div>
+          <details class="genetic-settings"><summary>Configurar evolución <span>ADN</span></summary><div class="genetic-fields"><label>Población<input id="population" type="number" min="4" max="1000" value="80" step="1" required></label><label>Generaciones máx.<input id="generations" type="number" min="1" max="100000" value="2000" step="1" required></label><label>Mutación (%)<input id="mutation" type="number" min="0" max="100" value="65" step="1" required></label><label>Tiempo máx. (s)<input id="search-seconds" type="number" min="1" max="120" value="15" step="1" required></label><label class="seed-field">Semilla (opcional)<input id="seed" type="number" step="1" placeholder="Aleatoria"></label></div><p>El tiempo limita la búsqueda, no N. Una semilla repite el experimento; la mutación aumenta si la población se estanca.</p></details>
+          <div class="mode-label">ELIGE TU CAMINO</div><div class="mode-switch" role="group" aria-label="Modo de juego"><button class="active" data-mode="explore" aria-pressed="true">Explorar</button><button data-mode="steps" aria-pressed="false">Paso a paso</button><button data-mode="challenge" aria-pressed="false">Desafío</button></div>
+          <button class="primary-button" id="solve-button"><svg class="icon"><use href="#i-flower"/></svg><span>Evolucionar reinas</span><svg class="icon"><use href="#i-arrow"/></svg></button><button id="cancel-search" class="cancel-button" hidden>Detener búsqueda</button>
+          <p class="configuration-note" id="mode-description">Deja que la lógica encuentre su equilibrio.</p>
+        </section>
+
+        <section class="control-card playback-card"><div class="section-heading"><span class="tiny-number">02</span><h2 id="playback-title">Observa la evolución</h2><span class="subtle-tag" id="algorithm-tag">GENÉTICO</span></div>
+          <div class="playback"><button class="icon-button" id="reset" aria-label="Volver al inicio" title="Volver al inicio"><svg class="icon"><use href="#i-reset"/></svg></button><button class="play-button" id="play" aria-label="Reproducir generaciones"><svg class="icon"><use href="#i-play"/></svg></button><button class="icon-button" id="step" aria-label="Avanzar una generación" title="Avanzar una generación"><svg class="icon"><use href="#i-next"/></svg></button><div class="speed-field"><label for="speed">Velocidad</label><select id="speed"><option value="2200">0.5×</option><option value="1400" selected>1×</option><option value="850">2×</option><option value="500">4×</option></select></div></div>
+          <div class="timeline"><span id="timeline-fill"></span></div><p class="step-message" id="step-message" aria-live="polite">Cada generación abre nuevas posibilidades.</p><div class="generation-footer"><span id="fitness-label">APTITUD —</span><button id="jump-final">Ver resultado ↗</button></div>
+        </section>
+
+        <section class="solution-card"><div class="solution-top"><span class="solution-icon"><svg class="icon"><use href="#i-check"/></svg></span><span id="solution-label">GENERACIÓN ACTUAL</span><span class="status-dot"></span></div><div class="solution-main"><div><strong id="solution-index">00</strong><span id="solution-total">/ — generaciones</span></div><div class="solution-navigation"><button id="previous-solution" class="icon-button" aria-label="Generación anterior"><svg class="icon"><use href="#i-left"/></svg></button><button id="next-solution" class="icon-button" aria-label="Generación siguiente"><svg class="icon"><use href="#i-right"/></svg></button></div></div><p id="solution-caption">El mejor individuo de cada generación.</p></section>
+      </aside>
+    </div>
+
+    <section class="stats-strip" aria-label="Estadísticas del algoritmo"><div><span class="stat-symbol">♛</span><span><small>REINAS SIN AMENAZAS</small><strong id="stat-queens">— <em>/ 8</em></strong></span></div><div><span class="stat-symbol">⌘</span><span><small>PARES EN CONFLICTO</small><strong id="stat-solutions">—</strong></span></div><div><span class="stat-symbol">⤳</span><span><small>INDIVIDUOS EVALUADOS</small><strong id="stat-visited">—</strong></span></div><div><span class="stat-symbol">◷</span><span><small>TIEMPO DE BÚSQUEDA</small><strong id="stat-time">— <em>ms</em></strong></span></div><span class="stats-note"><span class="status-dot"></span> Genética en Python</span></section>
+
+    <section class="rules-section"><div class="rules-intro"><p class="eyebrow">LA BELLEZA ESTÁ EN LAS REGLAS</p><h2>Un lugar para cada reina.</h2><p>El reto es sencillo de entender.<br>La magia está en resolverlo.</p><button class="text-button" data-open="learn">Descubre el algoritmo <svg class="icon"><use href="#i-arrow"/></svg></button></div><article class="rule-card"><span class="rule-number">一 <span>01</span></span><div class="rule-diagram horizontal" aria-hidden="true"><span></span><span>♛</span><span></span><span class="forbidden">×</span></div><h3>Su propia fila</h3><p>Cada reina necesita una fila<br>solo para ella.</p></article><article class="rule-card"><span class="rule-number">二 <span>02</span></span><div class="rule-diagram column" aria-hidden="true"><span></span><span>♛</span><span></span><span class="forbidden">×</span></div><h3>Su propia columna</h3><p>Dos reinas nunca comparten<br>la misma columna.</p></article><article class="rule-card"><span class="rule-number">三 <span>03</span></span><div class="rule-diagram diagonal" aria-hidden="true"><span></span><span>♛</span><span></span><span class="forbidden">×</span></div><h3>Ninguna diagonal</h3><p>Sus caminos tampoco pueden<br>cruzarse en diagonal.</p></article></section>
+    <footer><a class="footer-brand" href="#garden"><svg class="icon"><use href="#i-flower"/></svg> SAKURA QUEENS</a><p>Pequeñas mutaciones. Nuevas posibilidades.</p><span>HECHO CON PYTHON & THREE.JS <span class="footer-flower">✿</span></span></footer>
+  </main>
+
+  <dialog id="learn-dialog"><button class="dialog-close icon-button" aria-label="Cerrar explicación">×</button><p class="eyebrow">DE LA NATURALEZA AL ALGORITMO</p><h2>El arte de <em>evolucionar.</em></h2><p>Imagina muchas distribuciones de reinas compitiendo por sobrevivir. Los tableros con menos conflictos tienen más oportunidades de reproducirse. Sus descendientes combinan posiciones y reciben pequeñas mutaciones. Eso es un <strong>algoritmo genético</strong>.</p><div class="learning-steps"><article><span>01</span><h3>Selecciona</h3><p>Evalúa la población y elige padres mediante torneos de aptitud.</p></article><article><span>02</span><h3>Cruza</h3><p>Combina un fragmento de un padre con las columnas del otro, sin repetirlas.</p></article><article><span>03</span><h3>Muta</h3><p>Intercambia dos columnas para explorar otras distribuciones.</p></article></div><p>El cromosoma <code>[1, 3, 0, 2]</code> es una solución de 4 reinas. Cada fila tiene una reina y cada columna aparece una vez. Contamos los pares que comparten diagonal. La aptitud es <code>1 / (1 + conflictos)</code>: su máximo, <code>1</code>, significa cero amenazas.</p><pre><code><span class="code-comment"># Algoritmo genético con elitismo</span>
+crear población de permutaciones aleatorias
+evaluar conflictos de cada individuo
+mientras no haya solución y quede presupuesto:
+    conservar los dos mejores individuos
+    seleccionar padres por torneo
+    cruzar padres sin duplicar columnas
+    mutar hijos intercambiando columnas
+    evaluar la nueva generación
+    registrar su mejor tablero</code></pre><p>La animación muestra el <strong>mejor individuo de cada generación</strong>. Las piezas se elevan, cambian de columna y aterrizan. Los desplazamientos solo ilustran el cambio de cromosoma: no son jugadas legales de ajedrez ni muestran todos los individuos.</p><p>El elitismo conserva las mejores aptitudes. Una generación puede mantener la misma puntuación. Si se agota el tiempo o las generaciones, conservamos el mejor candidato; eso <strong>no demuestra que el problema sea imposible</strong>. N = 2 y N = 3 sí son casos imposibles conocidos.</p><p class="practice-note"><strong>Tu siguiente reto:</strong> usa N = 16 y semilla 42. Compara la evolución con mutación del 20 % y del 80 %.</p><button class="primary-button" id="try-steps">Ver evolucionar 16 reinas <svg class="icon"><use href="#i-arrow"/></svg></button></dialog>
+  <dialog id="about-dialog"><button class="dialog-close icon-button" aria-label="Cerrar información">×</button><p class="eyebrow">UN PROYECTO PARA APRENDER</p><h2>Lógica con alma <em>sakura.</em></h2><p>Sakura Queens explora N-Reinas mediante una población de tableros que evoluciona en Python.</p><div class="about-stack"><p><strong>Python</strong><span>Selección por torneo, cruce de orden, mutación por intercambio, elitismo y diversidad. Transmite cada generación sin caché.</span></p><p><strong>Three.js</strong><span>Anima cada reina en tres fases: elevación, desplazamiento y aterrizaje. Los tableros grandes usan una superficie compartida y piezas instanciadas.</span></p><p><strong>JavaScript</strong><span>Recibe las generaciones, permite cancelarlas y reproduce el historial con control de velocidad.</span></p></div><p>N se escribe libremente, sin un máximo fijo como 12. El tiempo, las generaciones y la memoria disponibles limitan el cálculo real. El motor verifica un presupuesto estimado de 256 MB por búsqueda, configurable en Python. El historial del navegador también se conserva con un presupuesto y se resume si es necesario.</p><p>La búsqueda encuentra un candidato con cero conflictos o devuelve el mejor intento. No calcula la cantidad total de soluciones. N = 1 es trivial; N = 2 y N = 3 no tienen solución.</p><p>Lee <code>README.md</code> y <code>solver.py</code> para estudiar el proyecto. Three.js se incluye localmente con su licencia MIT.</p></dialog>
+  <div id="toast" role="status" hidden></div>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

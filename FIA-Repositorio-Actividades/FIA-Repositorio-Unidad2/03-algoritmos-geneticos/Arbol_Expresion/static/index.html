@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5f0">
+  <meta name="description" content="Explora las matemáticas desde sus raíces. Un intérprete de expresiones con árboles 3D, evaluación y recorridos animados.">
+  <title>Arboria — Las matemáticas, desde la raíz</title>
+  <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/styles.css">
+  <link rel="stylesheet" href="/static/analysis.css">
+  <script type="importmap">{"imports":{"three":"/static/vendor/three.module.js","three/addons/controls/OrbitControls.js":"/static/vendor/OrbitControls.js"}}</script>
+</head>
+<body>
+  <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="i-tree" viewBox="0 0 24 24"><path d="M12 4v6m0 0H5v7m7-7h7v7M12 10v10"/><circle cx="12" cy="3" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m9 5 11 7-11 7Z"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol>
+    <symbol id="i-reset" viewBox="0 0 24 24"><path d="M4 10a8 8 0 1 1 1 8M4 4v6h6"/></symbol>
+    <symbol id="i-focus" viewBox="0 0 24 24"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-cube" viewBox="0 0 24 24"><path d="m12 3 9 5v9l-9 5-9-5V8Zm0 10v9M3 8l9 5 9-5M7 5l10 6"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 2 3 7 7 3-7 3-3 7-3-7-7-3 7-3ZM20 2v4m-2-2h4"/></symbol>
+    <symbol id="i-step" viewBox="0 0 24 24"><path d="m5 5 10 7-10 7Zm14 0v14"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+  </defs></svg>
+
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Arboria, inicio"><span class="brand-symbol"><svg><use href="#i-tree"/></svg></span>arboria<span class="brand-dot">.</span><span class="brand-divider"></span><span class="brand-caption">EXPRESSION LAB</span></a>
+    <nav aria-label="Navegación principal"><button class="nav-link active" id="lab-nav">Laboratorio</button><button class="nav-link" id="guide-nav">Cómo funciona <span>↗</span></button></nav>
+    <div class="header-end"><span class="connection"><span></span><span id="connection-label">Conectando con Python</span></span><button class="button button-small" id="examples-open"><svg><use href="#i-spark"/></svg> Explorar ejemplos</button></div>
+  </header>
+
+  <main>
+    <section class="intro"><div><div class="eyebrow"><span class="tiny-line"></span> LAS MATEMÁTICAS, DESDE LA RAÍZ</div><h1>Cada expresión cuenta <em>un árbol.</em></h1></div><p>Escribe. Conecta. Comprende.<br>Descubre la estructura que vive detrás de tus fórmulas.</p></section>
+
+    <section class="generator-panel" aria-label="Generador libre de expresiones">
+      <div class="generator-heading"><div><span class="eyebrow">DE LAS REGLAS A UNA FÓRMULA</span><h2>Deja que una expresión nazca.</h2><p>Elige sus operaciones y su altura máxima. Nosotros construimos la fórmula, el árbol y la curva.</p></div><span class="generator-badge">GENERACIÓN LIBRE · ARIDADES VÁLIDAS</span></div>
+      <div class="generator-settings">
+        <label for="generator-height">Altura máxima · niveles<input id="generator-height" type="number" min="1" max="12" step="1" value="5"></label>
+        <label for="generator-variable">Variable<input id="generator-variable" type="text" value="x" maxlength="64" spellcheck="false"></label>
+        <label for="generator-seed">Semilla · opcional<input id="generator-seed" type="number" step="1" min="-9007199254740991" max="9007199254740991" placeholder="Aleatoria"></label>
+        <label class="generator-constant-option"><input id="generator-constants" type="checkbox" checked> Incluir constantes de −5 a 5</label>
+        <button class="button button-primary" id="generate-random" disabled><svg><use href="#i-spark"/></svg><span>Generar fórmula libre</span></button>
+      </div>
+      <div class="operation-library-header"><span class="section-label">BIBLIOTECA DE OPERACIONES · LOS BADGES INDICAN LA ARIDAD</span><div><button id="operations-all" type="button">Todas</button><button id="operations-none" type="button">Ninguna</button></div></div>
+      <fieldset class="operation-library" id="operation-library"><legend class="sr-only">Operaciones permitidas en el generador</legend><span class="field-hint" id="operation-loading">Cargando biblioteca desde Python…</span></fieldset>
+      <p class="generator-hint">Una hoja tiene altura 1 y aridad 0. En el último nivel solo hay variables o constantes. Raíz = sqrt(x), potencia = a^b y logaritmo = ln(x). La fórmula puede ser más baja que el máximo; no necesita usar todas las operaciones activadas.</p>
+      <div class="generated-result" id="generated-result" hidden><div><span class="section-label">FÓRMULA GENERADA</span><span id="generated-stats"></span></div><code id="generated-formula"></code><p id="generated-status" aria-live="polite"></p></div>
+      <p class="error-message" id="generator-error" role="alert" hidden></p>
+    </section>
+    <section class="workspace" aria-label="Laboratorio de expresiones">
+      <div class="workspace-heading"><div class="workspace-title"><svg><use href="#i-tree"/></svg><h2>Tu espacio de exploración</h2><span class="version">v.03</span></div><div class="live-badge"><span></span> INTERACTIVO EN TIEMPO REAL</div></div>
+      <div class="policy-bar">
+        <label for="evaluation-mode">EVALUACIÓN <select id="evaluation-mode"><option value="protected" selected>Protegida · programación genética</option><option value="strict">Estricta · números reales</option></select></label>
+        <label for="epsilon">Epsilon <input id="epsilon" type="number" value="0.000000001" min="0.000000000000001" max="0.01" step="any"></label>
+        <label for="max-value">Límite ± <input id="max-value" type="number" value="1000000000000" min="1" max="1e100" step="any"></label>
+        <details class="policy-rules"><summary>Cómo se protege</summary><p>Esto cambia las reglas de evaluación; no es una igualdad matemática ni usa números complejos. División y módulo: los divisores con |d| &lt; ε se sustituyen por ±ε, conservando el signo. Raíz cuadrada: sqrt(abs(x)). Las raíces impares negativas conservan su signo; las demás usan abs(x). Logaritmos: max(abs(x), ε); bases cercanas a 1: 1 + ε. Potencias fraccionarias de bases negativas: abs(base). Exponentes: ±1000. asin/acos: argumento en [-1,1]. Factorial: entero redondeado de abs(x), hasta 170. Exponenciales y resultados se limitan para mantenerlos finitos. Las variables faltantes y la sintaxis inválida siguen siendo errores. En modo estricto, ε y el límite protegido no se aplican.</p></details>
+      </div>
+      <details id="correction-report" class="correction-report"><summary id="corrections-title">Sin correcciones numéricas</summary><ul id="correction-list"><li>El cálculo actual no necesitó protección.</li></ul></details>
+      <div class="workbench">
+        <aside class="editor-panel">
+          <div class="section-label"><span>01 / EXPRESIÓN</span><span class="keyboard-label">Ctrl ↵</span></div>
+          <label class="input-title" for="expression">Todo empieza con una idea.</label>
+          <div class="expression-box"><span class="expression-prompt">ƒ(x)</span><textarea id="expression" rows="3" maxlength="512" spellcheck="false" aria-describedby="expression-hint">sqrt(x^2 + y^2)</textarea><div class="expression-meta"><span id="syntax-state"><span class="status-dot"></span>Expresión lista</span><span id="character-count">15 / 512</span></div></div>
+          <p id="expression-hint" class="field-hint">Usa <code>^</code> para potencias y <code>*</code> para multiplicar.</p>
+          <button class="button button-primary" id="generate">Generar árbol <svg><use href="#i-arrow"/></svg></button>
+          <button class="button button-small simplify-button" id="simplify-tree" type="button">Simplificar constantes del árbol</button>
+          <p class="field-hint" id="simplify-status">Ejemplo: (2 + 3) * x → 5 * x. Conserva errores y protecciones.</p>
+          <p class="error-message" id="parse-error" role="alert" hidden></p>
+
+          <div class="function-section"><div class="section-label">A MANO, POR SI LO NECESITAS</div><div class="function-chips"><button data-insert="sqrt()" title="Insertar raíz cuadrada">√ <span>raíz</span></button><button data-insert="^" title="Insertar potencia">x<sup>n</sup></button><button data-insert="sin()">sin</button><button data-insert="cos()">cos</button><button data-insert="log()">log</button><button data-insert="pi">π</button><button data-insert="()">( )</button><button id="all-functions">···</button></div></div>
+
+          <div class="variables-section"><div class="section-label"><span>02 / VARIABLES</span><span class="small-tag">EDITABLES</span></div><div id="variable-inputs" class="variable-inputs"></div><p class="field-hint" id="variable-hint">Cambia un valor y observa el resultado.</p></div>
+          <div class="result-card"><div><span class="section-label">RESULTADO</span><span class="result-real">ℝ</span></div><div class="result-value" id="result-value">—</div><div class="result-detail" id="result-detail">Evaluando tu expresión…</div></div>
+          <div class="editor-note"><svg><use href="#i-info"/></svg><p>Un árbol, muchas perspectivas.<br>Selecciona un nodo para conocerlo.</p></div>
+        </aside>
+
+        <section class="visual-panel" aria-label="Visualización del árbol">
+          <div class="canvas-topbar"><div><span class="canvas-title">Árbol de expresión</span><span class="canvas-subtitle" id="graph-subtitle">Una fórmula, vista desde dentro</span></div><div class="view-switch" role="group" aria-label="Vista del árbol"><button id="view-2d" class="selected" aria-pressed="true">2D</button><button id="view-3d" aria-pressed="false"><svg><use href="#i-cube"/></svg>3D</button></div></div>
+          <div id="graph" class="graph"><div class="graph-watermark" aria-hidden="true">ideas que<br><em>conectan.</em></div><div id="node-labels" class="node-labels"></div><div class="graph-loading" id="graph-loading">Preparando tu árbol…</div><div class="canvas-tools"><button id="zoom-in" aria-label="Acercar" title="Acercar">+</button><button id="zoom-out" aria-label="Alejar" title="Alejar">−</button><span></span><button id="fit-view" aria-label="Centrar árbol" title="Centrar árbol"><svg><use href="#i-focus"/></svg></button><button id="export-image" aria-label="Descargar imagen PNG" title="Descargar imagen"><svg><use href="#i-download"/></svg></button></div><div class="graph-help" id="graph-help">ARRASTRA PARA MOVER · SCROLL PARA ZOOM</div><div class="axis-marker" aria-hidden="true"><span>y</span><i></i><span>x</span></div></div>
+          <div class="legend"><span><i class="legend-function"></i>Función</span><span><i class="legend-operator"></i>Operador</span><span><i class="legend-variable"></i>Variable</span><span><i class="legend-number"></i>Constante / número</span><span class="render-engine">HECHO CON THREE.JS <span>↗</span></span></div>
+        </section>
+
+        <aside class="inspector-panel"><div class="section-label"><span>03 / BAJO LA SUPERFICIE</span><svg><use href="#i-spark"/></svg></div><div class="inspector-header"><span id="selected-symbol">√</span><div><span class="small-tag" id="selected-kind">FUNCIÓN</span><h3 id="selected-title">Raíz cuadrada</h3></div></div><p class="inspector-description" id="selected-description">Devuelve el número que, multiplicado por sí mismo, produce el valor de su hijo.</p><div class="node-facts"><div><span>Identificador</span><code id="selected-id">—</code></div><div><span>Hijos</span><span id="selected-children">1</span></div><div><span>Valor del nodo</span><strong id="selected-value">—</strong></div></div><div class="inspector-divider"></div><div class="section-label">LA ESTRUCTURA, EN NÚMEROS</div><div class="stats-grid"><div><strong id="stat-nodes">—</strong><span>nodos</span></div><div><strong id="stat-depth">—</strong><span>niveles</span></div><div><strong id="stat-leaves">—</strong><span>hojas</span></div><div><strong id="stat-operations">—</strong><span>operaciones</span></div></div><div class="insight-card"><span>¿POR QUÉ UN ÁRBOL?</span><p>Las hojas son los datos.<br>Las ramas, las relaciones.<br><em>La raíz conecta todo.</em></p><svg viewBox="0 0 180 70" aria-hidden="true"><path d="M90 10v18M90 28H40v23M90 28h50v23M40 51H18v13M40 51h22v13M140 51h-22v13M140 51h22v13"/><circle cx="90" cy="10" r="5"/><circle cx="40" cy="51" r="4"/><circle cx="140" cy="51" r="4"/></svg></div></aside>
+      </div>
+
+      <section class="traversal-panel" aria-label="Recorridos del árbol"><div class="traversal-heading"><div><span class="section-label">SIGUE EL CAMINO</span><h3>Una estructura. Tres recorridos.</h3></div><div class="traversal-tabs" role="group" aria-label="Tipo de recorrido"><button data-order="preorder">Preorden</button><button data-order="inorder">Inorden</button><button data-order="postorder" class="selected">Postorden</button></div><div class="playback-controls"><label class="speed-control" for="speed">Velocidad <select id="speed"><option value="1300">0.5×</option><option value="750" selected>1×</option><option value="350">2×</option></select></label><button class="icon-button" id="reset-traversal" aria-label="Reiniciar recorrido" title="Reiniciar"><svg><use href="#i-reset"/></svg></button><button class="icon-button" id="step-traversal" aria-label="Avanzar un paso" title="Avanzar un paso"><svg><use href="#i-step"/></svg></button><button class="button button-dark" id="play-traversal"><svg><use href="#i-play"/></svg><span>Animar recorrido</span></button></div></div><div class="traversal-track" id="traversal-track"></div><div class="traversal-footer"><p id="traversal-explanation">Izquierda → derecha → raíz. Primero resolvemos los hijos; después, su padre.</p><span id="traversal-progress" aria-live="polite">0 / 0 nodos</span></div></section>
+    </section>
+    <section class="curve-panel" aria-label="Gráfica de resultados">
+      <div class="curve-heading"><div><span class="eyebrow">04 / DE LA ESTRUCTURA AL COMPORTAMIENTO</span><h2>Ahora, mira cómo cambia.</h2><p>Define tu intervalo y paso. Compara curvas con una función objetivo o un CSV.</p></div><button class="button button-small" id="export-csv" disabled><svg><use href="#i-download"/></svg> Descargar datos CSV</button></div>
+      <div class="study-preset"><button class="button button-small" id="load-study">Cargar ejercicio del coseno</button><span>6.87 + 11 · cos(7.23 · x³) · [−10, 10] · paso 0.001</span></div>
+      <div class="curve-controls">
+        <label for="plot-variable">Variable del dominio<input id="plot-variable" type="text" value="x" maxlength="64" list="plot-variables"><datalist id="plot-variables"></datalist></label>
+        <label for="domain-start">Desde<input id="domain-start" type="number" value="0" step="any"></label>
+        <label for="domain-end">Hasta<input id="domain-end" type="number" value="1" step="any"></label>
+        <label for="sampling-mode">Muestreo<select id="sampling-mode"><option value="step" selected>Tamaño de paso</option><option value="points">Cantidad de muestras</option></select></label>
+        <label for="plot-step" id="plot-step-field">Paso<input id="plot-step" type="number" value="0.01" min="0" step="any"></label>
+        <label for="plot-points" id="plot-points-field" hidden>Muestras<input id="plot-points" type="number" value="201" min="2" max="100001" step="1" disabled></label>
+        <label for="plot-scale">Escala vertical<select id="plot-scale"><option value="linear">Lineal</option><option value="symlog">Logarítmica simétrica</option></select></label>
+        <button class="button button-primary" id="plot-generate">Graficar resultados <svg><use href="#i-arrow"/></svg></button>
+      </div>
+      <details class="comparison-controls" open><summary>Comparar y medir el error</summary>
+        <label for="reference-source">Función objetivo<select id="reference-source"><option value="expression">La expresión del árbol (f1)</option><option value="csv">Valores de un archivo CSV</option></select></label>
+        <div id="csv-fields" hidden><label for="reference-file">CSV con encabezados · UTF-8 · máximo 16 MB<input id="reference-file" type="file" accept=".csv,text/csv"></label><div class="csv-columns"><label for="csv-x">Columna x · opcional<input id="csv-x" type="text" placeholder="Automática: variable del dominio o x"></label><label for="csv-y">Columna objetivo · opcional<input id="csv-y" type="text" placeholder="Automática: y_objetivo, y, target o f1"></label></div><p class="field-hint">Se usan los valores de x del CSV, ordenados y sin repetir. El intervalo y paso del formulario se aplican al modo de expresión. Separador coma o punto y coma; decimales con punto.</p></div>
+        <label for="plot-comparisons" id="comparisons-label">Candidatas: hasta tres fórmulas, una por línea<textarea id="plot-comparisons" rows="3" maxlength="1540" spellcheck="false" placeholder="6.87 + 10 * cos(7.23 * x^3)"></textarea></label>
+        <p class="field-hint" id="comparison-help">Sin candidatas se muestra solo la función objetivo. En modo CSV, la expresión del árbol es la primera candidata; puedes añadir otras dos.</p>
+      </details>
+      <p class="curve-context" id="plot-context">La variable elegida recorre el dominio; las demás mantienen sus valores del panel.</p>
+      <p class="error-message" id="plot-error" role="alert" hidden></p>
+      <div class="curve-chart" id="curve-chart"><svg id="curve-svg" role="img" tabindex="0" aria-label="Curvas de las expresiones. Usa las flechas del teclado para inspeccionar las muestras."></svg><div class="curve-tooltip" id="curve-tooltip" hidden></div><div class="curve-empty" id="curve-empty">Genera una expresión para explorar su curva.</div></div>
+      <div class="curve-legend" id="curve-legend"></div><p class="curve-status" id="plot-status" aria-live="polite">Esperando la primera expresión.</p>
+      <section class="metrics-panel" aria-label="Métricas de error"><div class="metrics-heading"><strong>Error respecto a f1 · objetivo</strong><button class="button button-small" id="export-metrics" disabled>Descargar métricas CSV</button></div><p class="field-hint">MSE, RMSE y NMSE: menor es mejor (ideal 0). R²: ideal 1; puede ser negativo. NMSE = MSE / varianza poblacional del objetivo. Los cálculos y el CSV usan todas las muestras.</p><div id="metrics-table" aria-live="polite">Agrega una candidata para medir qué tan lejos está del objetivo.</div></section>
+      <p class="curve-note">Los puntos naranja indican protección numérica. Los valores no definidos y los cruces de polos detectados separan las ramas. Es un muestreo finito: una discontinuidad entre muestras puede no detectarse. La escala logarítmica simétrica usa sign(y) · log10(1 + |y|) para mostrar también ceros y negativos.</p>
+      <details class="curve-data"><summary>Ver tabla de resultados · primeras 20 muestras</summary><div id="plot-table"></div></details>
+    </section>
+    <footer class="page-footer"><span>Un pequeño laboratorio para grandes <span class="footer-ideas">ideas.</span></span><span>PYTHON + THREE.JS <i></i> CONSTRUYE. EXPLORA. ENTIENDE.</span></footer>
+  </main>
+
+  <dialog id="examples-dialog" class="modal"><div class="modal-heading"><div><span class="eyebrow">UN PUNTO DE PARTIDA</span><h2>Deja crecer una idea.</h2></div><button class="icon-button" data-close="examples-dialog" aria-label="Cerrar ejemplos"><svg><use href="#i-close"/></svg></button></div><p>Elige una expresión y descubre cómo se conectan sus partes.</p><div class="example-grid" id="example-grid"></div></dialog>
+
+  <dialog id="guide-dialog" class="modal guide-modal"><div class="modal-heading"><div><span class="eyebrow">APRENDER EXPLORANDO</span><h2>De símbolos a conexiones.</h2></div><button class="icon-button" data-close="guide-dialog" aria-label="Cerrar guía"><svg><use href="#i-close"/></svg></button></div><div class="guide-steps"><article><span>01</span><div><h3>Escribe una expresión</h3><p>Python separa el texto en elementos: números, variables, operadores y funciones. Después construye un árbol respetando los paréntesis y la prioridad de las operaciones.</p><code>sqrt(x^2 + y^2)</code></div></article><article><span>02</span><div><h3>Explora su estructura</h3><p>Cada nodo representa una parte de la expresión. Los hijos son los argumentos de su padre. Selecciona cualquier nodo para ver su significado y valor. En 3D, arrastra para girar; con el botón derecho, desplaza.</p></div></article><article><span>03</span><div><h3>Sigue el orden de evaluación</h3><p>El postorden visita los hijos antes que su padre: es el orden que usamos para calcular. El preorden visita primero al padre. El inorden coloca los operadores binarios entre sus hijos; las funciones conservan su nombre antes de los argumentos.</p></div></article></div><h3>Tu caja de herramientas</h3><p><b>Operadores:</b> + − * / % ^ ** y factorial !. Se admite multiplicación implícita: <code>2x</code>, <code>2(x+1)</code>, <code>(x+1)(x−1)</code>. <code>xy</code> es una sola variable; usa <code>x*y</code> para multiplicarlas.</p><div id="function-reference" class="function-reference"></div><p><b>Constantes:</b> pi / π, e, tau / τ. <b>Alias:</b> √(...), raiz(...), raíz(...), sen(...), tg(...). Las funciones requieren paréntesis.</p><p><b>Convenciones:</b> ángulos en radianes; <code>log(x)</code> y <code>ln(x)</code> son logaritmos naturales; <code>log(x, base)</code> permite otra base; <code>root(x, n)</code> calcula la raíz de índice n; <code>round(x)</code> redondea empates al entero par.</p><p class="guide-limit">Trabajamos con números reales. Hasta 512 caracteres, 160 nodos y 48 niveles; los resultados deben estar entre −1e100 y 1e100. No se admiten ecuaciones, asignaciones, derivadas ni código Python.</p></dialog>
+  <div class="toast" id="toast" role="status" hidden></div>
+  <script type="module" src="/static/app.js"></script>
+</body>
+</html>
